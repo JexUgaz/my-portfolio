@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme static {
+  --color-primary: oklch(27.8% 0.033 256.848);
+  --color-white: #f9f9f9;
+}
+
+@layer base {
+  :root {
+    font-family: "DM Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  html,
+  body {
+    min-height: 100dvh;
+    width: 100dvw;
+  }
+}
+
+@layer utilities {
+  .nav-item-activate {
+    @apply bg-white text-primary py-2 px-4 rounded-lg font-bold;
+  }
+}

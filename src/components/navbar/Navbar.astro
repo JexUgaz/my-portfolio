@@ -1,0 +1,71 @@
+---
+import type { NavItem } from "@/types/NavItem";
+import CodeFileIcon from "@/components/icons/CodeFileIcon.astro";
+import HomeIcon from "@/components/icons/HomeIcon.astro";
+import PersonIcon from "@/components/icons/PersonIcon.astro";
+import CodeIcon from "@/components/icons/CodeIcon.astro";
+import StatisticsIcon from "@/components/icons/StatisticsIcon.astro";
+import ContactIcon from "@/components/icons/ContactIcon.astro";
+import SkillIcon from "@/components/icons/Skill_Icon.astro";
+
+const navItems: NavItem[] = [
+  {
+    link: "#home",
+    title: "Home",
+    icon: { Icon: HomeIcon },
+  },
+  {
+    link: "#about",
+    title: "About",
+    icon: { Icon: PersonIcon },
+  },
+  {
+    link: "#skills",
+    title: "Skills",
+    icon: { Icon: SkillIcon },
+  },
+  {
+    link: "#projects",
+    title: "Projects",
+    icon: { Icon: CodeIcon },
+  },
+  {
+    link: "#experience",
+    title: "Experience",
+    icon: { Icon: StatisticsIcon },
+  },
+  {
+    link: "#contact",
+    title: "Contact",
+    icon: { Icon: ContactIcon },
+  },
+];
+---
+
+<nav
+  aria-label="Main navigation"
+  class="sticky top-0 right-0 w-full h-20
+  shadow-2xl shadow-black/25 bg-transparent backdrop-blur"
+>
+  <div
+    class="h-full flex items-center justify-between max-w-7xl w-full mx-auto text-white"
+  >
+    <a class="text-3xl font-bold flex items-center gap-2" href="#">
+      <CodeFileIcon class="size-8" />My Portfolio
+    </a>
+    <ul class="flex gap-10 justify-center items-center h-full">
+      {
+        navItems.map((item) => {
+          const { Icon, className = "size-5" } = item.icon;
+          return (
+            <li>
+              <a href={item.link} class="flex items-center gap-2 text-base">
+                <Icon class={className} /> {item.title}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</nav>
