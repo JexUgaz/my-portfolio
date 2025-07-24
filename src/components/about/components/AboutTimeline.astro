@@ -10,7 +10,7 @@ import { aboutTimelineItems } from "../data/aboutTimelineItems";
 >
   {
     aboutTimelineItems.map((data) => {
-      const { Description, title } = data;
+      const { description, title } = data;
       return (
         <li class="relative ms-6">
           <span
@@ -20,9 +20,10 @@ import { aboutTimelineItems } from "../data/aboutTimelineItems";
             <DotIcon class="size-2.5 text-white" />
           </span>
           <h3 class="text-lg font-bold text-white">{title}</h3>
-          <p class="mt-1 text-base text-justify text-pretty text-white/80">
-            <Description />
-          </p>
+          <p
+            set:html={description}
+            class="mt-1 text-sm text-justify text-pretty text-white/80"
+          />
         </li>
       );
     })

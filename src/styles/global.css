@@ -36,6 +36,7 @@
     box-sizing: border-box;
     --navbar-height: 5rem;
     --shadow-white: 0 0 10px rgba(249, 249, 249, 0.8);
+    --shadow-white-sm: 0 0 4px rgba(249, 249, 249, 0.3);
   }
 
   *,

@@ -1,0 +1,29 @@
+---
+import { personalInfoItems } from "../data/personalInfoItems";
+---
+
+<div class="w-full flex flex-wrap justify-center gap-4">
+  {
+    personalInfoItems.map((data) => {
+      const {
+        icon: { Icon },
+        content,
+        label,
+      } = data;
+      return (
+        <div
+          class={`min-w-[45%] flex items-center gap-3 bg-primary py-2 px-4 rounded-xl shadow-[var(--shadow-white-sm)] transition-transform duration-500 hover:scale-110`}
+        >
+          <div class="flex items-center justify-center size-10 bg-accent/10 text-accent rounded-full">
+            <Icon class="size-5" />
+          </div>
+
+          <div class="grid grid-cols-[auto,1fr] gap-x-2 text-white text-sm">
+            <span class="text-gray-400 font-bold">{label}:</span>
+            <span class="font-medium">{content}</span>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>
