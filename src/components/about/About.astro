@@ -1,4 +1,8 @@
 ---
+import AboutClosing from "./components/AboutClosing.astro";
+import AboutTimeline from "./components/AboutTimeline.astro";
+import AboutTitle from "./components/AboutTitle.astro";
+
 interface Props {
   id: string;
 }
@@ -6,6 +10,20 @@ interface Props {
 const { id } = Astro.props;
 ---
 
-<section id={id}>
-  <h1>About</h1>
+<section id={id} class="flex flex-col items-center gap-10 text-white py-10">
+  <AboutTitle />
+
+  <div class="flex w-full">
+    <div class="w-[50%]">
+      Targets floating... with animation..
+      <br />
+      ¿Who I'm?
+      <br />
+      My Approach
+      <br />
+      Personal Info (Mini targets animateds floating... with icons)
+    </div>
+    <div class="w-[50%]"><AboutTimeline /></div>
+  </div>
+  <AboutClosing />
 </section>

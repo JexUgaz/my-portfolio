@@ -43,6 +43,9 @@
   *::after {
     box-sizing: inherit;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 
   html,
   body {
@@ -54,7 +57,7 @@
   }
 
   body > section {
-    height: calc(100dvh - var(--navbar-height));
+    min-height: calc(100dvh - var(--navbar-height));
     scroll-margin-top: var(--navbar-height);
     @apply w-7xl;
   }
