@@ -1,0 +1,21 @@
+---
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+
+interface Props {
+  Icon: AstroComponentFactory;
+  tooltip: string;
+  url: string;
+}
+
+const { tooltip, Icon, url } = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  class="group aspect-square rounded-full bg-white flex items-center justify-center p-2
+        cursor-pointer transition-transform duration-300 hover:scale-115"
+>
+  <Icon class="size-7 text-primary" />
+  <span class="floating-orbs-tooltip">{tooltip}</span>
+</a>

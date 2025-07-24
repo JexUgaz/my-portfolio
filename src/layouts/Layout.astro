@@ -1,4 +1,5 @@
 ---
+import "aos/dist/aos.css";
 import "@/styles/global.css";
 ---
 
@@ -21,13 +22,18 @@ import "@/styles/global.css";
     <slot />
   </body>
   <script>
+    // @ts-ignore
+    import AOS from "aos";
+    AOS.init();
+  </script>
+  <script type="module" lang="ts" is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       const sections = document.querySelectorAll("section[id]");
       const navLinks = document.querySelectorAll("nav a");
 
-      const observerOptions: IntersectionObserverInit = {
+      const observerOptions = {
         rootMargin: "0px 0px -40% 0px",
-        threshold: 0.25,
+        threshold: 0.4,
       };
 
       const observer = new IntersectionObserver((entries) => {

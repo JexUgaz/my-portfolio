@@ -1,3 +1,32 @@
-<section id="home" class="text-white scroll-mt-20">
-  <h1>HOME</h1>
+---
+import FloatingOrbs from "./components/FloatingOrbs.astro";
+import ContactMe from "./components/ContactMe.astro";
+import HeroDescription from "./components/HeroDescription.astro";
+import HeroTitle from "./components/HeroTitle.astro";
+import Myself from "./components/Myself.astro";
+import { floatingOrbsData } from "./data/floatingOrbsData";
+import DownloadCV from "./components/DownloadCV.astro";
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<section id={id} class="relative flex items-center justify-between gap-10">
+  <div
+    class="w-[50%] relative flex justify-center"
+    data-aos="fade-up"
+    data-aos-duration="500"
+  >
+    <Myself />
+    {floatingOrbsData.map((orb) => <FloatingOrbs {...orb} />)}
+  </div>
+  <div class="w-[50%] h-full flex flex-col justify-center text-white">
+    <HeroTitle />
+    <HeroDescription />
+    <ContactMe />
+    <DownloadCV />
+  </div>
 </section>
