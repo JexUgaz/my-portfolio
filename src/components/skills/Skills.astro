@@ -1,26 +1,19 @@
 ---
-import TabSwitcher from "@/react/TabSwitcher";
+import TechSkillsTab from "./components/TechSkillsTab";
 
 interface Props {
   id: string;
 }
 
 const { id } = Astro.props;
-
-const techTabs = {
-  Frontend: ["React", "Astro", "Tailwind", "Next.js"],
-  Backend: ["Node.js", "Express", "NestJS"],
-  Languages: [],
-  "Other Tools": [],
-  Cloud: ["AWS", "Firebase", "Docker"],
-};
 ---
 
-<section id={id} class="flex flex-col items-center text-white">
-  <h1 class="text-6xl font-bold">My Skills</h1>
-  <p class="text-xl mt-3">
-    <span class="text-accent">Tools and technologies</span> I've mastered or currently
-    exploring.
+<section id={id} class="flex flex-col items-center text-white py-10">
+  <h1 class="text-6xl font-bold text-center">Tech Stack</h1>
+  <p class="text-xl mt-3 text-center max-w-xl">
+    A collection of <span class="text-accent">software technologies</span> I've mastered,
+    explored, or integrated into real-world solutions.
   </p>
-  <TabSwitcher tabs={techTabs} className="mt-10" client:load />
+
+  <TechSkillsTab client:load />
 </section>

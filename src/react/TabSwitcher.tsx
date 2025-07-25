@@ -1,42 +1,48 @@
+import type { TabSwitcherItem } from "@/types/TabSwitcherItem";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface Props {
-  tabs: Record<string, string[]>;
+  items: TabSwitcherItem[];
   className?: string;
 }
+const TabSwitcher: React.FC<Props> = ({ items, className = "" }) => {
+  const [selected, setSelected] = useState<number>(0);
 
-const TabSwitcher: React.FC<Props> = ({ tabs, className = "" }) => {
-  const tabKeys = Object.keys(tabs);
-  const [selected, setSelected] = useState(tabKeys[0]);
+  const noSelectedClasses =
+    "bg-white/10 text-gray-300 hover:bg-white/20 border-white/10";
+  const selectedClasses =
+    "bg-accent/90 text-white shadow-md border-transparent";
 
   return (
-    <div className={`flex flex-col items-start gap-4 ${className}`}>
-      <div className="flex flex-wrap gap-3">
-        {tabKeys.map((key) => (
+    <div
+      className={`flex flex-col sm:flex-row items-stretch gap-6 w-full ${className}`}
+    >
+      <div className="flex flex-row sm:flex-col gap-3 sm:max-w-[200px]">
+        {items.map((item, i) => (
           <button
-            key={key}
-            onClick={() => setSelected(key)}
-            className={`px-4 py-1 rounded-full text-sm font-medium ${
-              selected === key
-                ? "bg-accent text-white"
-                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-            } transition`}
+            key={item.label}
+            onClick={() => setSelected(i)}
+            className={`px-6 py-2 rounded-2xl text-base font-semibold border transition-all duration-200
+              ${selected === i ? selectedClasses : noSelectedClasses}`}
           >
-            {key}
+            {item.label}
           </button>
         ))}
       </div>
 
-      <ul className="grid grid-cols-2 gap-3">
-        {tabs[selected].map((item) => (
-          <li
-            key={item}
-            className="px-3 py-2 bg-gray-800 rounded-xl text-white text-sm shadow-md"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={selected}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          className="flex-1"
+        >
+          {items[selected].content}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
