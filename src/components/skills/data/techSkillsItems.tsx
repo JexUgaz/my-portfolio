@@ -33,7 +33,7 @@ import { FastApiIcon } from "@/components/skills/icons/FastApiIcon";
 import { DotNetIcon } from "@/components/skills/icons/DotNetIcon";
 import { DjangoIcon } from "@/components/skills/icons/DjangoIcon";
 import { BootstrapIcon } from "@/components/skills/icons/BootstrapIcon";
-import { JavaScriptIcon } from "@/components/skills/icons/JavascriptIcon";
+import { JavascriptIcon } from "@/components/skills/icons/JavascriptIcon";
 import { CSharpIcon } from "@/components/skills/icons/CSharpIcon";
 import { ViteIcon } from "@/components/skills/icons/ViteIcon";
 import { SupabaseIcon } from "@/components/skills/icons/SupabaseIcon";
@@ -90,7 +90,7 @@ const data: Record<string, TechGridItem[]> = {
   ],
   Languages: [
     { Icon: TypeScriptIcon, name: "TypeScript", tooltip: { color: "#3178c6" } },
-    { Icon: JavaScriptIcon, name: "JavaScript", tooltip: { color: "#f7df1e" } },
+    { Icon: JavascriptIcon, name: "JavaScript", tooltip: { color: "#f7df1e" } },
     { Icon: CSharpIcon, name: "C#", tooltip: { color: "#68217A" } },
     { Icon: PythonIcon, name: "Python", tooltip: { color: "#3776AB" } },
     { Icon: DartIcon, name: "Dart", tooltip: { color: "#00B4AB" } },
