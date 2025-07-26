@@ -5,8 +5,13 @@ import { AnimatePresence, motion } from "framer-motion";
 interface Props {
   items: TabSwitcherItem[];
   className?: string;
+  textSize?: string;
 }
-const TabSwitcher: React.FC<Props> = ({ items, className = "" }) => {
+const TabSwitcher: React.FC<Props> = ({
+  items,
+  className = "",
+  textSize = "text-base",
+}) => {
   const [selected, setSelected] = useState<number>(0);
 
   const noSelectedClasses =
@@ -16,14 +21,18 @@ const TabSwitcher: React.FC<Props> = ({ items, className = "" }) => {
 
   return (
     <div
-      className={`flex flex-col sm:flex-row items-stretch gap-6 w-full ${className}`}
+      className={`flex flex-col sm:flex-row items-center gap-6 w-full ${className}`}
     >
-      <div className="flex flex-row sm:flex-col gap-3 sm:max-w-[200px]">
+      <div
+        className="flex flex-row sm:flex-col gap-3 sm:max-w-[200px]"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
         {items.map((item, i) => (
           <button
             key={item.label}
             onClick={() => setSelected(i)}
-            className={`px-6 py-2 rounded-2xl text-base font-semibold border transition-all duration-200
+            className={`z-100 px-6 py-2 rounded-2xl ${textSize} font-semibold border transition-all duration-200
               ${selected === i ? selectedClasses : noSelectedClasses}`}
           >
             {item.label}

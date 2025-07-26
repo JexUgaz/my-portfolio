@@ -146,7 +146,7 @@ const data: Record<string, TechGridItem[]> = {
     { Icon: DockerIcon, name: "Docker", tooltip: { color: "#2496ED" } },
     { Icon: LinuxIcon, name: "Linux", tooltip: { color: "#000000" } },
   ],
-  "Productivity Tools": [
+  Tools: [
     { Icon: GitHubIcon, name: "GitHub", tooltip: { color: "#181717" } },
     { Icon: GitIcon, name: "Git", tooltip: { color: "#F05032" } },
     { Icon: VisualStudioIcon, name: "VS Code", tooltip: { color: "#007ACC" } },
