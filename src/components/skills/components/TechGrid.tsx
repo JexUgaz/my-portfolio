@@ -6,6 +6,7 @@ export interface TechGridItem {
     color: string;
   };
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  iconSize?: string;
 }
 
 interface TechGridProps {
@@ -20,32 +21,36 @@ const TechGrid: React.FC<TechGridProps> = ({ techs }) => {
       data-aos-duration="800"
     >
       <div className="flex flex-wrap justify-center gap-4">
-        {techs.map(({ name, Icon, tooltip: { color } }, index) => (
-          <div
-            key={name}
-            className="group relative w-[17%] max-w-[150px] flex-1 sm:flex-none"
-          >
+        {techs.map(
+          ({ name, Icon, iconSize = "size-20", tooltip: { color } }, index) => (
             <div
-              className="p-2 sm:p-3 rounded-xl cursor-pointer flex items-center justify-center
+              key={name}
+              className="group relative w-[17%] max-w-[150px] flex-1 sm:flex-none"
+            >
+              <div
+                className="p-2 sm:p-3 rounded-xl cursor-pointer flex items-center justify-center
                    bg-white/30 hover:bg-white/80
                    hover:scale-105 hover:shadow-lg transition-transform duration-300"
-            >
-              <span data-tooltip-id={`tooltip-${index}`}>
-                <Icon className="size-20 drop-shadow-[var(--shadow-white-sm)] group-hover:drop-shadow-[var(--shadow-primary)] group-hover:animate-lift-soft" />
-              </span>
-            </div>
+              >
+                <span data-tooltip-id={`tooltip-${index}`}>
+                  <Icon
+                    className={`${iconSize} drop-shadow-[var(--shadow-white-sm)] group-hover:drop-shadow-[var(--shadow-primary)] group-hover:animate-lift-soft`}
+                  />
+                </span>
+              </div>
 
-            <Tooltip
-              id={`tooltip-${index}`}
-              place="right"
-              offset={10}
-              content={name}
-              opacity={1}
-              className="z-50 text-sm font-medium text-white px-2 py-1 rounded"
-              style={{ backgroundColor: color }}
-            />
-          </div>
-        ))}
+              <Tooltip
+                id={`tooltip-${index}`}
+                place="right"
+                offset={10}
+                content={name}
+                opacity={1}
+                className="z-50 text-sm font-medium text-white px-2 py-1 rounded"
+                style={{ backgroundColor: color }}
+              />
+            </div>
+          )
+        )}
       </div>
     </div>
   );

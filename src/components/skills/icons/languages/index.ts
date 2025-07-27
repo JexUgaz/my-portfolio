@@ -1,0 +1,11 @@
+export { PythonIcon } from "./PythonIcon";
+export { DartIcon } from "./DartIcon";
+export { HtmlIcon } from "./HtmlIcon";
+export { CssIcon } from "./CssIcon";
+export { JavaIcon } from "./JavaIcon";
+export { KotlinIcon } from "./KotlinIcon";
+export { TypeScriptIcon } from "./TypeScriptIcon";
+export { JavaScriptIcon } from "./JavaScriptIcon";
+export { CSharpIcon } from "./CSharpIcon";
+export { SQLLanguageIcon } from "./SQLLanguageIcon";
+export { PHPIcon } from "./PHPIcon";

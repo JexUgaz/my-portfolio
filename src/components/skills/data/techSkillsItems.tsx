@@ -2,51 +2,82 @@ import type { TabSwitcherItem } from "@/types/TabSwitcherItem";
 import TechGrid, {
   type TechGridItem,
 } from "@/components/skills/components/TechGrid";
-import { PythonIcon } from "@/components/skills/icons/PythonIcon";
-import { DartIcon } from "@/components/skills/icons/DartIcon";
-import { HtmlIcon } from "@/components/skills/icons/HtmlIcon";
-import { CssIcon } from "@/components/skills/icons/CssIcon";
-import { ReactIcon } from "@/components/skills/icons/ReactIcon";
-import { DockerIcon } from "@/components/skills/icons/DockerIcon";
-import { NextIcon } from "@/components/skills/icons/NextIcon";
-import { AstroIcon } from "@/components/skills/icons/AstroIcon";
-import { TailwindIcon } from "@/components/skills/icons/TailwindIcon";
-import { NodeIcon } from "@/components/skills/icons/NodeIcon";
-import { ExpressIcon } from "@/components/skills/icons/ExpressIcon";
-import { NestIcon } from "@/components/skills/icons/NestIcon";
-import { AwsIcon } from "@/components/skills/icons/AwsIcon";
-import { JavaIcon } from "@/components/skills/icons/JavaIcon";
-import { KotlinIcon } from "@/components/skills/icons/KotlinIcon";
-import { GoogleCloudPlatformIcon } from "@/components/skills/icons/GoogleCloudPlatformIcon";
-import { FirebaseIcon } from "@/components/skills/icons/FirebaseIcon";
-import { GitHubIcon } from "@/components/skills/icons/GitHubIcon";
-import { GitIcon } from "@/components/skills/icons/GitIcon";
-import { CloudflareIcon } from "@/components/skills/icons/CloudflareIcon";
-import { VisualStudioIcon } from "@/components/skills/icons/VisualStudioIcon";
-import { AndroidStudioIcon } from "@/components/skills/icons/AndroidStudioIcon";
-import { IntellijIdeaIcon } from "@/components/skills/icons/IntellijIdeaIcon";
-import { FlutterIcon } from "@/components/skills/icons/FlutterIcon";
-import { TypeScriptIcon } from "@/components/skills/icons/TypeScriptIcon";
-import { SpringBootIcon } from "@/components/skills/icons/SpringBootIcon";
-import { LaravelIcon } from "@/components/skills/icons/LaravelIcon";
-import { FastApiIcon } from "@/components/skills/icons/FastApiIcon";
-import { DotNetIcon } from "@/components/skills/icons/DotNetIcon";
-import { DjangoIcon } from "@/components/skills/icons/DjangoIcon";
-import { BootstrapIcon } from "@/components/skills/icons/BootstrapIcon";
-import { JavaScriptIcon } from "@/components/skills/icons/JavaScriptIcon";
-import { CSharpIcon } from "@/components/skills/icons/CSharpIcon";
-import { ViteIcon } from "@/components/skills/icons/ViteIcon";
-import { SupabaseIcon } from "@/components/skills/icons/SupabaseIcon";
-import { LinuxIcon } from "@/components/skills/icons/LinuxIcon";
-import { TerraformIcon } from "@/components/skills/icons/TerraformIcon";
-import { GitHubActionsIcon } from "@/components/skills/icons/GitHubActionsIcon";
-import { DigitalOceanIcon } from "@/components/skills/icons/DigitalOceanIcon";
-import { PhpStormIcon } from "@/components/skills/icons/PhpStormIcon";
-import { MySQLIcon } from "@/components/skills/icons/MySQLIcon";
-import { SqlServerIcon } from "@/components/skills/icons/SqlServerIcon";
-import { SQLiteIcon } from "@/components/skills/icons/SQLiteIcon";
-import { PostgresSQLIcon } from "@/components/skills/icons/PostgresSQLIcon";
-import { MongoIcon } from "@/components/skills/icons/MongoIcon";
+import {
+  DjangoIcon,
+  DotNetIcon,
+  ExpressIcon,
+  FastApiIcon,
+  FlaskIcon,
+  LaravelIcon,
+  NestIcon,
+  NodeIcon,
+  PrismaIcon,
+  SocketDotIcon,
+  SpringBootIcon,
+  SwaggerIcon,
+} from "@/components/skills/icons/server-side";
+import {
+  AndroidIcon,
+  AstroIcon,
+  BootstrapIcon,
+  FlutterIcon,
+  NextIcon,
+  ReactIcon,
+  ShadcnIcon,
+  TailwindIcon,
+  ViteIcon,
+} from "@/components/skills/icons/client-side";
+import {
+  CSharpIcon,
+  CssIcon,
+  DartIcon,
+  HtmlIcon,
+  JavaIcon,
+  JavaScriptIcon,
+  KotlinIcon,
+  PHPIcon,
+  PythonIcon,
+  SQLLanguageIcon,
+  TypeScriptIcon,
+} from "@/components/skills/icons/languages";
+
+import {
+  DynamoIcon,
+  FirestoreIcon,
+  MongoIcon,
+  MySQLIcon,
+  PostgreSQLIcon,
+  RedisIcon,
+  SQLiteIcon,
+  SqlServerIcon,
+} from "@/components/skills/icons/databases";
+import {
+  AwsIcon,
+  CloudflareIcon,
+  DigitalOceanIcon,
+  DockerIcon,
+  FirebaseIcon,
+  GitHubActionsIcon,
+  GoogleCloudPlatformIcon,
+  LinuxIcon,
+  NginxIcon,
+  SupabaseIcon,
+  TerraformIcon,
+  VercelIcon,
+} from "@/components/skills/icons/cloud-devops";
+
+import {
+  AndroidStudioIcon,
+  GitHubIcon,
+  GitIcon,
+  GitLabIcon,
+  IntellijIdeaIcon,
+  PhpStormIcon,
+  PostmanIcon,
+  TerminalIcon,
+  VirtualBoxIcon,
+  VisualStudioIcon,
+} from "@/components/skills/icons/tools-ides";
 
 const data: Record<string, TechGridItem[]> = {
   "Server-side": [
@@ -71,6 +102,11 @@ const data: Record<string, TechGridItem[]> = {
       tooltip: { color: "#512BD4" },
     },
     {
+      Icon: FlaskIcon,
+      name: "Flask",
+      tooltip: { color: "#000000" },
+    },
+    {
       Icon: DjangoIcon,
       name: "Django",
       tooltip: { color: "#44b78b" },
@@ -78,11 +114,16 @@ const data: Record<string, TechGridItem[]> = {
     { Icon: NodeIcon, name: "Node.js", tooltip: { color: "#339933" } },
     { Icon: ExpressIcon, name: "Express", tooltip: { color: "#000000" } },
     { Icon: NestIcon, name: "NestJS", tooltip: { color: "#E0234E" } },
+    { Icon: SocketDotIcon, name: "Socket.IO", tooltip: { color: "#000000" } },
+    { Icon: PrismaIcon, name: "Prisma ORM", tooltip: { color: "#000000" } },
+    { Icon: SwaggerIcon, name: "Swagger", tooltip: { color: "#6d9a00" } },
   ],
   "Client-side": [
     { Icon: FlutterIcon, name: "Flutter", tooltip: { color: "#0d63ab" } },
+    { Icon: AndroidIcon, name: "Android", tooltip: { color: "#a4c639" } },
     { Icon: ReactIcon, name: "React", tooltip: { color: "#61DAFB" } },
     { Icon: NextIcon, name: "Next.js", tooltip: { color: "#000000" } },
+    { Icon: ShadcnIcon, name: "Shadcn UI", tooltip: { color: "#000000" } },
     { Icon: AstroIcon, name: "Astro", tooltip: { color: "#FF5D01" } },
     { Icon: ViteIcon, name: "Vite", tooltip: { color: "#bd34fe" } },
     { Icon: TailwindIcon, name: "Tailwind", tooltip: { color: "#06B6D4" } },
@@ -97,7 +138,9 @@ const data: Record<string, TechGridItem[]> = {
     { Icon: HtmlIcon, name: "HTML", tooltip: { color: "#E34F26" } },
     { Icon: CssIcon, name: "CSS", tooltip: { color: "#1572B6" } },
     { Icon: JavaIcon, name: "Java", tooltip: { color: "#007396" } },
+    { Icon: PHPIcon, name: "PHP", tooltip: { color: "#4c6b96" } },
     { Icon: KotlinIcon, name: "Kotlin", tooltip: { color: "#7F52FF" } },
+    { Icon: SQLLanguageIcon, name: "SQL", tooltip: { color: "#00bcf2" } },
   ],
   Databases: [
     {
@@ -106,10 +149,11 @@ const data: Record<string, TechGridItem[]> = {
       tooltip: { color: "#499D4A" },
     },
     {
-      Icon: PostgresSQLIcon,
-      name: "PostgresSQL",
+      Icon: PostgreSQLIcon,
+      name: "PostgreSQL",
       tooltip: { color: "#336791" },
     },
+    { Icon: RedisIcon, name: "Redis", tooltip: { color: "#D82C20" } },
     { Icon: MySQLIcon, name: "MySQL", tooltip: { color: "#00618A" } },
     {
       Icon: SqlServerIcon,
@@ -117,53 +161,77 @@ const data: Record<string, TechGridItem[]> = {
       tooltip: { color: "#000000" },
     },
     {
+      Icon: DynamoIcon,
+      name: "DynamoDB",
+      tooltip: { color: "#2E27AD" },
+    },
+    {
       Icon: SQLiteIcon,
       name: "SQLite",
       tooltip: { color: "#0f7fcc" },
     },
+    {
+      Icon: FirestoreIcon,
+      name: "Firestore",
+      tooltip: { color: "#EEAB37" },
+    },
   ],
-  DevOps: [
+  "Cloud & DevOps": [
+    { Icon: AwsIcon, name: "AWS", tooltip: { color: "#FF9900" } },
+    {
+      Icon: GoogleCloudPlatformIcon,
+      name: "Google Cloud Platform",
+      tooltip: { color: "#4285F4" },
+    },
+    {
+      Icon: DigitalOceanIcon,
+      name: "Digital Ocean",
+      tooltip: { color: "#0080FF" },
+    },
+
     {
       Icon: GitHubActionsIcon,
       name: "GitHub Actions",
       tooltip: { color: "#2088ff" },
     },
     { Icon: TerraformIcon, name: "Terraform", tooltip: { color: "#5C4EE5" } },
-    { Icon: AwsIcon, name: "AWS", tooltip: { color: "#FF9900" } },
-    { Icon: CloudflareIcon, name: "Cloudflare", tooltip: { color: "#F4811F" } },
-    {
-      Icon: DigitalOceanIcon,
-      name: "Digital Ocean",
-      tooltip: { color: "#0080FF" },
-    },
-    {
-      Icon: GoogleCloudPlatformIcon,
-      name: "Google Cloud Platform",
-      tooltip: { color: "#4285F4" },
-    },
+    { Icon: DockerIcon, name: "Docker", tooltip: { color: "#2496ED" } },
+    { Icon: NginxIcon, name: "NGINX", tooltip: { color: "#009639" } },
+
     { Icon: FirebaseIcon, name: "Firebase", tooltip: { color: "#ffc24a" } },
     { Icon: SupabaseIcon, name: "Supabase", tooltip: { color: "#3ECF8E" } },
-    { Icon: DockerIcon, name: "Docker", tooltip: { color: "#2496ED" } },
-    { Icon: LinuxIcon, name: "Linux", tooltip: { color: "#000000" } },
+
+    { Icon: CloudflareIcon, name: "Cloudflare", tooltip: { color: "#F4811F" } },
+    { Icon: VercelIcon, name: "Vercel", tooltip: { color: "#000000" } },
+
+    { Icon: LinuxIcon, name: "Linux Server", tooltip: { color: "#000000" } },
   ],
-  Tools: [
-    { Icon: GitHubIcon, name: "GitHub", tooltip: { color: "#181717" } },
+  "Tools & IDEs": [
+    { Icon: TerminalIcon, name: "Terminal", tooltip: { color: "#323232" } },
+    { Icon: PostmanIcon, name: "Postman", tooltip: { color: "#FF6C37" } },
     { Icon: GitIcon, name: "Git", tooltip: { color: "#F05032" } },
+    { Icon: GitHubIcon, name: "GitHub", tooltip: { color: "#181717" } },
+    {
+      Icon: GitLabIcon,
+      name: "GitLab",
+      tooltip: { color: "#e24329" },
+    },
     { Icon: VisualStudioIcon, name: "VS Code", tooltip: { color: "#007ACC" } },
     {
       Icon: AndroidStudioIcon,
       name: "Android Studio",
       tooltip: { color: "#3DDC84" },
     },
-    {
-      Icon: PhpStormIcon,
-      name: "Php Storm",
-      tooltip: { color: "#8a44d8" },
-    },
+    { Icon: PhpStormIcon, name: "Php Storm", tooltip: { color: "#8a44d8" } },
     {
       Icon: IntellijIdeaIcon,
       name: "IntelliJ IDEA",
-      tooltip: { color: "#000000" },
+      tooltip: { color: "#3068B1" },
+    },
+    {
+      Icon: VirtualBoxIcon,
+      name: "Virtual Box",
+      tooltip: { color: "#183A61" },
     },
   ],
 };
