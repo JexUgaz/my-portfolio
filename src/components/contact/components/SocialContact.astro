@@ -1,0 +1,27 @@
+---
+import ArrowIcon from "@/components/icons/ArrowIcon.astro";
+import type { SocialContactItem } from "@/types/SocialContactItem";
+
+interface Props {
+  item: SocialContactItem;
+}
+
+const { item } = Astro.props;
+const { Icon, description, title, url } = item;
+---
+
+<a
+  target="_blank"
+  href={url}
+  class="relative w-full rounded-3xl border-2 border-white py-8 px-6 flex items-center gap-4
+              hover:animate-lift"
+>
+  <ArrowIcon class="absolute right-10 top-[50%] -translate-y-[50%]" />
+  <span class="bg-white rounded-xl p-2"
+    ><Icon class="size-10 text-primary" /></span
+  >
+  <div>
+    <h4 class="text-2xl font-bold">{title}</h4>
+    <p class="text-lg">{description}</p>
+  </div>
+</a>
