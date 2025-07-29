@@ -1,4 +1,7 @@
 ---
+import ExperienceItem from "./components/ExperienceItem.astro";
+import { experienceData } from "./data/experienceData";
+
 interface Props {
   id: string;
 }
@@ -6,6 +9,18 @@ interface Props {
 const { id } = Astro.props;
 ---
 
-<section id={id}>
-  <h1>Experience</h1>
+<section
+  id={id}
+  class="flex flex-col justify-start items-center py-10 text-white font-bold"
+>
+  <h1 class="text-6xl">My Experience</h1>
+  <ol class="relative mt-16">
+    {
+      experienceData.map((item) => (
+        <li>
+          <ExperienceItem item={item} />
+        </li>
+      ))
+    }
+  </ol>
 </section>

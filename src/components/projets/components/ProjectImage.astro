@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+}
+
+const { alt, image } = Astro.props;
+---
+
+<div class="relative rounded-t-xl shadow-md aspect-[16/9] overflow-hidden">
+  <Image
+    src={image}
+    alt={alt}
+    class="absolute inset-0 h-full w-auto object-cover transition-transform duration-200 ease-out group-hover:scale-105"
+  />
+</div>

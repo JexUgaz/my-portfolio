@@ -28,7 +28,7 @@ const TechGrid: React.FC<TechGridProps> = ({ techs }) => {
               className="group relative w-[17%] max-w-[150px] flex-1 sm:flex-none"
             >
               <div
-                className="p-2 sm:p-3 rounded-xl cursor-pointer flex items-center justify-center
+                className="p-2 sm:p-3 rounded-xl flex items-center justify-center
                    bg-white/30 hover:bg-white/80
                    hover:scale-105 hover:shadow-lg transition-transform duration-300"
               >

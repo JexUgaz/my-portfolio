@@ -1,4 +1,9 @@
 ---
+import ProjectsTitle from "./components/ProjectsTitle.astro";
+import { projectsData } from "./data/projectsData";
+import ProjectCard from "./components/ProjectCard.astro";
+import StillBuildingCard from "./components/StillBuildingCard.astro";
+
 interface Props {
   id: string;
 }
@@ -6,6 +11,17 @@ interface Props {
 const { id } = Astro.props;
 ---
 
-<section id={id}>
-  <h1>Projects</h1>
+<section
+  id={id}
+  class="py-5 flex flex-col items-center justify-start gap-15 text-white"
+>
+  <ProjectsTitle />
+  <div
+    class="grid grid-cols-3 gap-5 px-8"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+  >
+    {projectsData.map((item) => <ProjectCard item={item} />)}
+    <StillBuildingCard />
+  </div>
 </section>

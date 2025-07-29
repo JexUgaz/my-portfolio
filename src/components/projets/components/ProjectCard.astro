@@ -1,0 +1,33 @@
+---
+import type { Project } from "@/types/Project";
+import ProjectImage from "./ProjectImage.astro";
+import CallToActionButtons from "./CallToActionButtons.astro";
+
+interface Props {
+  item: Project;
+}
+
+const { item } = Astro.props;
+const { description, image, stack, title, demoUrl, codeUrl } = item;
+---
+
+<div
+  class="grid grid-rows-[auto_1fr] rounded-3xl overflow-hidden bg-white/10 hover:bg-white/20 hover:animate-lift"
+>
+  <ProjectImage alt={title} image={image} />
+
+  <div class="p-6 flex flex-col justify-start">
+    <h2 class="text-xl font-semibold mb-2 text-white">{title}</h2>
+    <p class="text-neutral-300 text-sm mb-4 line-clamp-3">{description}</p>
+    <ul class="flex flex-wrap gap-2 text-sm">
+      {
+        stack.map((tech) => (
+          <li class="bg-accent/10 text-accent px-3 py-1 rounded-full font-medium">
+            {tech}
+          </li>
+        ))
+      }
+    </ul>
+    <CallToActionButtons codeUrl={codeUrl} demoUrl={demoUrl} />
+  </div>
+</div>

@@ -22,14 +22,14 @@ const navItems: NavItem[] = [
     icon: { Icon: HomeIcon },
   },
   {
-    link: "#about",
-    title: "About",
-    icon: { Icon: PersonIconOutline },
-  },
-  {
     link: "#skills",
     title: "Skills",
     icon: { Icon: SkillIcon },
+  },
+  {
+    link: "#experience",
+    title: "Experience",
+    icon: { Icon: StatisticsIcon },
   },
   {
     link: "#projects",
@@ -37,9 +37,9 @@ const navItems: NavItem[] = [
     icon: { Icon: CodeIcon },
   },
   {
-    link: "#experience",
-    title: "Experience",
-    icon: { Icon: StatisticsIcon },
+    link: "#about",
+    title: "About",
+    icon: { Icon: PersonIconOutline },
   },
   {
     link: "#contact",
@@ -52,9 +52,9 @@ const navItems: NavItem[] = [
 <Layout>
   <Navbar items={navItems} />
   <Home id="home" />
-  <About id="about" />
   <Skills id="skills" />
-  <Projects id="projects" />
   <Experience id="experience" />
+  <Projects id="projects" />
+  <About id="about" />
   <Contact id="contact" />
 </Layout>

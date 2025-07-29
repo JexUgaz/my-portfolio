@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme static {
-  --color-primary: oklch(27.8% 0.033 256.848);
+  --color-primary: oklch(23% 0.033 256.848);
   --color-white: #f9f9f9;
   --color-accent: oklch(80% 0.2 140);
 
@@ -83,12 +83,12 @@
     @apply bg-white text-primary py-2 px-4 rounded-lg font-bold;
   }
 
-  .floating-orbs-tooltip {
+  .tooltip {
     @apply absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap;
     position: absolute;
   }
 
-  .floating-orbs-tooltip::after {
+  .tooltip::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -98,5 +98,9 @@
     border-style: solid;
     border-color: black transparent transparent transparent;
     z-index: 1000;
+  }
+
+  .no-select {
+    @apply select-none cursor-default;
   }
 }

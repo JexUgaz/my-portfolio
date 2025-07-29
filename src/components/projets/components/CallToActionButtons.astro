@@ -1,0 +1,27 @@
+---
+import ProjectButton from "./ProjectButton.astro";
+import OpenLinkIcon from "@/components/icons/OpenLinkIcon.astro";
+import CodeIcon from "@/components/icons/CodeIcon.astro";
+
+interface Props {
+  demoUrl: string;
+  codeUrl: string;
+}
+
+const { demoUrl, codeUrl } = Astro.props;
+---
+
+<span class="h-[20px] w-full"></span>
+
+<div class="flex justify-between mt-auto">
+  <div class="w-[58%]">
+    <ProjectButton href={demoUrl} primary>
+      Demo <OpenLinkIcon class="size-4" />
+    </ProjectButton>
+  </div>
+  <div class="w-[38%]">
+    <ProjectButton href={codeUrl}>
+      Code <CodeIcon class="size-4" />
+    </ProjectButton>
+  </div>
+</div>

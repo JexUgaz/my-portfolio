@@ -17,6 +17,6 @@ export const whoIAmItems: WhoIAmItem[] = [
       Icon: LightBulbIcon,
       size: "size-6",
     },
-    description: `I care about building <span class="text-accent">useful and reliable</span> solutions — always listening, iterating, and aligning with real-world goals.`,
+    description: `I build software with a focus on <span class="text-accent">clean architecture</span>, <span class="text-accent">performance</span>, and <span class="text-accent">rapid delivery</span> — turning ideas into solid products across both server-side and client-side.`,
   },
 ];
