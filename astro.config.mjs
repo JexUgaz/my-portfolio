@@ -8,6 +8,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://portfolio.jexugaz.work",
   vite: {
+    assetsInclude: ["**/*.lottie"],
     plugins: [tailwindcss()],
     resolve: {
       alias: {
