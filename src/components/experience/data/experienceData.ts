@@ -17,6 +17,8 @@ import WebSocketIcon from "@/components/icons/colored/WebSocketIcon.astro";
 import FirestoreIcon from "@/components/icons/colored/FirestoreIcon.astro";
 import DockerIcon from "@/components/icons/colored/DockerIcon.astro";
 import JavaScriptIcon from "@/components/icons/colored/JavaScriptIcon.astro";
+import TailwindCSSIcon from "@/components/icons/colored/TailwindCSSIcon.astro";
+import TypeScriptIcon from "@/components/icons/colored/TypeScriptIcon.astro";
 
 export const experienceData: Experience[] = [
   {
@@ -33,12 +35,16 @@ export const experienceData: Experience[] = [
     logo: lexiaLogo,
     date: "Jan 2025 - Apr 2025",
     stack: [
+      { title: "TypeScript", Icon: TypeScriptIcon },
+      { title: "Node.js", Icon: NodeIcon },
+      { title: "Python", Icon: PythonIcon },
       { title: "Next.js", Icon: NextIcon },
       { title: "Cloudflare Workers", Icon: CloudflareIcon },
       { title: "Supabase", Icon: SupabaseIcon },
       { title: "AWS", Icon: AwsIcon },
       { title: "WebSockets", Icon: WebSocketIcon },
       { title: "PostgreSQL", Icon: PostgreSQLIcon },
+      { title: "Tailwind CSS", Icon: TailwindCSSIcon },
     ],
   },
   {
@@ -57,6 +63,7 @@ export const experienceData: Experience[] = [
     logo: zafiroLogo,
     date: "Oct 2023 - Dec 2024",
     stack: [
+      { title: "JavaScript", Icon: JavaScriptIcon },
       { title: "Firebase", Icon: FirebaseIcon },
       { title: "Firestore", Icon: FirestoreIcon },
       { title: "AWS", Icon: AwsIcon },
