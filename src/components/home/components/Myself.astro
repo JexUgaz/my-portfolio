@@ -3,15 +3,17 @@ import myselfPhoto from "@/assets/myself.webp";
 import Image from "astro/components/Image.astro";
 ---
 
-<div class="relative h-auto hover:animate-lift w-80 xl:w-[50%] 2xl:w-100">
+<div
+  class="relative h-auto hover:animate-lift w-60 md:w-80 xl:w-[50%] 2xl:w-100"
+>
   <span
     class="absolute bottom-0 aspect-square rounded-full bg-white drop-shadow-[var(--shadow-white)] w-full"
   ></span>
-  <div class="rounded-b-full overflow-hidden">
+  <div class="rounded-b-full overflow-hidden drop-shadow-[var(--shadow-white)]">
     <Image
       src={myselfPhoto}
       alt="Photo of myself"
-      class="w-full object-cover drop-shadow-[var(--shadow-white)]"
+      class="w-full object-cover"
     />
   </div>
 </div>

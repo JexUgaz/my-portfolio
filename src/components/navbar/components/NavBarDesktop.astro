@@ -1,0 +1,10 @@
+---
+import { navItemsData } from "@/data/navItemsData";
+import NavItemDesktop from "./NavItemDesktop.astro";
+---
+
+<ul
+  class="justify-center items-center h-full gap-8 xl:gap-10 hidden lg:flex z-950"
+>
+  {navItemsData.map((item) => <NavItemDesktop item={item} />)}
+</ul>

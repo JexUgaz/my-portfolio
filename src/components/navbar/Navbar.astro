@@ -1,8 +1,7 @@
 ---
 import CodeFileIcon from "@/components/icons/CodeFileIcon.astro";
-import { navItemsData } from "@/data/navItemsData";
-import NavItemDesktop from "./components/NavItemDesktop.astro";
-import MenuIcon from "../icons/MenuIcon.astro";
+import NavBarDesktop from "./components/NavBarDesktop.astro";
+import NavBarMobile from "./components/NavBarMobile.astro";
 ---
 
 <nav
@@ -11,10 +10,11 @@ import MenuIcon from "../icons/MenuIcon.astro";
   shadow-2xl shadow-black/25 bg-transparent"
 >
   <div
-    class="relative h-full flex items-center justify-between max-w-7xl w-full mx-auto text-white"
+    class="h-full flex items-center justify-between max-w-7xl w-full mx-auto text-white"
   >
     <input type="checkbox" id="menu-toggle" class="hidden peer" />
-    <span class="absolute backdrop-blur w-full h-[var(--navbar-height)] z-900"
+    <span
+      class="absolute top-0 left-0 backdrop-blur w-[100dvw] h-[var(--navbar-height)] z-900"
     ></span>
     <a
       class="font-bold flex items-center gap-1 xl:gap-2 text-xl xl:text-3xl z-950"
@@ -22,28 +22,7 @@ import MenuIcon from "../icons/MenuIcon.astro";
     >
       <CodeFileIcon class="size-6 xl:size-8" />My Portfolio
     </a>
-    <ul
-      class="justify-center items-center h-full gap-8 xl:gap-10 hidden lg:flex z-950"
-    >
-      {navItemsData.map((item) => <NavItemDesktop item={item} />)}
-    </ul>
-
-    <label for="menu-toggle" class="cursor-pointer lg:hidden p-2 z-950">
-      <MenuIcon class="size-7" />
-    </label>
-
-    <label
-      for="menu-toggle"
-      class="fixed inset-0 bg-black/50 peer-checked:block hidden lg:hidden z-4000 h-[100dvh]"
-    ></label>
-
-    <div
-      class="z-5000 fixed top-0 right-0 h-[100dvh] w-[300px] bg-white
-         translate-x-full peer-checked:translate-x-0
-         transition-transform duration-300 ease-in-out
-         will-change-transform
-         lg:hidden"
-    >
-    </div>
+    <NavBarDesktop />
+    <NavBarMobile />
   </div>
 </nav>

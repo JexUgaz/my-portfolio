@@ -28,7 +28,7 @@ const TabSwitcher: React.FC<Props> = ({
           <button
             key={item.label}
             onClick={() => setSelected(i)}
-            className={`z-100 rounded-2xl ${textSize} font-semibold border px-6 py-1 xl:py-2 transition-all duration-200
+            className={`z-100 w-[45%] sm:w-auto rounded-2xl ${textSize} font-semibold border px-3 sm:px-6 py-1 xl:py-2 transition-all duration-200
               ${selected === i ? selectedClasses : noSelectedClasses}`}
           >
             {item.label}

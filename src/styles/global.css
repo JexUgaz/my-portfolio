@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme static {
+  --breakpoint-xs: 30rem;
+
   --color-primary: oklch(23% 0.033 256.848);
   --color-primary-900: oklch(15% 0.033 256.848);
   --color-white: #f9f9f9;
@@ -71,7 +73,7 @@
   body > section {
     min-height: calc(100dvh - var(--navbar-height));
     scroll-margin-top: var(--navbar-height);
-    @apply max-w-7xl w-[100dvw];
+    @apply max-w-7xl w-[100dvw] overflow-x-hidden;
   }
 
   button {
@@ -82,6 +84,10 @@
 @layer utilities {
   .nav-item-activate {
     @apply bg-white text-primary py-2 px-4 rounded-lg font-bold;
+  }
+
+  .nav-item-mobile-activate {
+    @apply bg-white text-primary font-bold;
   }
 
   .tooltip {
@@ -106,10 +112,10 @@
   }
 
   .section-title {
-    @apply text-[clamp(2.5rem,3dvw,3rem)] xl:text-5xl 2xl:text-6xl;
+    @apply text-3xl sm:text-[clamp(2.5rem,3dvw,3rem)] xl:text-5xl 2xl:text-6xl;
   }
 
   .section-description {
-    @apply max-w-2xl xl:max-w-4xl text-lg xl:text-2xl 2xl:text-3xl;
+    @apply max-w-2xl xl:max-w-4xl text-base sm:text-lg xl:text-2xl 2xl:text-3xl;
   }
 }

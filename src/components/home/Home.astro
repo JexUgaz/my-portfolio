@@ -20,7 +20,7 @@ const { id } = Astro.props;
         pt-10 gap-10 xl:p-0 xl:flex-row xl:gap-5 2xl:gap-10"
 >
   <div
-    class="w-[70%] lg:w-[55%] xl:w-[52%] 2xl:w-[48%] relative flex justify-center"
+    class="w-[90%] md:w-[70%] lg:w-[55%] xl:w-[52%] 2xl:w-[48%] relative flex justify-center"
     data-aos="fade-up"
     data-aos-duration="1000"
   >
@@ -28,7 +28,7 @@ const { id } = Astro.props;
     {floatingOrbsData.map((orb) => <FloatingOrbs {...orb} />)}
   </div>
   <div
-    class="xl:w-[48%] h-full flex flex-col items-center xl:items-start xl:justify-center text-white xl:pe-5"
+    class="xl:w-[48%] px-5 sm:px-10 h-full flex flex-col items-center xl:items-start xl:justify-center text-white xl:pe-5"
   >
     <HeroTitle />
     <HeroDescription />
