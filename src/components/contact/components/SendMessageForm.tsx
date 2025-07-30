@@ -13,7 +13,7 @@ interface MailStatus {
 
 const SendMessageForm = () => {
   const [mailState, setMailState] = useState<MailStatus>({
-    state: "success",
+    state: "empty",
   });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
