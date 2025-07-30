@@ -13,7 +13,7 @@ interface MailStatus {
 
 const SendMessageForm = () => {
   const [mailState, setMailState] = useState<MailStatus>({
-    state: "empty",
+    state: "success",
   });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -115,7 +115,7 @@ const SendMessageForm = () => {
             autoplay
           />
           <p
-            className="absolute bottom-8 left-[50%] -translate-x-[50%] text-xl font-bold text-center"
+            className="absolute w-full bottom-4 sm:bottom-8 left-[50%] -translate-x-[50%] text-base xs:text-lg sm:text-xl font-bold text-center"
             data-aos="fade-up"
             data-aos-duration="500"
           >
