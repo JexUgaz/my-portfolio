@@ -1,7 +1,7 @@
 ---
+import { contactMeData } from "@/data/contactMeData";
 import SendMessageForm from "./components/SendMessageForm";
 import SocialContact from "./components/SocialContact.astro";
-import { socialContacts } from "./data/socialContacts";
 
 interface Props {
   id: string;
@@ -33,9 +33,13 @@ const { id } = Astro.props;
       data-aos="fade-up"
       data-aos-duration="900"
     >
-      {socialContacts.map((item) => <SocialContact item={item} />)}
+      {contactMeData.map((item) => <SocialContact item={item} />)}
     </div>
-    <div class="w-[50%] flex items-center">
+    <div
+      class="w-[50%] flex items-center"
+      data-aos="fade-up"
+      data-aos-duration="900"
+    >
       <SendMessageForm client:visible />
     </div>
   </div>

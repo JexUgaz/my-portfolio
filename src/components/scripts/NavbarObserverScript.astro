@@ -1,0 +1,26 @@
+<script type="module" lang="ts" is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a");
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute("id");
+        const navLink = document.querySelector(`nav a[href="#${id}"]`);
+
+        if (!entry.isIntersecting) return;
+
+        navLinks.forEach((link) => link.classList.remove("nav-item-activate"));
+        navLink?.classList.add("nav-item-activate");
+      });
+    }, observerOptions);
+
+    sections.forEach((section) => observer.observe(section));
+  });
+</script>

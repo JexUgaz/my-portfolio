@@ -51,11 +51,7 @@ const SendMessageForm = () => {
   const hasAnError = mailState.state === "error";
 
   return (
-    <div
-      className="w-full p-6 bg-white/10 rounded-2xl shadow-lg"
-      data-aos="fade-up"
-      data-aos-duration="900"
-    >
+    <div className="w-full p-6 bg-white/10 rounded-2xl shadow-lg">
       {!showSuccessVideo && (
         <>
           <div className="flex justify-center items-center gap-2">

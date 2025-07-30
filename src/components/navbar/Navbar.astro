@@ -1,12 +1,6 @@
 ---
-import type { NavItem } from "@/types/NavItem";
 import CodeFileIcon from "@/components/icons/CodeFileIcon.astro";
-
-interface Props {
-  items: NavItem[];
-}
-
-const { items } = Astro.props;
+import { navItemsData } from "@/data/navItemsData";
 ---
 
 <nav
@@ -22,7 +16,7 @@ const { items } = Astro.props;
     </a>
     <ul class="flex gap-10 justify-center items-center h-full">
       {
-        items.map((item) => {
+        navItemsData.map((item) => {
           const { Icon, className = "size-5" } = item.icon;
           return (
             <li>

@@ -23,11 +23,7 @@ const TabSwitcher: React.FC<Props> = ({
     <div
       className={`flex flex-col sm:flex-row items-center gap-6 h-full w-full ${className}`}
     >
-      <div
-        className="flex flex-row sm:flex-col gap-3 sm:max-w-[200px]"
-        data-aos="fade-up"
-        data-aos-duration="800"
-      >
+      <div className="flex flex-row sm:flex-col gap-3 sm:max-w-[200px]">
         {items.map((item, i) => (
           <button
             key={item.label}

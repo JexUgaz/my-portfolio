@@ -1,10 +1,11 @@
-import EmailIcon from "@/components/icons/EmailIcon.astro";
+import type { ContactMeItem } from "@/types/ContactMeItem";
+
 import GithubIcon from "@/components/icons/GithubIcon.astro";
 import LinkedinIcon from "@/components/icons/LinkedinIcon.astro";
 import WhatsappIcon from "@/components/icons/WhatsappIcon.astro";
-import type { SocialContactItem } from "@/types/SocialContactItem";
+import EmailIcon from "@/components/icons/EmailIcon.astro";
 
-export const socialContacts: SocialContactItem[] = [
+export const contactMeData: ContactMeItem[] = [
   {
     Icon: GithubIcon,
     description: "Explore my code & projects",

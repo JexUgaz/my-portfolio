@@ -1,0 +1,14 @@
+---
+import ArrowIcon from "@/components/icons/ArrowIcon.astro";
+import { navItemsData } from "@/data/navItemsData";
+---
+
+<a
+  id="scrollTopButton"
+  href={navItemsData[0].link}
+  class="fixed bottom-5 right-5 z-2000 text-primary bg-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none
+        transition-all duration-300 animate-float hover:scale-115 hover:bg-accent"
+  aria-label="Scroll to top"
+>
+  <ArrowIcon class="size-10 rotate-270" />
+</a>

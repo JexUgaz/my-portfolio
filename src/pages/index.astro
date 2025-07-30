@@ -2,59 +2,23 @@
 import About from "@/components/about/About.astro";
 import Contact from "@/components/contact/Contact.astro";
 import Experience from "@/components/experience/Experience.astro";
+import Footer from "@/components/footer/Footer.astro";
 import Home from "@/components/home/Home.astro";
-import CodeIcon from "@/components/icons/CodeIcon.astro";
-import ContactIcon from "@/components/icons/ContactIcon.astro";
-import HomeIcon from "@/components/icons/HomeIcon.astro";
-import PersonIconOutline from "@/components/icons/PersonIconOutline.astro";
-import SkillIcon from "@/components/icons/Skill_Icon.astro";
-import StatisticsIcon from "@/components/icons/StatisticsIcon.astro";
 import Navbar from "@/components/navbar/Navbar.astro";
 import Projects from "@/components/projects/Projects.astro";
+import ScrollTopButton from "@/components/scroll-top-button/ScrollTopButton.astro";
 import Skills from "@/components/skills/Skills.astro";
 import Layout from "@/layouts/Layout.astro";
-import type { NavItem } from "@/types/NavItem";
-
-const navItems: NavItem[] = [
-  {
-    link: "#home",
-    title: "Home",
-    icon: { Icon: HomeIcon },
-  },
-  {
-    link: "#skills",
-    title: "Skills",
-    icon: { Icon: SkillIcon },
-  },
-  {
-    link: "#experience",
-    title: "Experience",
-    icon: { Icon: StatisticsIcon },
-  },
-  {
-    link: "#projects",
-    title: "Projects",
-    icon: { Icon: CodeIcon },
-  },
-  {
-    link: "#about",
-    title: "About",
-    icon: { Icon: PersonIconOutline },
-  },
-  {
-    link: "#contact",
-    title: "Contact",
-    icon: { Icon: ContactIcon },
-  },
-];
 ---
 
 <Layout>
-  <Navbar items={navItems} />
+  <Navbar />
   <Home id="home" />
   <Skills id="skills" />
   <Experience id="experience" />
   <Projects id="projects" />
   <About id="about" />
   <Contact id="contact" />
+  <Footer />
+  <ScrollTopButton />
 </Layout>

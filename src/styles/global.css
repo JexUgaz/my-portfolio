@@ -2,6 +2,7 @@
 
 @theme static {
   --color-primary: oklch(23% 0.033 256.848);
+  --color-primary-900: oklch(15% 0.033 256.848);
   --color-white: #f9f9f9;
   --color-accent: oklch(80% 0.2 140);
 

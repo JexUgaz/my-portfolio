@@ -1,5 +1,5 @@
 ---
-import { contactMeData } from "@/components/home/data/contactMeData";
+import { contactMeData } from "@/data/contactMeData";
 import SocialButton from "./SocialButton.astro";
 ---
 
@@ -10,6 +10,10 @@ import SocialButton from "./SocialButton.astro";
 >
   <p class="font-bold text-base 2xl:text-lg">Contact me:</p>
   <div class="flex justify-start gap-2">
-    {contactMeData.map((d) => <SocialButton {...d} />)}
+    {
+      contactMeData.map((d) => (
+        <SocialButton tooltip={d.title} Icon={d.Icon} url={d.url} />
+      ))
+    }
   </div>
 </div>
