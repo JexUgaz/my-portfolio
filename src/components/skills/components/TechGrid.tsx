@@ -16,7 +16,7 @@ interface TechGridProps {
 const TechGrid: React.FC<TechGridProps> = ({ techs }) => {
   return (
     <div className="w-full bg-white/10 rounded-2xl px-2 py-5 mx-auto flex flex-col items-center gap-5 z-100 max-w-2xl xl:max-w-3xl">
-      <div className="flex flex-wrap justify-evenly sm:justify-center gap-2 lg:gap-4 max-h-100 sm:max-h-full overflow-y-scroll sm:overflow-auto">
+      <div className="flex flex-wrap justify-evenly sm:justify-center gap-2 lg:gap-4 max-h-100 sm:max-h-full overflow-y-scroll sm:overflow-hidden">
         {techs.map(
           (
             { name, Icon, iconSize = "size-15 xl:size-20", tooltip: { color } },
