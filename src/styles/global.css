@@ -73,7 +73,7 @@
   body > section {
     min-height: calc(100dvh - var(--navbar-height));
     scroll-margin-top: var(--navbar-height);
-    @apply max-w-7xl w-[100dvw] overflow-x-hidden;
+    @apply max-w-7xl w-[100dvw] overflow-x-hidden overflow-y-hidden;
   }
 
   button {
