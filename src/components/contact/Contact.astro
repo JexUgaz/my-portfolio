@@ -2,6 +2,7 @@
 import { contactMeData } from "@/data/contactMeData";
 import SendMessageForm from "./components/SendMessageForm";
 import SocialContact from "./components/SocialContact.astro";
+import ContactTitle from "./components/ContactTitle.astro";
 
 interface Props {
   id: string;
@@ -11,32 +12,21 @@ const { id } = Astro.props;
 ---
 
 <section id={id} class="py-5 text-white">
-  <div class="flex flex-col items-center">
-    <h1
-      class="max-w-4xl text-6xl font-bold"
-      data-aos="fade-up"
-      data-aos-duration="800"
-    >
-      Contact Me!
-    </h1>
-    <p
-      class="text-3xl text-center max-w-4xl mt-2"
-      data-aos="fade-up"
-      data-aos-duration="900"
-    >
-      <span class="text-accent">Open to Work</span> — Let's Build Together
-    </p>
-  </div>
-  <div class="w-full mt-20 flex gap-5">
+  <ContactTitle />
+  <div
+    class="w-full mt-5 xl:mt-20 flex flex-col xl:flex-row justify-evenly gap-5"
+  >
     <div
-      class="w-[50%] flex flex-col justify-start gap-5"
+      class="gap-5 flex flex-col
+            items-center xl:justify-start
+            xl:w-[45%] 2xl:w-[50%]"
       data-aos="fade-up"
       data-aos-duration="900"
     >
       {contactMeData.map((item) => <SocialContact item={item} />)}
     </div>
     <div
-      class="w-[50%] flex items-center"
+      class="xl:w-[45%] 2xl:w-[50%] flex items-center justify-center mt-5 xl:mt-0"
       data-aos="fade-up"
       data-aos-duration="900"
     >

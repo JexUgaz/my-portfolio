@@ -15,16 +15,18 @@ const { id } = Astro.props;
 <section id={id} class="flex flex-col items-center gap-10 text-white py-10">
   <AboutTitle />
 
-  <div class="flex w-full">
+  <div
+    class="flex flex-col xl:flex-row w-full max-w-3xl gap-10 xl:gap-0 xl:max-w-full"
+  >
     <div
-      class="w-[50%] px-15 flex flex-col items-start justify-center gap-10"
+      class="xl:w-[50%] px-15 flex flex-col items-start justify-center gap-4 xl:gap-10"
       data-aos="fade-up"
       data-aos-duration="400"
     >
       <WhoIAm />
       <PersonalInfoCard />
     </div>
-    <div class="w-[50%]"><AboutTimeline /></div>
+    <div class="flex justify-center xl:w-[50%]"><AboutTimeline /></div>
   </div>
   <AboutClosing />
 </section>

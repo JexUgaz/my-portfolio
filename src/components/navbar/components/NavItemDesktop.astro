@@ -1,0 +1,24 @@
+---
+import type { NavItem } from "@/types/NavItem";
+
+interface Props {
+  item: NavItem;
+}
+
+const { item } = Astro.props;
+const {
+  icon: { Icon, className = "size-5" },
+  link,
+  title,
+} = item;
+---
+
+<li>
+  <a
+    href={link}
+    class="flex items-center text-base transition-all duration-300 ease-in-out gap-1 xl:gap-2"
+  >
+    <Icon class={className} />
+    {title}
+  </a>
+</li>

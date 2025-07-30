@@ -71,7 +71,7 @@
   body > section {
     min-height: calc(100dvh - var(--navbar-height));
     scroll-margin-top: var(--navbar-height);
-    @apply w-7xl;
+    @apply max-w-7xl w-[100dvw];
   }
 
   button {
@@ -103,5 +103,13 @@
 
   .no-select {
     @apply select-none cursor-default;
+  }
+
+  .section-title {
+    @apply text-[clamp(2.5rem,3dvw,3rem)] xl:text-5xl 2xl:text-6xl;
+  }
+
+  .section-description {
+    @apply max-w-2xl xl:max-w-4xl text-lg xl:text-2xl 2xl:text-3xl;
   }
 }

@@ -3,6 +3,7 @@ import { Euler, Mesh } from "three";
 import { useMemo, useRef, useState } from "react";
 import type { CubeData } from "@/types/CubeData";
 import { cubesData } from "@/components/skills/data/cubesData";
+import { useSpring, a } from "@react-spring/three";
 
 const Cube: React.FC<CubeData> = ({ position, size, speed, horizontalDir }) => {
   const ref = useRef<Mesh>(null!);
@@ -17,6 +18,14 @@ const Cube: React.FC<CubeData> = ({ position, size, speed, horizontalDir }) => {
     []
   );
   const [hovered, setHovered] = useState(false);
+  const [clicked, setClicked] = useState(false);
+
+  const applyEffect = hovered || clicked;
+
+  const { scale } = useSpring({
+    scale: applyEffect ? 1.2 : 1,
+    config: { tension: 300, friction: 15 },
+  });
 
   const currentPosition = useRef({ x: position[0], y: position[1] });
   useFrame((_, delta) => {
@@ -32,21 +41,22 @@ const Cube: React.FC<CubeData> = ({ position, size, speed, horizontalDir }) => {
   });
 
   return (
-    <mesh
+    <a.mesh
       ref={ref}
       position={position}
       rotation={initialRotation}
-      scale={hovered ? 1.2 : 1}
+      scale={scale}
       onPointerOver={(_) => setHovered(true)}
       onPointerOut={(_) => setHovered(false)}
+      onClick={() => setClicked((c) => !c)}
     >
       <boxGeometry args={[size, size, size]} />
       <meshStandardMaterial
         color="#f9f9f9"
         transparent
-        opacity={hovered ? 0.5 : 0.1}
+        opacity={applyEffect ? 0.5 : 0.1}
       />
-    </mesh>
+    </a.mesh>
   );
 };
 

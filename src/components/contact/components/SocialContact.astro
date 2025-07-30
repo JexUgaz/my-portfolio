@@ -13,15 +13,16 @@ const { Icon, description, title, url } = item;
 <a
   target="_blank"
   href={url}
-  class="relative w-full rounded-3xl border-2 border-white py-8 px-6 flex items-center gap-4
-              hover:animate-lift"
+  class="relative w-full rounded-3xl border-2 border-white flex items-center gap-4
+        py-4 xl:py-8 px-6
+        max-w-3xl xl:max-w-full hover:animate-lift"
 >
   <ArrowIcon class="absolute right-10 top-[50%] -translate-y-[50%]" />
   <span class="bg-white rounded-xl p-2"
-    ><Icon class="size-10 text-primary" /></span
+    ><Icon class="size-8 xl:size-10 text-primary" /></span
   >
   <div>
-    <h4 class="text-2xl font-bold">{title}</h4>
-    <p class="text-lg">{description}</p>
+    <h4 class="text-xl xl:text-2xl font-bold">{title}</h4>
+    <p class="text-base xl:text-lg">{description}</p>
   </div>
 </a>

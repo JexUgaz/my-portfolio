@@ -13,10 +13,12 @@ const { id } = Astro.props;
   id={id}
   class="flex flex-col justify-start items-center py-10 text-white font-bold"
 >
-  <h1 class="text-6xl" data-aos="fade-up" data-aos-duration="800">
+  <h1 class="section-title" data-aos="fade-up" data-aos-duration="800">
     My Experience
   </h1>
-  <ol class="relative mt-16">
+  <ol
+    class="ps-15 pe-5 xl:px-10 w-full relative mt-16 flex flex-col items-center lg:block"
+  >
     {
       experienceData.map((item) => (
         <li>

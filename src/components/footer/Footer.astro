@@ -3,7 +3,7 @@ import CodeIcon from "@/components/icons/CodeIcon.astro";
 import { contactMeData } from "@/data/contactMeData";
 ---
 
-<footer class="w-full bg-primary-900 text-white py-10 px-6">
+<footer class="w-[100dvw] bg-primary-900 text-white py-10 px-6 mt-20">
   <div
     class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
   >
@@ -11,7 +11,7 @@ import { contactMeData } from "@/data/contactMeData";
       <h2 class="text-xl font-semibold flex gap-2 items-center">
         <CodeIcon /> Loammi Ugaz
       </h2>
-      <p class="text-sm text-white/70 max-w-md text-justify">
+      <p class="text-sm text-white/70 text-justify max-w-md">
         Telecommunications Engineer specialized in Software Development and
         Cloud Architecture
       </p>
@@ -28,7 +28,7 @@ import { contactMeData } from "@/data/contactMeData";
               class="flex flex-col items-center gap-1 justify-center hover:text-accent transition"
             >
               <Icon class="size-5" />
-              <p class="text-sm">{title}</p>
+              <p class="text-xs">{title}</p>
             </a>
           </li>
         ))
@@ -40,4 +40,3 @@ import { contactMeData } from "@/data/contactMeData";
     &copy; {new Date().getFullYear()} Loammi Ugaz. All rights reserved.
   </p>
 </footer>
-

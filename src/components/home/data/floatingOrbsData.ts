@@ -17,14 +17,14 @@ import DockerIcon from "@/components/icons/DockerIcon.astro";
 export const floatingOrbsData: FloatingOrbConfig[] = [
   {
     Icon: LaravelIcon,
-    position: "top-0 left-0",
+    position: "top-0 left-0 xl:left-8 2xl:left-0",
     size: "size-6 2xl:size-7",
     tooltip: "Laravel",
     url: "https://laravel.com/",
   },
   {
     Icon: FlutterIcon,
-    position: "bottom-0 left-0",
+    position: "bottom-0 left-0 xl:left-8 2xl:left-0",
     size: "size-5 2xl:size-6",
     tooltip: "Flutter",
     url: "https://flutter.dev/",
@@ -45,14 +45,14 @@ export const floatingOrbsData: FloatingOrbConfig[] = [
   },
   {
     Icon: KotlinIcon,
-    position: "top-30 left-10",
+    position: "top-30 left-10 xl:left-18 2xl:left-10",
     size: "size-5 2xl:size-6",
     tooltip: "Kotlin",
     url: "https://kotlinlang.org/",
   },
   {
     Icon: NextIcon,
-    position: "left-2 bottom-45 2xl:bottom-50",
+    position: "left-2 xl:left-10 2xl:left-2 bottom-45 2xl:bottom-50",
     size: "size-6 2xl:size-7",
     tooltip: "Next",
     url: "https://nextjs.org/",
@@ -66,7 +66,7 @@ export const floatingOrbsData: FloatingOrbConfig[] = [
   },
   {
     Icon: DotNetIcon,
-    position: "top-50 right-20 2xl:right-15",
+    position: "top-50 right-15 xl:right-20 2xl:right-15",
     size: "size-6 2xl:size-7",
     tooltip: ".NET",
     url: "https://learn.microsoft.com/es-es/dotnet/",
@@ -87,14 +87,14 @@ export const floatingOrbsData: FloatingOrbConfig[] = [
   },
   {
     Icon: FirebaseIcon,
-    position: "bottom-20 left-10",
+    position: "bottom-20 left-10 xl:left-18 2xl:left-10",
     size: "size-7 2xl:size-8",
     tooltip: "Firebase",
     url: "https://firebase.google.com/docs",
   },
   {
     Icon: CloudflareIcon,
-    position: "left-15 top-50 2xl:top-60",
+    position: "left-15 xl:left-23 2xl:left-15 top-50 2xl:top-60",
     size: "size-5 2xl:size-6",
     tooltip: "Cloudflare",
     url: "https://developers.cloudflare.com/",

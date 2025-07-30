@@ -12,12 +12,12 @@ const { title, company, description, date, logo, stack } = item;
 ---
 
 <div
-  class="relative mx-12 pb-24 grid md:grid-cols-5
+  class="relative grid lg:grid-cols-5 gap-8 xl:gap-2 pb-15 xl:pb-24
         before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-gray-600 before:content-['']"
   data-aos="fade-up"
   data-aos-duration="800"
 >
-  <div class="md:col-span-2">
+  <div class="lg:col-span-2">
     <div class="sticky top-0">
       <span class="text-accent -left-[42px] absolute rounded-full text-5xl"
         >&bull;</span
@@ -32,22 +32,24 @@ const { title, company, description, date, logo, stack } = item;
           />
         </div>
         <div class="flex flex-col justify-center">
-          <h4 class="text-xl text-white">
+          <h4 class="text-white text-lg xl:text-xl">
             {company}
           </h4>
-          <time class="text-sm text-gray-300 flex gap-1 items-center"
+          <time class="text-gray-300 flex gap-1 items-center text-xs xl:text-sm"
             ><CalendarIcon class="size-5 text-accent" /> {date}</time
           >
         </div>
       </div>
     </div>
   </div>
-  <div class="h-full flex flex-col justify-center md:col-span-3 gap-4">
+  <div
+    class="h-full flex flex-col justify-center max-w-3xl lg:max-w-full lg:col-span-3 gap-4 text-sm xl:text-base"
+  >
     <p class="text-white text-justify text-pretty" set:html={description} />
     <ul class="flex flex-wrap gap-2 mt-2">
       {
         stack.map(({ Icon, title }) => (
-          <li class="flex items-center gap-2 px-3 py-1 rounded-full text-sm text-white font-medium bg-white/10 hover:bg-white/20 border-white/10 hover:animate-lift-soft no-select">
+          <li class="flex items-center gap-2 px-3 py-1 rounded-full text-xs xl:text-sm text-white font-medium bg-white/10 hover:bg-white/20 border-white/10 hover:animate-lift-soft no-select">
             <Icon class="size-5" /> {title}
           </li>
         ))

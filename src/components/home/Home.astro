@@ -14,16 +14,22 @@ interface Props {
 const { id } = Astro.props;
 ---
 
-<section id={id} class="relative flex items-center justify-between gap-10">
+<section
+  id={id}
+  class="flex flex-col items-center
+        pt-10 gap-10 xl:p-0 xl:flex-row xl:gap-5 2xl:gap-10"
+>
   <div
-    class="w-[50%] relative flex justify-center"
+    class="w-[70%] lg:w-[55%] xl:w-[52%] 2xl:w-[48%] relative flex justify-center"
     data-aos="fade-up"
     data-aos-duration="1000"
   >
     <Myself />
     {floatingOrbsData.map((orb) => <FloatingOrbs {...orb} />)}
   </div>
-  <div class="w-[50%] h-full flex flex-col justify-center text-white">
+  <div
+    class="xl:w-[48%] h-full flex flex-col items-center xl:items-start xl:justify-center text-white xl:pe-5"
+  >
     <HeroTitle />
     <HeroDescription />
     <ContactMe />

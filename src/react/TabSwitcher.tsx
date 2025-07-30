@@ -21,14 +21,14 @@ const TabSwitcher: React.FC<Props> = ({
 
   return (
     <div
-      className={`flex flex-col sm:flex-row items-center gap-6 h-full w-full ${className}`}
+      className={`flex flex-col xl:flex-row items-center gap-6 h-full w-full ${className}`}
     >
-      <div className="flex flex-row sm:flex-col gap-3 sm:max-w-[200px]">
+      <div className="gap-3 flex flex-row flex-wrap justify-center xl:flex-col max-w-4xl xl:max-w-[200px]">
         {items.map((item, i) => (
           <button
             key={item.label}
             onClick={() => setSelected(i)}
-            className={`z-100 px-6 py-2 rounded-2xl ${textSize} font-semibold border transition-all duration-200
+            className={`z-100 rounded-2xl ${textSize} font-semibold border px-6 py-1 xl:py-2 transition-all duration-200
               ${selected === i ? selectedClasses : noSelectedClasses}`}
           >
             {item.label}

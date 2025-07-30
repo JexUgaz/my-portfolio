@@ -15,16 +15,19 @@ interface TechGridProps {
 
 const TechGrid: React.FC<TechGridProps> = ({ techs }) => {
   return (
-    <div className="w-full bg-white/10 rounded-2xl max-w-3xl py-5 mx-auto flex flex-col items-center gap-5 z-100">
+    <div className="w-full bg-white/10 rounded-2xl py-5 mx-auto flex flex-col items-center gap-5 z-100 max-w-2xl xl:max-w-3xl">
       <div className="flex flex-wrap justify-center gap-4">
         {techs.map(
-          ({ name, Icon, iconSize = "size-20", tooltip: { color } }, index) => (
+          (
+            { name, Icon, iconSize = "size-15 xl:size-20", tooltip: { color } },
+            index
+          ) => (
             <div
               key={name}
-              className="group relative w-[17%] max-w-[150px] flex-1 sm:flex-none"
+              className="group relative w-[17%] max-w-[120px] xl:max-w-[150px]"
             >
               <div
-                className="p-2 sm:p-3 rounded-xl flex items-center justify-center
+                className="p-2 sm:p-3 rounded-xl flex flex-col items-center justify-center
                    bg-white/30 hover:bg-white/80
                    hover:scale-105 hover:shadow-lg transition-transform duration-300"
               >
@@ -33,6 +36,9 @@ const TechGrid: React.FC<TechGridProps> = ({ techs }) => {
                     className={`${iconSize} drop-shadow-[var(--shadow-white-sm)] group-hover:drop-shadow-[var(--shadow-primary)] group-hover:animate-lift-soft`}
                   />
                 </span>
+                <p className="max-w-full mt-1 text-white text-sm truncate group-hover:text-primary group-hover:font-bold">
+                  {name}
+                </p>
               </div>
 
               <Tooltip
