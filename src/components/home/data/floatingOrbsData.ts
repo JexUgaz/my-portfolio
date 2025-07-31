@@ -31,14 +31,14 @@ export const floatingOrbsData: FloatingOrbConfig[] = [
   },
   {
     Icon: SpringBootIcon,
-    position: "top-0 right-0",
+    position: "top-0 right-3 sm:right-0",
     size: "size-4 xs:size-6 md:size-7 2xl:size-8",
     tooltip: "Spring Boot",
     url: "https://spring.io/projects/spring-boot/",
   },
   {
     Icon: PythonIcon,
-    position: "bottom-0 right-0",
+    position: "bottom-0 right-3 sm:right-0",
     size: "size-4 md:size-5 2xl:size-6",
     tooltip: "Python",
     url: "https://www.python.org/",
@@ -105,14 +105,14 @@ export const floatingOrbsData: FloatingOrbConfig[] = [
   {
     Icon: AwsIcon,
     position:
-      "right-0 xs:right-13 sm:right-20 md:right-5 bottom-40 2xl:bottom-50",
+      "right-3 sm:right-0 xs:right-13 sm:right-20 md:right-5 bottom-50 sm:bottom-40 2xl:bottom-50",
     size: "size-6 md:size-7 2xl:size-8",
     tooltip: "AWS Cloud",
     url: "https://docs.aws.amazon.com/",
   },
   {
     Icon: DockerIcon,
-    position: "top-20 md:top-30 right-10 md:right-8",
+    position: "top-15 sm:top-20 md:top-30 right-10 md:right-8",
     size: "size-6 xs:size-4 md:size-5 2xl:size-6",
     tooltip: "Docker",
     url: "https://docs.docker.com/",
