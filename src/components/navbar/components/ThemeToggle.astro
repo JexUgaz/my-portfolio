@@ -25,17 +25,23 @@ import LightModeIcon from "@/components/icons/LightModeIcon.astro";
   const setTheme = (theme) => {
     const isLight = theme === "light";
     html.classList.toggle("light", isLight);
+    localStorage.setItem("theme", theme);
 
     darkIcon.classList.toggle("hidden", isLight);
     lightIcon.classList.toggle("hidden", !isLight);
   };
 
-  const prefersLight = window.matchMedia(
-    "(prefers-color-scheme: light)"
-  ).matches;
-  const initialTheme = prefersLight ? "light" : "dark";
+  const getPreferredTheme = () => {
+    const stored = localStorage.getItem("theme");
+    if (stored === "light" || stored === "dark") return stored;
 
-  setTheme(initialTheme);
+    const prefersLight = window.matchMedia(
+      "(prefers-color-scheme: light)"
+    ).matches;
+    return prefersLight ? "light" : "dark";
+  };
+
+  setTheme(getPreferredTheme());
 
   toggleBtn.addEventListener("click", () => {
     const isCurrentlyLight = html.classList.contains("light");
