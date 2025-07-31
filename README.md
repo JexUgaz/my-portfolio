@@ -2,6 +2,8 @@
 
 This is a personal portfolio site built with modern web technologies to showcase professional experience, projects, and skills in a clean, responsive, and accessible way.
 
+🌐 Live site: https://portfolio.jexugaz.work/
+
 ## 📸 Preview
 
 ![Portfolio Banner](public/preview.webp)
