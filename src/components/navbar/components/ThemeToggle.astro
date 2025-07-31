@@ -1,0 +1,44 @@
+---
+import DarkModeIcon from "@/components/icons/DarkModeIcon.astro";
+import LightModeIcon from "@/components/icons/LightModeIcon.astro";
+---
+
+<button
+  id="theme-toggle"
+  class="z-950 size-6 text-white"
+  aria-label="Toggle theme"
+>
+  <span id="dark-icon" class="block">
+    <LightModeIcon class="size-4 sm:size-5" />
+  </span>
+  <span id="light-icon" class="hidden">
+    <DarkModeIcon class="size-4 sm:size-5" />
+  </span>
+</button>
+
+<script type="module" is:inline>
+  const html = document.documentElement;
+  const toggleBtn = document.getElementById("theme-toggle");
+  const darkIcon = document.getElementById("dark-icon");
+  const lightIcon = document.getElementById("light-icon");
+
+  const setTheme = (theme) => {
+    const isLight = theme === "light";
+    html.classList.toggle("light", isLight);
+
+    darkIcon.classList.toggle("hidden", isLight);
+    lightIcon.classList.toggle("hidden", !isLight);
+  };
+
+  const prefersLight = window.matchMedia(
+    "(prefers-color-scheme: light)"
+  ).matches;
+  const initialTheme = prefersLight ? "light" : "dark";
+
+  setTheme(initialTheme);
+
+  toggleBtn.addEventListener("click", () => {
+    const isCurrentlyLight = html.classList.contains("light");
+    setTheme(isCurrentlyLight ? "dark" : "light");
+  });
+</script>

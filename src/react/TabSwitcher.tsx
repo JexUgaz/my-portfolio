@@ -15,9 +15,9 @@ const TabSwitcher: React.FC<Props> = ({
   const [selected, setSelected] = useState<number>(0);
 
   const noSelectedClasses =
-    "bg-white/10 text-gray-300 hover:bg-white/20 border-white/10";
+    "bg-white/10 text-on-container-inactive hover:bg-white/20 border-white/10";
   const selectedClasses =
-    "bg-accent/90 text-white shadow-md border-transparent";
+    "bg-accent/90 text-on-container shadow-md border-transparent";
 
   return (
     <div

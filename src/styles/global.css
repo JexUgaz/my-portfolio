@@ -4,9 +4,17 @@
 @theme static {
   --breakpoint-xs: 30rem;
 
+  --gradient-radial: radial-gradient(
+    ellipse 80% 80% at 50% -20%,
+    rgba(120, 119, 198, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+
   --color-primary: oklch(23% 0.033 256.848);
   --color-primary-900: oklch(15% 0.033 256.848);
   --color-white: #f9f9f9;
+  --color-on-container: #f9f9f9;
+  --color-on-container-inactive: #d1d5db;
   --color-accent: oklch(80% 0.2 140);
 
   --animate-float: float 3s ease-in-out infinite;
@@ -53,6 +61,25 @@
     --shadow-white-sm: 0 0 4px rgba(249, 249, 249, 0.3);
   }
 
+  .light {
+    --color-primary: #f9f9f9;
+    --color-primary-900: oklch(92% 0.02 256.848);
+    --color-white: oklch(23% 0.033 256.848);
+    --color-accent: oklch(65% 0.2 140);
+
+    --color-on-container-inactive: var(--color-white);
+
+    --color-gray-300: oklch(70% 0.01 260);
+    --color-gray-600: oklch(50% 0.01 260);
+    --color-gray-700: oklch(60% 0.01 260);
+    --color-gray-800: oklch(40% 0.01 260);
+    --color-neutral-300: #4b4b4b;
+
+    --shadow-primary: 0 0 5px rgba(0, 0, 0, 0.1);
+    --shadow-white: 0 0 10px rgba(0, 0, 0, 0.25);
+    --shadow-white-sm: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+
   *,
   *::before,
   *::after {
@@ -92,8 +119,10 @@
   }
 
   .tooltip {
-    @apply absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap;
+    @apply absolute -top-8 left-1/2 -translate-x-1/2 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap;
     position: absolute;
+    color: var(--color-white);
+    background-color: var(--color-primary);
   }
 
   .tooltip::after {
@@ -104,7 +133,7 @@
     transform: translateX(-50%);
     border-width: 6px;
     border-style: solid;
-    border-color: black transparent transparent transparent;
+    border-color: var(--color-primary) transparent transparent transparent;
     z-index: 1000;
   }
 
@@ -118,5 +147,13 @@
 
   .section-description {
     @apply max-w-2xl xl:max-w-4xl text-base sm:text-lg xl:text-2xl 2xl:text-3xl;
+  }
+
+  .body-bg {
+    @apply bg-primary;
+  }
+
+  html:not(.light) .body-bg {
+    background-image: var(--gradient-radial);
   }
 }
