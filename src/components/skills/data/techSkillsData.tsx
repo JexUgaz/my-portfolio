@@ -1,7 +1,4 @@
-import type { TabSwitcherItem } from "@/types/TabSwitcherItem";
-import TechGrid, {
-  type TechGridItem,
-} from "@/components/skills/components/TechGrid";
+import { type TechGridItem } from "@/components/skills/components/TechGrid";
 import {
   DjangoIcon,
   DotNetIcon,
@@ -78,9 +75,10 @@ import {
   VirtualBoxIcon,
   VisualStudioIcon,
 } from "@/components/skills/icons/tools-ides";
+import type { TranslationKey } from "@/i18n/types";
 
-const data: Record<string, TechGridItem[]> = {
-  "Server-side": [
+export const techSkillsData: Partial<Record<TranslationKey, TechGridItem[]>> = {
+  "skills.categories.server": [
     {
       Icon: SpringBootIcon,
       name: "Spring Boot",
@@ -118,7 +116,7 @@ const data: Record<string, TechGridItem[]> = {
     { Icon: PrismaIcon, name: "Prisma ORM", tooltip: { color: "#000000" } },
     { Icon: SwaggerIcon, name: "Swagger", tooltip: { color: "#6d9a00" } },
   ],
-  "Client-side": [
+  "skills.categories.client": [
     { Icon: FlutterIcon, name: "Flutter", tooltip: { color: "#0d63ab" } },
     { Icon: AndroidIcon, name: "Android", tooltip: { color: "#a4c639" } },
     { Icon: ReactIcon, name: "React", tooltip: { color: "#61DAFB" } },
@@ -129,7 +127,7 @@ const data: Record<string, TechGridItem[]> = {
     { Icon: TailwindIcon, name: "Tailwind", tooltip: { color: "#06B6D4" } },
     { Icon: BootstrapIcon, name: "Bootstrap", tooltip: { color: "#563D7C" } },
   ],
-  Languages: [
+  "skills.categories.languages": [
     { Icon: TypeScriptIcon, name: "TypeScript", tooltip: { color: "#3178c6" } },
     { Icon: JavaScriptIcon, name: "JavaScript", tooltip: { color: "#f7df1e" } },
     { Icon: CSharpIcon, name: "C#", tooltip: { color: "#68217A" } },
@@ -142,7 +140,7 @@ const data: Record<string, TechGridItem[]> = {
     { Icon: KotlinIcon, name: "Kotlin", tooltip: { color: "#7F52FF" } },
     { Icon: SQLLanguageIcon, name: "SQL", tooltip: { color: "#00bcf2" } },
   ],
-  Databases: [
+  "skills.categories.databases": [
     {
       Icon: MongoIcon,
       name: "MongoDB",
@@ -176,7 +174,7 @@ const data: Record<string, TechGridItem[]> = {
       tooltip: { color: "#EEAB37" },
     },
   ],
-  "Cloud & DevOps": [
+  "skills.categories.cloud": [
     { Icon: AwsIcon, name: "AWS", tooltip: { color: "#FF9900" } },
     {
       Icon: GoogleCloudPlatformIcon,
@@ -206,7 +204,7 @@ const data: Record<string, TechGridItem[]> = {
 
     { Icon: LinuxIcon, name: "Linux Server", tooltip: { color: "#000000" } },
   ],
-  "Tools & IDEs": [
+  "skills.categories.tools": [
     { Icon: TerminalIcon, name: "Terminal", tooltip: { color: "#323232" } },
     { Icon: PostmanIcon, name: "Postman", tooltip: { color: "#FF6C37" } },
     { Icon: GitIcon, name: "Git", tooltip: { color: "#F05032" } },
@@ -235,10 +233,3 @@ const data: Record<string, TechGridItem[]> = {
     },
   ],
 };
-
-export const techSkillsItems: TabSwitcherItem[] = Object.keys(data).map(
-  (key): TabSwitcherItem => ({
-    label: key,
-    content: <TechGrid techs={data[key]} />,
-  })
-);

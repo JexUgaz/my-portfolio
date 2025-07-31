@@ -1,4 +1,5 @@
 ---
+import { ui } from "@/i18n/ui";
 import FloatingCubesScene from "./components/FloatingCubesScene";
 import SkillsTitle from "./components/SkillsTitle.astro";
 import TechSkillsTab from "./components/TechSkillsTab";
@@ -8,6 +9,10 @@ interface Props {
 }
 
 const { id } = Astro.props;
+import { getLangFromUrl, getSkillsCategoryMap } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translations = getSkillsCategoryMap(lang);
 ---
 
 <section
@@ -29,7 +34,7 @@ const { id } = Astro.props;
       data-aos="fade-up"
       data-aos-duration="800"
     >
-      <TechSkillsTab client:visible />
+      <TechSkillsTab translations={translations} client:visible />
     </div>
   </div>
 </section>

@@ -17,14 +17,14 @@ import DockerIcon from "@/components/icons/DockerIcon.astro";
 export const floatingOrbsData: FloatingOrbConfig[] = [
   {
     Icon: LaravelIcon,
-    position: "top-0 left-0 xl:left-8 2xl:left-0",
+    position: "top-0 left-0 xl:left-8 2xl:left-5",
     size: "size-5 md:size-6 2xl:size-7",
     tooltip: "Laravel",
     url: "https://laravel.com/",
   },
   {
     Icon: FlutterIcon,
-    position: "bottom-0 left-0 xl:left-8 2xl:left-0",
+    position: "bottom-0 left-0 xl:left-8 2xl:left-5",
     size: "size-4 md:size-5 2xl:size-6",
     tooltip: "Flutter",
     url: "https://flutter.dev/",

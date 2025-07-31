@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <div
   class="grid grid-rows-[auto_1fr] max-w-[400px] rounded-3xl overflow-hidden border-2 border-dashed border-white/30 bg-white/5 backdrop-blur-md text-white/80 hover:animate-pulse"
 >
@@ -17,9 +24,9 @@
   </div>
 
   <div class="p-6 flex flex-col items-center justify-center text-center gap-2">
-    <h2 class="text-lg font-semibold">More Projects Coming Soon</h2>
+    <h2 class="text-lg font-semibold">{t("projects.placeholder.title")}</h2>
     <p class="text-neutral-400 text-sm">
-      Stay tuned, we're still building amazing stuff!
+      {t("projects.placeholder.description")}
     </p>
   </div>
 </div>

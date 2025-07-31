@@ -9,32 +9,32 @@ import StatisticsIcon from "@/components/icons/StatisticsIcon.astro";
 export const navItemsData: NavItem[] = [
   {
     link: "#home",
-    title: "Home",
+    title: "nav.home",
     icon: { Icon: HomeIcon },
   },
   {
     link: "#skills",
-    title: "Skills",
+    title: "nav.skills",
     icon: { Icon: SkillIcon },
   },
   {
     link: "#experience",
-    title: "Experience",
+    title: "nav.experience",
     icon: { Icon: StatisticsIcon },
   },
   {
     link: "#projects",
-    title: "Projects",
+    title: "nav.projects",
     icon: { Icon: CodeIcon },
   },
   {
     link: "#about",
-    title: "About",
+    title: "nav.about",
     icon: { Icon: PersonIconOutline },
   },
   {
     link: "#contact",
-    title: "Contact",
+    title: "nav.contact",
     icon: { Icon: ContactIcon },
   },
-];
+] as const;

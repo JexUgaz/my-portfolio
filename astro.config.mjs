@@ -6,6 +6,14 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "static",
+  i18n: {
+    locales: ["es", "en"],
+    defaultLocale: "en",
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
   site: "https://portfolio.jexugaz.work",
   vite: {
     assetsInclude: ["**/*.lottie"],

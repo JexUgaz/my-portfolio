@@ -2,6 +2,10 @@
 import type { Project } from "@/types/Project";
 import ProjectImage from "./ProjectImage.astro";
 import CallToActionButtons from "./CallToActionButtons.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
   item: Project;
@@ -17,8 +21,8 @@ const { description, image, stack, title, demoUrl, codeUrl } = item;
   <ProjectImage alt={title} image={image} />
 
   <div class="p-6 flex flex-col justify-start">
-    <h2 class="text-xl font-semibold mb-2 text-white">{title}</h2>
-    <p class="text-neutral-300 text-sm mb-4 line-clamp-3">{description}</p>
+    <h2 class="text-xl font-semibold mb-2 text-white">{t(title)}</h2>
+    <p class="text-neutral-300 text-sm mb-4 line-clamp-3">{t(description)}</p>
     <ul class="flex flex-wrap gap-2 text-xs xs:text-sm">
       {
         stack.map(({ Icon, title }) => (

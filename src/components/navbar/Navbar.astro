@@ -2,6 +2,10 @@
 import CodeFileIcon from "@/components/icons/CodeFileIcon.astro";
 import NavBarDesktop from "./components/NavBarDesktop.astro";
 import NavBarMobile from "./components/NavBarMobile.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <nav
@@ -20,7 +24,7 @@ import NavBarMobile from "./components/NavBarMobile.astro";
       class="font-bold flex items-center gap-1 xl:gap-2 text-xl xl:text-3xl z-950"
       href="/"
     >
-      <CodeFileIcon class="size-6 xl:size-8" />My Portfolio
+      <CodeFileIcon class="size-6 xl:size-8" />{t("site.title")}
     </a>
     <NavBarDesktop />
     <NavBarMobile />

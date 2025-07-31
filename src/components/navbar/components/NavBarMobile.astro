@@ -1,8 +1,8 @@
 ---
-import ArrowIcon from "@/components/icons/ArrowIcon.astro";
 import CloseIcon from "@/components/icons/CloseIcon.astro";
 import MenuIcon from "@/components/icons/MenuIcon.astro";
 import { navItemsData } from "@/data/navItemsData";
+import NavItemMobile from "./NavItemMobile.astro";
 ---
 
 <label for="menu-toggle" class="cursor-pointer lg:hidden p-2 z-950">
@@ -26,22 +26,7 @@ import { navItemsData } from "@/data/navItemsData";
     ><CloseIcon class="size-6" /></label
   >
   <ul class="mt-20 w-full flex flex-col items-center gap-4 px-2">
-    {
-      navItemsData.map(
-        ({ title, icon: { Icon, className = "size-5" }, link }) => (
-          <li class="w-[90%]">
-            <label
-              for="menu-toggle"
-              onclick={`location.href='${link}'`}
-              class="relative text-white rounded-xl py-3 px-4 flex gap-2 items-center cursor-pointer w-full"
-            >
-              <Icon class={className} /> {title}
-              <ArrowIcon class="absolute size-5 right-5" />
-            </label>
-          </li>
-        )
-      )
-    }
+    {navItemsData.map((item) => <NavItemMobile item={item} />)}
   </ul>
   <div class="p-6 border-t border-gray-200 dark:border-gray-700">
     <div class="text-center text-sm text-gray-500 dark:text-gray-400">

@@ -1,5 +1,9 @@
 ---
 import DownloadIcon from "@/components/icons/DownloadIcon.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <a
@@ -12,6 +16,6 @@ import DownloadIcon from "@/components/icons/DownloadIcon.astro";
   data-aos="fade-up"
   data-aos-duration="1600"
 >
-  Download My CV
+  {t("home.download-cv")}
   <DownloadIcon class="size-4 2xl:size-5 -translate-y-[2px]" />
 </a>

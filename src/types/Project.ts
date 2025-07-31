@@ -1,4 +1,5 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import type { TranslationKey } from "@/i18n/types";
 
 interface TechStack {
   title: string;
@@ -6,8 +7,8 @@ interface TechStack {
 }
 
 export interface Project {
-  title: string;
-  description: string;
+  title: TranslationKey;
+  description: TranslationKey;
   stack: TechStack[];
   image: ImageMetadata;
   codeUrl: string;

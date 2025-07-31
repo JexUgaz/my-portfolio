@@ -1,20 +1,23 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <div class="flex flex-col">
   <h1
     class="font-bold text-center z-100 section-title"
     data-aos="fade-up"
     data-aos-duration="800"
   >
-    Projects
+    {t("projects.title")}
   </h1>
 
   <p
     class="mt-3 text-center max-w-4xl z-100 section-description"
     data-aos="fade-up"
     data-aos-duration="900"
-  >
-    A selection of <span class="text-accent">my public projects</span> built with
-    modern
-    <span class="text-accent">technologies</span>, featuring open-source code
-    and cloud integrations.
-  </p>
+    set:html={t("projects.description")}
+  />
 </div>

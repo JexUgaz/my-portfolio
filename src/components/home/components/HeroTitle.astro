@@ -1,14 +1,19 @@
 ---
 import Typewriter from "@/react/Typewriter";
 import { type TypedOptions } from "typed.js";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const typedWriterOptions: TypedOptions = {
-  strings: ["Software Developer", "Cloud Engineer", "Mobile Developer"],
+  strings: [...t("home.roles")],
   typeSpeed: 50,
   backSpeed: 30,
   backDelay: 2000,
   loop: true,
 };
+const isSpanish = lang === "es";
 ---
 
 <h1
@@ -16,9 +21,11 @@ const typedWriterOptions: TypedOptions = {
   data-aos="fade-up"
   data-aos-duration="1000"
 >
-  Hello, I'm Loammi
+  {t("home.intro")}
   <br />
-  <span class="text-accent relative text-nowrap">
+  <span
+    class={`text-accent relative text-nowrap ${isSpanish ? "text-2xl sm:text-[clamp(2.5rem,3dvw,3rem)] xl:text-5xl" : ""}`}
+  >
     <Typewriter options={typedWriterOptions} client:load />
     <span class="absolute bottom-0 left-0 h-[3px] w-full bg-accent"></span>
   </span>

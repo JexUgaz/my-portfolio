@@ -1,3 +1,4 @@
+import type { TranslationKey } from "@/i18n/types";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
 interface TechStack {
@@ -6,10 +7,10 @@ interface TechStack {
 }
 
 export interface Experience {
-  title: string;
+  title: TranslationKey;
   company: string;
   logo: ImageMetadata;
-  description: string;
+  description: TranslationKey;
   stack: TechStack[];
-  date: string;
+  date: TranslationKey;
 }

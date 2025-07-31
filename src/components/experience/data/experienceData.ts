@@ -22,18 +22,11 @@ import TypeScriptIcon from "@/components/icons/colored/TypeScriptIcon.astro";
 
 export const experienceData: Experience[] = [
   {
-    title: "Software Engineer",
+    title: "experience.lexia.title",
     company: "Lexia LegalTech S.A.C.",
-    description: `
-      Built a data extraction system via <span class="text-accent">Web Scraping</span> and 
-      <span class="text-accent">Cloudflare Workers</span> using a microservices architecture. Integrated 
-      <span class="text-accent">Supabase</span>, <span class="text-accent">vector databases</span>, and 
-      <span class="text-accent">AWS (RDS, S3)</span> for <span class="text-accent">AI-powered semantic search</span>. 
-      Implemented <span class="text-accent">WebSockets</span> for real-time AI streaming with a frontend built in 
-      <span class="text-accent">Next.js</span>.
-    `,
+    description: "experience.lexia.description",
     logo: lexiaLogo,
-    date: "Jan 2025 - Apr 2025",
+    date: "experience.lexia.date",
     stack: [
       { title: "TypeScript", Icon: TypeScriptIcon },
       { title: "Node.js", Icon: NodeIcon },
@@ -48,20 +41,11 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    title: "Software Analyst & Developer",
+    title: "experience.zafiro.title",
     company: "Zafiro Equipos y Servicios S.A.C.",
-    description: `
-      Developed cloud-based web and mobile apps using <span class="text-accent">Firebase</span>, 
-      <span class="text-accent">AWS</span>, and <span class="text-accent">aiPaaS</span>. Created 
-      <span class="text-accent">serverless functions</span> with <span class="text-accent">Python</span> and 
-      <span class="text-accent">Node.js</span>. Built a telemetry data platform using the 
-      <span class="text-accent">Volvo Connect API</span> and developed an app for fleet optimization. 
-      Led a <span class="text-accent">cybersecurity project</span> with 
-      <span class="text-accent">Tenable Nessus®</span>, generating automated reports integrated into 
-      <span class="text-accent">SQL Server</span>.
-    `,
+    description: "experience.zafiro.description",
     logo: zafiroLogo,
-    date: "Oct 2023 - Dec 2024",
+    date: "experience.zafiro.date",
     stack: [
       { title: "JavaScript", Icon: JavaScriptIcon },
       { title: "Firebase", Icon: FirebaseIcon },
@@ -75,16 +59,11 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    title: "Developer & Systems Support",
+    title: "experience.barbacci.title",
     company: "Barbacci Motors S.A.",
-    description: `
-      Maintained a <span class="text-accent">Java/JavaScript</span> based ERP system. Developed internal 
-      software tools to streamline processes. Provided technical support and managed 
-      <span class="text-accent">SQL Server</span> and <span class="text-accent">PostgreSQL</span> databases 
-      to enhance operational efficiency.
-    `,
+    description: "experience.barbacci.description",
     logo: barbacciLogo,
-    date: "Jan 2023 - Mar 2023",
+    date: "experience.barbacci.date",
     stack: [
       { title: "Java", Icon: JavaIcon },
       { title: "SQL Server", Icon: SqlServerIcon },
