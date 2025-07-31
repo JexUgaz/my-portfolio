@@ -22,6 +22,13 @@ export const languages: Language[] = [
 export const ui = {
   en: {
     "site.title": "My Portfolio",
+    "meta.title": "Loammi Ugaz - Software Developer",
+    "meta.description":
+      "I'm Loammi Ugaz, a Telecommunications Engineer specialized in Full-Stack Software Development and Cloud Architecture. Explore my portfolio, skills, and projects.",
+    "meta.og.title": "Loammi Ugaz - Software Developer",
+    "meta.og.description":
+      "Telecommunications Engineer focused on building scalable software and cloud solutions. View my work, background, and projects.",
+    "meta.og.site_name": "Loammi Ugaz Portfolio",
     "nav.home": "Home",
     "nav.skills": "Skills",
     "nav.experience": "Experience",
@@ -141,15 +148,21 @@ export const ui = {
 
     "contact.github.title": "GitHub",
     "contact.github.description": "Explore my code & projects",
+    "contact.github.url": "https://github.com/JexUgaz",
 
     "contact.linkedin.title": "LinkedIn",
     "contact.linkedin.description": "Connect with me professionally",
+    "contact.linkedin.url": "https://www.linkedin.com/in/lugazmlink/",
 
     "contact.whatsapp.title": "WhatsApp",
     "contact.whatsapp.description": "Message me directly via WhatsApp",
+    "contact.whatsapp.url":
+      "https://wa.me/51970149453?text=Hi%20Jex%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20to%20you.",
 
     "contact.email.title": "Email",
     "contact.email.description": "Send me an email to start a conversation",
+    "contact.email.url":
+      "mailto:loammi.jezreel@gmail.com?subject=Hi%20Jex%20-%20Portfolio&body=Hi%20Jex%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20to%20you.",
 
     "contact.form.title": "Send Me a Message",
     "contact.form.name.label": "Name",
@@ -168,6 +181,13 @@ export const ui = {
     "footer.copyright": "Loammi Ugaz. All rights reserved.",
   },
   es: {
+    "meta.title": "Loammi Ugaz - Desarrollador de Software",
+    "meta.description":
+      "Soy Loammi Ugaz, Ingeniero en Telecomunicaciones especializado en Desarrollo de Software Full-Stack y Arquitectura Cloud. Explora mi portafolio, habilidades y proyectos.",
+    "meta.og.title": "Loammi Ugaz - Desarrollador de Software",
+    "meta.og.description":
+      "Ingeniero en Telecomunicaciones enfocado en crear soluciones escalables de software y nube. Descubre mi experiencia y proyectos.",
+    "meta.og.site_name": "Portafolio de Loammi Ugaz",
     "site.title": "Mi Portafolio",
     "nav.home": "Inicio",
     "nav.skills": "Habilidades",
@@ -293,16 +313,22 @@ export const ui = {
 
     "contact.github.title": "GitHub",
     "contact.github.description": "Explora mi código y proyectos",
+    "contact.github.url": "https://github.com/JexUgaz",
 
     "contact.linkedin.title": "LinkedIn",
     "contact.linkedin.description": "Conéctate conmigo profesionalmente",
+    "contact.linkedin.url": "https://www.linkedin.com/in/lugazmlink/",
 
     "contact.whatsapp.title": "WhatsApp",
     "contact.whatsapp.description": "Envíame un mensaje directo por WhatsApp",
+    "contact.whatsapp.url":
+      "https://wa.me/51970149453?text=Hola%20Jex%2C%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo.",
 
     "contact.email.title": "Correo",
     "contact.email.description":
       "Envíame un correo para iniciar una conversación",
+    "contact.email.url":
+      "mailto:loammi.jezreel@gmail.com?subject=Hola%20Jex%20-%20Portafolio&body=Hola%20Jex%2C%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo.",
 
     "contact.form.title": "Envíame un mensaje",
     "contact.form.name.label": "Nombre",

@@ -17,7 +17,7 @@ const { Icon, description, title, url } = item;
 
 <a
   target="_blank"
-  href={url}
+  href={t(url) as string}
   class="relative w-full rounded-3xl border-1 sm:border-2 border-white flex items-center gap-4
         py-4 xl:py-8 px-6
         max-w-3xl xl:max-w-full hover:animate-lift"

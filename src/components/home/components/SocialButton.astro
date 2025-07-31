@@ -14,7 +14,7 @@ const { title, Icon, url } = item;
 ---
 
 <a
-  href={url}
+  href={t(url) as string}
   target="_blank"
   class="group aspect-square rounded-full bg-white flex items-center justify-center p-1 sm:p-2
         cursor-pointer transition-transform duration-300 hover:scale-115"

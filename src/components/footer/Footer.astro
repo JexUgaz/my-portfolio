@@ -25,7 +25,7 @@ const t = useTranslations(lang);
         contactMeData.map(({ title, url, Icon }) => (
           <li>
             <a
-              href={url}
+              href={t(url) as string}
               target="_blank"
               rel="noopener noreferrer"
               class="flex flex-col items-center gap-1 justify-center hover:text-accent transition"

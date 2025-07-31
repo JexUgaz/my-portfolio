@@ -4,6 +4,6 @@ import type { TranslationKey } from "@/i18n/types";
 export interface ContactMeItem {
   title: TranslationKey;
   description: TranslationKey;
-  url: string;
+  url: TranslationKey;
   Icon: AstroComponentFactory;
 }

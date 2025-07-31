@@ -10,24 +10,24 @@ export const contactMeData: ContactMeItem[] = [
     Icon: GithubIcon,
     description: "contact.github.description",
     title: "contact.github.title",
-    url: "https://github.com/JexUgaz",
+    url: "contact.github.url",
   },
   {
     description: "contact.linkedin.description",
     title: "contact.linkedin.title",
-    url: "https://www.linkedin.com/in/lugazmlink/",
+    url: "contact.linkedin.url",
     Icon: LinkedinIcon,
   },
   {
     description: "contact.whatsapp.description",
     title: "contact.whatsapp.title",
-    url: "https://wa.me/51970149453?text=Hola%20Jex%2C%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo.",
+    url: "contact.whatsapp.url",
     Icon: WhatsappIcon,
   },
   {
     description: "contact.email.description",
     title: "contact.email.title",
-    url: "mailto:loammi.jezreel@gmail.com?subject=Hola Jex - Portafolio&body=Hola Jex, vi tu portafolio y me gustaría hablar contigo.",
+    url: "contact.email.url",
     Icon: EmailIcon,
   },
 ];
