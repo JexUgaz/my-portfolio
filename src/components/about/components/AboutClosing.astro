@@ -1,5 +1,9 @@
 ---
 import DotIcon from "@/components/icons/DotIcon.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <span data-aos="fade-up" data-aos-duration="400">
@@ -10,13 +14,7 @@ import DotIcon from "@/components/icons/DotIcon.astro";
   >
     <div class="flex items-center gap-4">
       <DotIcon class="size-6 text-accent" />
-      <p class="text-xs xs:text-sm text-white">
-        More than just writing code, I approach problems as an <span
-          class="font-semibold text-accent">engineer</span
-        > — designing <span class="font-semibold text-accent">reliable</span> and
-        <span class="font-semibold text-accent">purpose-driven solutions</span> that
-        truly fit each context and need.
-      </p>
+      <p class="text-xs xs:text-sm text-white" set:html={t("about.closing")} />
     </div>
   </div>
 </span>

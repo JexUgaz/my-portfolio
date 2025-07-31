@@ -1,4 +1,6 @@
+import type { TranslationKey } from "@/i18n/types";
+
 export interface AboutTimelineItem {
-  title: string;
-  description: string;
+  title: TranslationKey;
+  description: TranslationKey;
 }

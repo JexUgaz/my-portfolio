@@ -1,6 +1,10 @@
 ---
 import DotIcon from "@/components/icons/DotIcon.astro";
 import { aboutTimelineItems } from "@/components/about/data/aboutTimelineItems";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <ol
@@ -19,9 +23,9 @@ import { aboutTimelineItems } from "@/components/about/data/aboutTimelineItems";
           >
             <DotIcon class="size-2.5 text-white" />
           </span>
-          <h3 class="text-base xl:text-lg font-bold text-white">{title}</h3>
+          <h3 class="text-base xl:text-lg font-bold text-white">{t(title)}</h3>
           <p
-            set:html={description}
+            set:html={t(description)}
             class="mt-1 text-justify text-pretty text-white/80 max-w-2xl xl:max-w-full text-sm xs:text-base xl:text-sm"
           />
         </li>

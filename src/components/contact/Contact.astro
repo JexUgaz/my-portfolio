@@ -3,6 +3,10 @@ import { contactMeData } from "@/data/contactMeData";
 import SendMessageForm from "./components/SendMessageForm";
 import SocialContact from "./components/SocialContact.astro";
 import ContactTitle from "./components/ContactTitle.astro";
+import { getLangFromUrl, getContactFormTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translations = getContactFormTranslations(lang);
 
 interface Props {
   id: string;
@@ -30,7 +34,7 @@ const { id } = Astro.props;
       data-aos="fade-up"
       data-aos-duration="900"
     >
-      <SendMessageForm client:visible />
+      <SendMessageForm translations={translations} client:visible />
     </div>
   </div>
 </section>

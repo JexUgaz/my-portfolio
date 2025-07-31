@@ -17,10 +17,6 @@ const t = useTranslations(lang);
     {t("home.contact-me")}
   </p>
   <div class="flex justify-start gap-2">
-    {
-      contactMeData.map((d) => (
-        <SocialButton tooltip={d.title} Icon={d.Icon} url={d.url} />
-      ))
-    }
+    {contactMeData.map((d) => <SocialButton item={d} />)}
   </div>
 </div>

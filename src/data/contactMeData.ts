@@ -8,25 +8,25 @@ import EmailIcon from "@/components/icons/EmailIcon.astro";
 export const contactMeData: ContactMeItem[] = [
   {
     Icon: GithubIcon,
-    description: "Explore my code & projects",
-    title: "GitHub",
+    description: "contact.github.description",
+    title: "contact.github.title",
     url: "https://github.com/JexUgaz",
   },
   {
-    description: "Connect with me professionally",
-    title: "LinkedIn",
+    description: "contact.linkedin.description",
+    title: "contact.linkedin.title",
     url: "https://www.linkedin.com/in/lugazmlink/",
     Icon: LinkedinIcon,
   },
   {
-    description: "Message me directly via WhatsApp",
-    title: "WhatsApp",
+    description: "contact.whatsapp.description",
+    title: "contact.whatsapp.title",
     url: "https://wa.me/51970149453?text=Hola%20Jex%2C%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo.",
     Icon: WhatsappIcon,
   },
   {
-    description: "Send me an email to start a conversation",
-    title: "Email",
+    description: "contact.email.description",
+    title: "contact.email.title",
     url: "mailto:loammi.jezreel@gmail.com?subject=Hola Jex - Portafolio&body=Hola Jex, vi tu portafolio y me gustaría hablar contigo.",
     Icon: EmailIcon,
   },

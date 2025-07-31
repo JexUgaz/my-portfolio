@@ -1,13 +1,16 @@
 ---
-import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import type { ContactMeItem } from "@/types/ContactMeItem";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 interface Props {
-  Icon: AstroComponentFactory;
-  tooltip: string;
-  url: string;
+  item: ContactMeItem;
 }
 
-const { tooltip, Icon, url } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { item } = Astro.props;
+const { title, Icon, url } = item;
 ---
 
 <a
@@ -17,5 +20,5 @@ const { tooltip, Icon, url } = Astro.props;
         cursor-pointer transition-transform duration-300 hover:scale-115"
 >
   <Icon class="text-primary size-5 sm:size-6 2xl:size-7" />
-  <span class="tooltip">{tooltip}</span>
+  <span class="tooltip">{t(title)}</span>
 </a>

@@ -28,3 +28,13 @@ export const getSkillsCategoryMap = (lang: Locale): Record<string, string> => {
 
   return Object.fromEntries(entries);
 };
+
+export const getContactFormTranslations = (
+  lang: Locale
+): Record<string, string> => {
+  const entries = Object.entries(ui[lang]).filter(([key]) =>
+    key.startsWith("contact.form.")
+  ) as [string, string][];
+
+  return Object.fromEntries(entries);
+};

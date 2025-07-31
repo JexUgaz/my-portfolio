@@ -6,12 +6,16 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import successAnimation from "@/assets/lottie/success.lottie";
 import LoadingSpinnerIcon from "./LoadingSpinnerIcon";
 
+interface Props {
+  translations: Record<string, string>;
+}
+
 interface MailStatus {
   state: "success" | "error" | "empty" | "loading";
   error?: string;
 }
 
-const SendMessageForm = () => {
+const SendMessageForm: React.FC<Props> = ({ translations }) => {
   const [mailState, setMailState] = useState<MailStatus>({
     state: "empty",
   });
@@ -41,7 +45,7 @@ const SendMessageForm = () => {
     } catch (error) {
       setMailState({
         state: "error",
-        error: "Oops! Something went wrong. Try again in a moment.",
+        error: translations["contact.form.error"],
       });
     }
   };
@@ -57,7 +61,7 @@ const SendMessageForm = () => {
           <div className="flex justify-center items-center gap-2">
             <EmailOutLineIcon className="size-8" />
             <h2 className="text-2xl text-center font-bold">
-              Send Me a Message
+              {translations["contact.form.title"]}
             </h2>
           </div>
           <form
@@ -67,24 +71,24 @@ const SendMessageForm = () => {
           >
             <FormInput
               id="name"
-              label="Name"
+              label={translations["contact.form.name.label"]}
               name="name"
-              placeholder="Your Name"
+              placeholder={translations["contact.form.name.placeholder"]}
               disabled={isLoading}
             />
 
             <FormInput
               id="email"
-              label="Email"
+              label={translations["contact.form.email.label"]}
               type="email"
               name="email"
-              placeholder="Your Email"
+              placeholder={translations["contact.form.email.placeholder"]}
               disabled={isLoading}
             />
             <FormTextArea
               id="message"
-              label="Message"
-              placeholder="Your Message"
+              label={translations["contact.form.message.label"]}
+              placeholder={translations["contact.form.message.placeholder"]}
               name="message"
               rows={5}
               disabled={isLoading}
@@ -96,7 +100,9 @@ const SendMessageForm = () => {
                 isLoading ? "opacity-70 cursor-wait" : "hover:bg-accent/50"
               }`}
             >
-              {isLoading ? "Sending..." : "Send Message"}
+              {isLoading
+                ? translations["contact.form.sending"]
+                : translations["contact.form.submit"]}
               {isLoading && <LoadingSpinnerIcon className="size-5" />}
             </button>
             {hasAnError && (
@@ -119,7 +125,7 @@ const SendMessageForm = () => {
             data-aos="fade-up"
             data-aos-duration="500"
           >
-            Message sent successfully!
+            {translations["contact.form.success"]}
           </p>
         </div>
       )}

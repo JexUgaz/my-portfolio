@@ -5,22 +5,22 @@ import type { PersonalInfoItem } from "@/types/PersonalInfoItem";
 
 export const personalInfoItems: PersonalInfoItem[] = [
   {
-    label: "Name",
+    label: "about.personal.name",
     content: "Loammi Ugaz",
     icon: {
       Icon: IdCardIcon,
     },
   },
   {
-    label: "Place of Birth",
+    label: "about.personal.place",
     content: "Lima, Peru",
     icon: {
       Icon: LocationIcon,
     },
   },
   {
-    label: "Education",
-    content: "The Pontifical Catholic University of Peru",
+    label: "about.personal.education",
+    content: "Pontificia Universidad Católica del Perú",
     icon: {
       Icon: GraduationIcon,
     },

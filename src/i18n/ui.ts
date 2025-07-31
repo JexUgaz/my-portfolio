@@ -1,9 +1,23 @@
-export const languages = {
-  en: "English",
-  es: "Español",
-};
+import SpainIcon from "@/components/icons/colored/SpainIcon.astro";
+import USIcon from "@/components/icons/colored/USIcon.astro";
+import type { Language } from "@/types/Language";
 
 export const defaultLang = "en";
+
+export const defaultLanguage: Language = {
+  code: defaultLang,
+  Icon: USIcon,
+  title: "English",
+};
+
+export const languages: Language[] = [
+  defaultLanguage,
+  {
+    code: "es",
+    Icon: SpainIcon,
+    title: "Español",
+  },
+];
 
 export const ui = {
   en: {
@@ -81,6 +95,77 @@ export const ui = {
       "Stay tuned, we're still building amazing stuff!",
     "projects.button.demo": "Demo",
     "projects.button.code": "Code",
+    "about.title": `
+      I build <span class="text-accent">solutions</span> that
+      <span class="text-accent">scale</span>,
+      <span class="text-accent">connect</span>, and
+      <span class="text-accent">make an impact</span>.
+    `,
+    "about.who.title-1": "¿Who I Am?",
+    "about.who.description-1": `
+      Engineer from <span class="text-accent">PUCP</span> with a background in networks and systems.
+      Enthusiastic about <span class="text-accent">AI</span> and currently focused on
+      <span class="text-accent">cloud</span> and <span class="text-accent">software solutions</span>.
+    `,
+    "about.who.title-2": "My Approach",
+    "about.who.description-2": `
+      I build software with a focus on <span class="text-accent">clean architecture</span>,
+      <span class="text-accent">performance</span>, and <span class="text-accent">rapid delivery</span> —
+      turning ideas into solid products across both server-side and client-side.
+    `,
+    "about.personal.name": "Name",
+    "about.personal.place": "Place of Birth",
+    "about.personal.education": "Education",
+    "about.timeline.foundation.title": "Foundation: Engineering Mindset",
+    "about.timeline.foundation.desc": `Graduated as a Telecommunications Engineer from <span class="font-medium text-accent">PUCP</span>. I built a strong foundation in <span class="text-accent">networks, systems, and analytical thinking</span> — essential to my approach to complex challenges.`,
+
+    "about.timeline.transition.title": "Transition: Software as My Medium",
+    "about.timeline.transition.desc": `I shifted focus to <span class="text-accent">software development</span> as a way to build things people use. From backend services to full-stack prototypes, I began crafting solutions that brought ideas to life.`,
+
+    "about.timeline.growth.title": "Growth: Real Projects, Real People",
+    "about.timeline.growth.desc": `Working on freelance and academic projects helped me learn how to build <span class="text-accent">user-focused systems</span> — from APIs and cloud infra to mobile experiences, always aligned with real needs.`,
+
+    "about.timeline.focus.title": "Focus Today: Systems that Deliver Value",
+    "about.timeline.focus.desc": `Today, I design <span class="text-accent">scalable, cloud-ready systems</span> that balance performance, maintainability, and business impact. I'm driven by technical depth and <span class="text-accent">real-world impact</span>.`,
+
+    "about.closing": `
+      More than just writing code, I approach problems as an 
+      <span class="font-semibold text-accent">engineer</span> — designing 
+      <span class="font-semibold text-accent">reliable</span> and 
+      <span class="font-semibold text-accent">purpose-driven solutions</span> that 
+      truly fit each context and need.
+    `,
+
+    "contact.title": "Contact Me!",
+    "contact.subtitle": `<span class="text-accent">Open to Work</span> — Let's Build Together`,
+
+    "contact.github.title": "GitHub",
+    "contact.github.description": "Explore my code & projects",
+
+    "contact.linkedin.title": "LinkedIn",
+    "contact.linkedin.description": "Connect with me professionally",
+
+    "contact.whatsapp.title": "WhatsApp",
+    "contact.whatsapp.description": "Message me directly via WhatsApp",
+
+    "contact.email.title": "Email",
+    "contact.email.description": "Send me an email to start a conversation",
+
+    "contact.form.title": "Send Me a Message",
+    "contact.form.name.label": "Name",
+    "contact.form.name.placeholder": "Your Name",
+    "contact.form.email.label": "Email",
+    "contact.form.email.placeholder": "Your Email",
+    "contact.form.message.label": "Message",
+    "contact.form.message.placeholder": "Your Message",
+    "contact.form.submit": "Send Message",
+    "contact.form.sending": "Sending...",
+    "contact.form.success": "Message sent successfully!",
+    "contact.form.error": "Something went wrong. Please try again.",
+
+    "footer.description":
+      "Telecommunications Engineer specialized in Software Development and Cloud Architecture",
+    "footer.copyright": "Loammi Ugaz. All rights reserved.",
   },
   es: {
     "site.title": "Mi Portafolio",
@@ -160,5 +245,79 @@ export const ui = {
       "Estate atento, seguimos construyendo cosas increíbles.",
     "projects.button.demo": "Demo",
     "projects.button.code": "Código",
+    "about.title": `
+      Construyo <span class="text-accent">soluciones</span> que
+      <span class="text-accent">escalan</span>,
+      <span class="text-accent">conectan</span> y
+      <span class="text-accent">generan impacto</span>.
+    `,
+    "about.who.title-1": "¿Quién soy?",
+    "about.who.description-1": `
+      Ingeniero de la <span class="text-accent">PUCP</span> con formación en redes y sistemas.
+      Apasionado por la <span class="text-accent">IA</span> y actualmente enfocado en
+      <span class="text-accent">nube</span> y <span class="text-accent">soluciones de software</span>.
+    `,
+    "about.who.title-2": "Mi Enfoque",
+    "about.who.description-2": `
+      Desarrollo software con enfoque en <span class="text-accent">arquitectura limpia</span>,
+      <span class="text-accent">rendimiento</span> y <span class="text-accent">entrega rápida</span> —
+      convirtiendo ideas en productos sólidos tanto del lado del servidor como del cliente.
+    `,
+    "about.personal.name": "Nombre",
+    "about.personal.place": "Lugar de nacimiento",
+    "about.personal.education": "Educación",
+
+    "about.timeline.foundation.title": "Base: Mentalidad Ingenieril",
+    "about.timeline.foundation.desc": `Graduado como Ingeniero de Telecomunicaciones en la <span class="font-medium text-accent">PUCP</span>. Desarrollé una sólida base en <span class="text-accent">redes, sistemas y pensamiento analítico</span>, fundamentales para abordar retos complejos.`,
+
+    "about.timeline.transition.title": "Transición: El Software como Medio",
+    "about.timeline.transition.desc": `Cambié el enfoque hacia el <span class="text-accent">desarrollo de software</span> como una forma de construir cosas útiles. Desde servicios backend hasta prototipos full-stack, comencé a dar vida a las ideas.`,
+
+    "about.timeline.growth.title":
+      "Crecimiento: Proyectos Reales, Personas Reales",
+    "about.timeline.growth.desc": `Trabajar en proyectos freelance y académicos me enseñó a construir <span class="text-accent">sistemas centrados en el usuario</span>, desde APIs e infraestructura cloud hasta experiencias móviles, siempre alineado con necesidades reales.`,
+
+    "about.timeline.focus.title": "Enfoque Actual: Sistemas que Generan Valor",
+    "about.timeline.focus.desc": `Hoy diseño <span class="text-accent">sistemas escalables y listos para la nube</span> que equilibran rendimiento, mantenibilidad e impacto en el negocio. Me motiva la profundidad técnica y el <span class="text-accent">impacto en el mundo real</span>.`,
+
+    "about.closing": `
+      Más que solo escribir código, abordo los problemas como un 
+      <span class="font-semibold text-accent">ingeniero</span>: diseño 
+      <span class="font-semibold text-accent">soluciones confiables</span> y 
+      <span class="font-semibold text-accent">con propósito</span> que se adaptan 
+      verdaderamente a cada contexto y necesidad.
+    `,
+
+    "contact.title": "¡Contáctame!",
+    "contact.subtitle": `<span class="text-accent">Disponible para trabajar</span> — Construyamos juntos`,
+
+    "contact.github.title": "GitHub",
+    "contact.github.description": "Explora mi código y proyectos",
+
+    "contact.linkedin.title": "LinkedIn",
+    "contact.linkedin.description": "Conéctate conmigo profesionalmente",
+
+    "contact.whatsapp.title": "WhatsApp",
+    "contact.whatsapp.description": "Envíame un mensaje directo por WhatsApp",
+
+    "contact.email.title": "Correo",
+    "contact.email.description":
+      "Envíame un correo para iniciar una conversación",
+
+    "contact.form.title": "Envíame un mensaje",
+    "contact.form.name.label": "Nombre",
+    "contact.form.name.placeholder": "Tu nombre",
+    "contact.form.email.label": "Correo",
+    "contact.form.email.placeholder": "Tu correo electrónico",
+    "contact.form.message.label": "Mensaje",
+    "contact.form.message.placeholder": "Tu mensaje",
+    "contact.form.submit": "Enviar mensaje",
+    "contact.form.sending": "Enviando...",
+    "contact.form.success": "¡Mensaje enviado con éxito!",
+    "contact.form.error": "Algo salió mal. Por favor, inténtalo de nuevo.",
+
+    "footer.description":
+      "Ingeniero en Telecomunicaciones especializado en Desarrollo de Software y Arquitectura Cloud",
+    "footer.copyright": "Loammi Ugaz. Todos los derechos reservados.",
   },
 } as const;
