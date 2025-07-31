@@ -1,52 +1,107 @@
-# Astro Starter Kit: Basics
+# 🌐 Portfolio Website
 
-```sh
-pnpm create astro@latest -- --template basics
+This is a personal portfolio site built with modern web technologies to showcase professional experience, projects, and skills in a clean, responsive, and accessible way.
+
+## 📸 Preview
+
+![Portfolio Banner](public/preview.webp)
+
+### 🖼 Final Screenshot
+
+This is the final rendered version of the site during performance auditing:
+
+![Lighthouse Screenshot](public/lighthouse-preview.webp)
+
+## 🔧 Tech Stack
+
+- **Astro** – Static site generator
+- **React** – Interactive UI components (e.g. tab switcher)
+- **TypeScript** – Type-safe development
+- **JavaScript (Vanilla)** – For dynamic behavior (e.g. theme toggling)
+- **Tailwind CSS** – Utility-first styling
+- **Vite** – Lightning-fast development bundler
+- **GitHub Actions** – CI/CD for automated deployment
+- **GitHub Pages** – Hosting platform
+
+## 🌍 Features
+
+- 🔁 **i18n (internationalization)**: Supports both **English** and **Spanish** using Astro’s i18n integration
+- 🌗 **Dark/Light mode toggle** with system preference detection and `localStorage` persistence
+- 🧭 **Responsive navigation** for desktop and mobile
+- 📁 Organized folder structure following best practices
+- 📦 Modular and reusable UI components
+- 🌐 Deployed via **GitHub Actions** with configuration for **GitHub Pages**
+
+## 📁 Project Structure
+
+```bash
+src/
+├── assets/ # Images and media
+├── components/ # UI components (About, Projects, Navbar, etc.)
+├── data/ # Content and static configuration
+├── i18n/ # Internationalization logic
+├── layouts/ # Base layout
+├── pages/ # Route-based content
+├── react/ # React components
+├── styles/ # Global styles (CSS variables, fonts)
+├── types/ # TypeScript interfaces
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Getting Started
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+1. **Clone the repo**
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+   ```bash
+   https://github.com/JexUgaz/my-portfolio.git
+   cd my-portfolio
+   ```
 
-## 🚀 Project Structure
+2. **Install dependencies**
 
-Inside of your Astro project, you'll see the following folders and files:
+   ```bash
+   npm install
+   ```
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+3. **Run development server**
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+   ```bash
+   npm run dev
+   ```
 
-## 🧞 Commands
+4. **Build for production**
 
-All commands are run from the root of the project, from a terminal:
+   ```bash
+   npm run build
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+5. **Preview production**
 
-## 👀 Want to learn more?
+   ```bash
+   npm run preview
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🚚 Deployment
+
+This project is deployed via GitHub Actions and hosted on GitHub Pages. The workflow builds the site and pushes the output in the `dist/` folder to the appropriate branch.
+
+## ✍️ Customization
+
+- Edit content in `src/data` and `src/components`
+
+- Add languages via `i18n/`
+
+- Adjust theme or colors via CSS variables in `styles/global.css`
+
+- Extend components or animations as needed
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 📬 Contact
+
+Made by **Loammi Ugaz** — [LinkedIn](https://www.linkedin.com/in/lugazmlink/) • [GitHub](https://github.com/JexUgaz/)
