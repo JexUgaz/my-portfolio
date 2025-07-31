@@ -10,10 +10,13 @@
     rgba(255, 255, 255, 0)
   );
 
-  --color-primary: oklch(23% 0.033 256.848);
+  --base-white: #f9f9f9;
+  --base-primary-dark: oklch(23% 0.033 256.848);
+
+  --color-primary: var(--base-primary-dark);
   --color-primary-900: oklch(15% 0.033 256.848);
-  --color-white: #f9f9f9;
-  --color-on-container: #f9f9f9;
+  --color-white: var(--base-white);
+  --color-on-container: var(--base-white);
   --color-on-container-inactive: #d1d5db;
   --color-accent: oklch(80% 0.2 140);
 
@@ -62,9 +65,9 @@
   }
 
   .light {
-    --color-primary: #f9f9f9;
+    --color-primary: var(--base-white);
     --color-primary-900: oklch(92% 0.02 256.848);
-    --color-white: oklch(23% 0.033 256.848);
+    --color-white: var(--base-primary-dark);
     --color-accent: oklch(65% 0.2 140);
 
     --color-on-container-inactive: var(--color-white);
@@ -120,9 +123,8 @@
 
   .tooltip {
     @apply absolute -top-8 left-1/2 -translate-x-1/2 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap;
-    position: absolute;
-    color: var(--color-white);
-    background-color: var(--color-primary);
+    color: var(--base-white);
+    background-color: var(--base-primary-dark);
   }
 
   .tooltip::after {
@@ -133,7 +135,7 @@
     transform: translateX(-50%);
     border-width: 6px;
     border-style: solid;
-    border-color: var(--color-primary) transparent transparent transparent;
+    border-color: var(--base-primary-dark) transparent transparent transparent;
     z-index: 1000;
   }
 

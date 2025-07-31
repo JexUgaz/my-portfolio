@@ -96,7 +96,7 @@ const SendMessageForm: React.FC<Props> = ({ translations }) => {
 
             <button
               type="submit"
-              className={`bg-accent/70 text-white font-semibold py-2 rounded-lg hover:bg-accent/50 transition flex justify-center gap-2 ${
+              className={`bg-accent/70 text-on-container font-semibold py-2 rounded-lg hover:bg-accent/50 transition flex justify-center gap-2 ${
                 isLoading ? "opacity-70 cursor-wait" : "hover:bg-accent/50"
               }`}
             >
