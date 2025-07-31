@@ -17,8 +17,8 @@ export default defineConfig({
     },
   },
   build: {
-    minify: "esbuild",
     target: "esnext",
+    minify: "esbuild",
   },
   integrations: [react()],
 });
