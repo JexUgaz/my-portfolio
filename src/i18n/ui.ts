@@ -97,6 +97,10 @@ export const ui = {
     "projects.mika.title": "Mika - Beauty Salon",
     "projects.mika.description":
       "Official website for the women's empowerment campaign organized by Mika Beauty Salon. The project aims to inspire women through Heels Dance (also known as Strip Dance), promoting self-esteem, sensuality, and personal power.",
+    "projects.portfolio.title": "Portfolio Website",
+    "projects.portfolio.description":
+      "A personal portfolio built with Astro and React, featuring i18n (English/Spanish), dark/light mode, responsive design, and CI/CD with GitHub Actions to GitHub Pages.",
+
     "projects.placeholder.title": "More Projects Coming Soon",
     "projects.placeholder.description":
       "Stay tuned, we're still building amazing stuff!",
@@ -260,6 +264,11 @@ export const ui = {
     "projects.mika.title": "Mika - Beauty Salon",
     "projects.mika.description":
       "Sitio web oficial para la campaña de empoderamiento femenino organizada por Mika Beauty Salon. El proyecto busca inspirar a las mujeres mediante el Heels Dance (también conocido como Strip Dance), promoviendo la autoestima, la sensualidad y el poder personal.",
+
+    "projects.portfolio.title": "Mi Portafolio",
+    "projects.portfolio.description":
+      "Un portafolio personal construido con Astro y React, con soporte i18n (inglés/español), modo oscuro/claro, diseño responsive y CI/CD con GitHub Actions a GitHub Pages.",
+
     "projects.placeholder.title": "Más proyectos próximamente",
     "projects.placeholder.description":
       "Estate atento, seguimos construyendo cosas increíbles.",
