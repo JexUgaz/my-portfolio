@@ -101,6 +101,10 @@ export const ui = {
     "projects.portfolio.description":
       "A personal portfolio built with Astro and React, featuring i18n (English/Spanish), dark/light mode, responsive design, and CI/CD with GitHub Actions to GitHub Pages.",
 
+    "projects.grocery.title": "Grocery Store",
+    "projects.grocery.description":
+      "A modern e-commerce platform for grocery shopping built with Next.js, TypeScript, and Tailwind CSS. Features include a responsive design, dynamic product listings, a shopping cart with discount calculations, and a smooth checkout flow powered by Framer Motion animations.",
+
     "projects.placeholder.title": "More Projects Coming Soon",
     "projects.placeholder.description":
       "Stay tuned, we're still building amazing stuff!",
@@ -268,6 +272,10 @@ export const ui = {
     "projects.portfolio.title": "Mi Portafolio",
     "projects.portfolio.description":
       "Un portafolio personal construido con Astro y React, con soporte i18n (inglés/español), modo oscuro/claro, diseño responsive y CI/CD con GitHub Actions a GitHub Pages.",
+
+    "projects.grocery.title": "Grocery Store",
+    "projects.grocery.description":
+      "Plataforma moderna de comercio electrónico para compras de supermercado, desarrollada con Next.js, TypeScript y Tailwind CSS. Incluye diseño responsivo, listado dinámico de productos, carrito de compras con cálculo de descuentos y un fluido proceso de pago potenciado con animaciones de Framer Motion.",
 
     "projects.placeholder.title": "Más proyectos próximamente",
     "projects.placeholder.description":
