@@ -36,15 +36,16 @@ export const ui = {
     "nav.about": "About",
     "nav.contact": "Contact",
     "home.intro": "Hello, I'm Loammi",
-    "home.roles": ["Software Developer", "Cloud Engineer", "Mobile Developer"],
+    "home.roles": ["IT Engineer", "Software Developer", "Mobile Developer"],
     "home.description": `
       <span class="text-accent font-semibold">Telecommunications Engineer</span>
       focused on software development, from backend and mobile apps to cloud infrastructure
       and databases. <br />I design <span class="text-accent font-semibold">
-      scalable systems</span> that solve real-world problems with clean, thoughtful architecture.
+      scalable systems</span> that solve real-world problems with clean and well-engineered architectures.
     `,
     "home.contact-me": "Contact me:",
     "home.download-cv": "Download My CV",
+    "home.link-cv": "cv.pdf",
     "skills.title": "Tech Stack",
     "skills.description": `
       A collection of <span class="text-accent">software technologies</span> I've mastered,
@@ -205,18 +206,19 @@ export const ui = {
     "nav.contact": "Contacto",
     "home.intro": "Hola, soy Loammi",
     "home.roles": [
+      "Ingeniero de TI",
       "Desarrollador de Software",
-      "Ingeniero Cloud",
       "Desarrollador Mobile",
     ],
     "home.description": `
       <span class="text-accent font-semibold">Ingeniero en Telecomunicaciones</span>
       enfocado en el desarrollo de software, desde aplicaciones móviles y backend hasta
       infraestructura en la nube y bases de datos. <br />Diseño <span class="text-accent font-semibold">
-      sistemas escalables</span> que resuelven problemas reales con una arquitectura limpia y bien pensada.
+      sistemas escalables</span> que resuelven problemas reales con una arquitectura limpia y cuidadosamente diseñada.
     `,
     "home.contact-me": "Contáctame:",
     "home.download-cv": "Descarga mi CV",
+    "home.link-cv": "cv-spanish.pdf",
     "skills.title": "Stack Tecnológico",
     "skills.description": `
       Una colección de <span class="text-accent">tecnologías de software</span> que he
