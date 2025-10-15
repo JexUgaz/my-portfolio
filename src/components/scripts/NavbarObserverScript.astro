@@ -6,7 +6,7 @@
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5,
+      threshold: 0.2,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -38,13 +38,13 @@
       entries.forEach((entry) => {
         const id = entry.target.getAttribute("id");
         const navLink = Array.from(navLinks).find((el) =>
-          el.getAttribute("onclick")?.includes(`#${id}`)
+          el.getAttribute("onclick")?.includes(`#${id}`),
         );
 
         if (!entry.isIntersecting) return;
 
         navLinks.forEach((link) =>
-          link.classList.remove("nav-item-mobile-activate")
+          link.classList.remove("nav-item-mobile-activate"),
         );
         navLink?.classList.add("nav-item-mobile-activate");
       });

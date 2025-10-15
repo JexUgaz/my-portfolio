@@ -58,6 +58,20 @@ export const ui = {
     "skills.categories.cloud": "Cloud & DevOps",
     "skills.categories.tools": "Tools & IDEs",
     "experience.title": "My Experience",
+    "experience.huawei.title": "IT Engineer",
+    "experience.huawei.description": `
+      Contributed to <span class="text-accent">Big Data ecosystem migrations</span>, updating critical components 
+      such as <span class="text-accent">Spark</span>, <span class="text-accent">Flume</span>, 
+      <span class="text-accent">Sqoop</span>, <span class="text-accent">Python</span>, 
+      <span class="text-accent">Redis</span>, <span class="text-accent">MySQL</span>, and 
+      <span class="text-accent">Hadoop</span> to their latest stable versions. Operated in 
+      <span class="text-accent">Linux</span> environments with secure <span class="text-accent">VPN</span> access 
+      to client servers, ensuring compatibility, stability, and optimal performance across the new infrastructure.
+      Responsible for <span class="text-accent">platform maintenance and upgrades</span>, 
+      <span class="text-accent">process automation</span> using Python, and providing 
+      <span class="text-accent">specialized technical support</span> during migration phases.
+    `,
+    "experience.huawei.date": "Oct 2025 - Present",
     "experience.lexia.title": "Software Engineer",
     "experience.lexia.description": `
       Built a data extraction system via <span class="text-accent">Web Scraping</span> and 
@@ -231,6 +245,21 @@ export const ui = {
     "skills.categories.cloud": "Cloud & DevOps",
     "skills.categories.tools": "Herramientas e IDEs",
     "experience.title": "Mi Experiencia",
+    "experience.huawei.title": "Ingeniero de TI",
+    "experience.huawei.description": `
+      Participación en <span class="text-accent">proyectos de migración de ecosistemas Big Data</span>, 
+      actualizando componentes críticos como <span class="text-accent">Spark</span>, 
+      <span class="text-accent">Flume</span>, <span class="text-accent">Sqoop</span>, 
+      <span class="text-accent">Python</span>, <span class="text-accent">Redis</span>, 
+      <span class="text-accent">MySQL</span> y <span class="text-accent">Hadoop</span> 
+      a sus versiones más recientes. Trabajo en entornos <span class="text-accent">Linux</span> 
+      con acceso seguro mediante <span class="text-accent">VPN</span> a los servidores del cliente, 
+      garantizando compatibilidad, estabilidad y rendimiento óptimo en la nueva infraestructura. 
+      Responsable del <span class="text-accent">mantenimiento y actualización de la plataforma</span>, 
+      <span class="text-accent">automatización de procesos</span> con Python y 
+      <span class="text-accent">soporte técnico especializado</span> durante las etapas de migración.
+    `,
+    "experience.huawei.date": "Oct 2025 - Actualidad",
     "experience.lexia.title": "Ingeniero de Software",
     "experience.lexia.description": `
       Construí un sistema de extracción de datos mediante <span class="text-accent">Web Scraping</span> y 
