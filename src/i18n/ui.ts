@@ -58,6 +58,21 @@ export const ui = {
     "skills.categories.cloud": "Cloud & DevOps",
     "skills.categories.tools": "Tools & IDEs",
     "experience.title": "My Experience",
+    "experience.isos.title": "Backend Developer (Contractor)",
+    "experience.isos.description": `
+      Backend development for an enterprise ERP system using 
+      <span class="text-accent">Node.js</span> and <span class="text-accent">Next.js</span>, 
+      contributing to the evolution and optimization of core system modules. 
+      Implemented <span class="text-accent">electronic invoicing integration with SUNAT</span>, 
+      including XML generation, digital signing, and submission workflows.
+
+      Developed <span class="text-accent">dynamic PDF reports</span>, 
+      automated email notifications, and implemented 
+      <span class="text-accent">role-based access control (RBAC)</span>. 
+      Refactored backend modules and improved sales workflows (product and service) 
+      as well as tax deduction management to enhance maintainability and business logic consistency.
+    `,
+    "experience.isos.date": "Feb 2026 - Present",
     "experience.huawei.title": "IT Engineer",
     "experience.huawei.description": `
       Contributed to <span class="text-accent">Big Data ecosystem migrations</span>, updating critical components 
@@ -245,6 +260,21 @@ export const ui = {
     "skills.categories.cloud": "Cloud & DevOps",
     "skills.categories.tools": "Herramientas e IDEs",
     "experience.title": "Mi Experiencia",
+    "experience.isos.title": "Backend Developer (RxH)",
+    "experience.isos.description": `
+    Desarrollo backend en un sistema ERP empresarial utilizando 
+    <span class="text-accent">Node.js</span> y <span class="text-accent">Next.js</span>, 
+    participando en la evolución y optimización de módulos críticos del sistema. 
+    Implementación de <span class="text-accent">facturación electrónica integrada con SUNAT</span>, 
+    incluyendo generación, firmado digital y envío de XML.
+
+    Desarrollo de <span class="text-accent">reportes dinámicos en PDF</span>, 
+    automatización de notificaciones por correo e implementación de 
+    <span class="text-accent">control de acceso basado en roles (RBAC)</span>. 
+    Mejora y refactorización de flujos de venta (producto y servicio) 
+    y gestión de detracciones, optimizando la mantenibilidad y la lógica de negocio.
+  `,
+    "experience.isos.date": "Feb 2026 - Actualidad",
     "experience.huawei.title": "Ingeniero de TI",
     "experience.huawei.description": `
       Participación en <span class="text-accent">proyectos de migración de ecosistemas Big Data</span>, 

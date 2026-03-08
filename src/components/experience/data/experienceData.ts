@@ -24,8 +24,31 @@ import SqoopIcon from "@/components/icons/colored/SqoopIcon.astro";
 import RedisIcon from "@/components/icons/colored/RedisIcon.astro";
 import MySQLIcon from "@/components/icons/colored/MySQLIcon.astro";
 import BashIcon from "@/components/icons/colored/BashIcon.astro";
+import GithubIcon from "@/components/icons/GithubIcon.astro";
+import XMLIcon from "@/components/icons/XMLIcon.astro";
+import ApiIcon from "@/components/icons/ApiIcon.astro";
+import PDFIcon from "@/components/icons/colored/PDFIcon.astro";
+import SecurityIcon from "@/components/icons/SecurityIcon.astro";
 
 export const experienceData: Experience[] = [
+  {
+    title: "experience.isos.title",
+    company: "ISOS Group",
+    description: "experience.isos.description",
+    logo: companiesLogo.isosLogo,
+    date: "experience.isos.date",
+    stack: [
+      { title: "Node.js", Icon: NodeIcon },
+      { title: "Next.js", Icon: NextIcon },
+      { title: "JavaScript", Icon: JavaScriptIcon },
+      { title: "XML", Icon: XMLIcon },
+      { title: "SUNAT Integration", Icon: ApiIcon },
+      { title: "PDF Generation", Icon: PDFIcon },
+      { title: "RBAC", Icon: SecurityIcon },
+      { title: "GitHub", Icon: GithubIcon },
+    ],
+    hasBackground: false,
+  },
   {
     title: "experience.huawei.title",
     company: "HUAWEI Perú",
@@ -42,6 +65,7 @@ export const experienceData: Experience[] = [
       { title: "Linux", Icon: LinuxIcon },
       { title: "Shell Scripting", Icon: BashIcon },
     ],
+    hasBackground: true,
   },
   {
     title: "experience.lexia.title",
@@ -61,6 +85,7 @@ export const experienceData: Experience[] = [
       { title: "PostgreSQL", Icon: PostgreSQLIcon },
       { title: "Tailwind CSS", Icon: TailwindCSSIcon },
     ],
+    hasBackground: true,
   },
   {
     title: "experience.zafiro.title",
@@ -79,6 +104,7 @@ export const experienceData: Experience[] = [
       { title: "Nessus Server", Icon: NessusServerIcon },
       { title: "Docker", Icon: DockerIcon },
     ],
+    hasBackground: true,
   },
   {
     title: "experience.barbacci.title",
@@ -92,5 +118,6 @@ export const experienceData: Experience[] = [
       { title: "PostgreSQL", Icon: PostgreSQLIcon },
       { title: "JavaScript", Icon: JavaScriptIcon },
     ],
+    hasBackground: true,
   },
 ];

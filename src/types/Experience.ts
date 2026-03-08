@@ -13,4 +13,5 @@ export interface Experience {
   description: TranslationKey;
   stack: TechStack[];
   date: TranslationKey;
+  hasBackground: boolean;
 }
