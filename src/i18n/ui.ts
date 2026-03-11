@@ -58,7 +58,7 @@ export const ui = {
     "skills.categories.cloud": "Cloud & DevOps",
     "skills.categories.tools": "Tools & IDEs",
     "experience.title": "My Experience",
-    "experience.isos.title": "Backend Developer (Contractor)",
+    "experience.isos.title": "Senior Full Stack Developer",
     "experience.isos.description": `
       Backend development for an enterprise ERP system using 
       <span class="text-accent">Node.js</span> and <span class="text-accent">Next.js</span>, 
@@ -260,7 +260,7 @@ export const ui = {
     "skills.categories.cloud": "Cloud & DevOps",
     "skills.categories.tools": "Herramientas e IDEs",
     "experience.title": "Mi Experiencia",
-    "experience.isos.title": "Backend Developer (RxH)",
+    "experience.isos.title": "Senior Full Stack Developer",
     "experience.isos.description": `
     Desarrollo backend en un sistema ERP empresarial utilizando 
     <span class="text-accent">Node.js</span> y <span class="text-accent">Next.js</span>, 
