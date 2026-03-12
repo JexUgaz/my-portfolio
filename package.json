@@ -31,5 +31,11 @@
     "@types/aos": "^3.0.7",
     "@types/three": "^0.178.1",
     "astro": "^5.14.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }

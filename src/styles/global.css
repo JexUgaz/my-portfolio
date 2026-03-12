@@ -16,6 +16,7 @@
   --color-primary: var(--base-primary-dark);
   --color-primary-900: oklch(15% 0.033 256.848);
   --color-white: var(--base-white);
+  --color-base-white: var(--base-white);
   --color-on-container: var(--base-white);
   --color-on-container-inactive: #d1d5db;
   --color-accent: oklch(80% 0.2 140);
