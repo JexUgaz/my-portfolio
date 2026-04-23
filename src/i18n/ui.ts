@@ -75,18 +75,12 @@ export const ui = {
     "experience.isos.date": "Feb 2026 - Present",
     "experience.huawei.title": "IT Engineer",
     "experience.huawei.description": `
-      Contributed to <span class="text-accent">Big Data ecosystem migrations</span>, updating critical components 
-      such as <span class="text-accent">Spark</span>, <span class="text-accent">Flume</span>, 
-      <span class="text-accent">Sqoop</span>, <span class="text-accent">Python</span>, 
-      <span class="text-accent">Redis</span>, <span class="text-accent">MySQL</span>, and 
-      <span class="text-accent">Hadoop</span> to their latest stable versions. Operated in 
-      <span class="text-accent">Linux</span> environments with secure <span class="text-accent">VPN</span> access 
-      to client servers, ensuring compatibility, stability, and optimal performance across the new infrastructure.
-      Responsible for <span class="text-accent">platform maintenance and upgrades</span>, 
-      <span class="text-accent">process automation</span> using Python, and providing 
-      <span class="text-accent">specialized technical support</span> during migration phases.
-    `,
-    "experience.huawei.date": "Oct 2025 - Present",
+    Participation in infrastructure projects for telecommunications and data centers for telecom sector clients.
+    Operation and administration of virtualization platforms such as <span class="text-accent">Huawei FusionSphere</span> and <span class="text-accent">FusionCompute</span> in on-premise and hybrid cloud environments.
+    Support of critical Linux infrastructure with focus on networking, VPN, high availability, and service redundancy.
+    Participation in Big Data platform migration processes (<span class="text-accent">Hadoop ecosystem</span>), operational task automation, and support in high availability environments.
+  `,
+    "experience.huawei.date": "Oct 2025 - Apr 2026",
     "experience.lexia.title": "Software Engineer",
     "experience.lexia.description": `
       Built a data extraction system via <span class="text-accent">Web Scraping</span> and 
@@ -277,19 +271,12 @@ export const ui = {
     "experience.isos.date": "Feb 2026 - Actualidad",
     "experience.huawei.title": "Ingeniero de TI",
     "experience.huawei.description": `
-      Participación en <span class="text-accent">proyectos de migración de ecosistemas Big Data</span>, 
-      actualizando componentes críticos como <span class="text-accent">Spark</span>, 
-      <span class="text-accent">Flume</span>, <span class="text-accent">Sqoop</span>, 
-      <span class="text-accent">Python</span>, <span class="text-accent">Redis</span>, 
-      <span class="text-accent">MySQL</span> y <span class="text-accent">Hadoop</span> 
-      a sus versiones más recientes. Trabajo en entornos <span class="text-accent">Linux</span> 
-      con acceso seguro mediante <span class="text-accent">VPN</span> a los servidores del cliente, 
-      garantizando compatibilidad, estabilidad y rendimiento óptimo en la nueva infraestructura. 
-      Responsable del <span class="text-accent">mantenimiento y actualización de la plataforma</span>, 
-      <span class="text-accent">automatización de procesos</span> con Python y 
-      <span class="text-accent">soporte técnico especializado</span> durante las etapas de migración.
+    Participación en proyectos de infraestructura de telecomunicaciones y data centers para clientes del sector telco.
+    Operación y administración de plataformas de virtualización como <span class="text-accent">Huawei FusionSphere</span> y <span class="text-accent">FusionCompute</span> en entornos on-premise y cloud híbrido.
+    Soporte de infraestructura crítica en Linux con foco en redes, VPN, alta disponibilidad y redundancia de servicios.
+    Participación en procesos de migración de plataformas de <span class="text-accent">Big Data (Hadoop ecosystem)</span>, automatización de tareas operativas y soporte en entornos de alta disponibilidad.
     `,
-    "experience.huawei.date": "Oct 2025 - Actualidad",
+    "experience.huawei.date": "Oct 2025 - Abr 2026",
     "experience.lexia.title": "Ingeniero de Software",
     "experience.lexia.description": `
       Construí un sistema de extracción de datos mediante <span class="text-accent">Web Scraping</span> y 
