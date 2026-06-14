@@ -1,6 +1,7 @@
 import mikaBeautySalonImage from "@/assets/projects/mika-beauty-salon.webp";
 import portfolioImage from "@/assets/projects/portfolio.webp";
 import groceryStoreImage from "@/assets/projects/grocery-store.webp";
+import supplierDueDiligenceImage from "@/assets/projects/supplier-inventory.webp";
 import AstroIcon from "@/components/icons/colored/Astroicon.astro";
 import GitHubActionsIcon from "@/components/icons/colored/GitHubActionsIcon.astro";
 import ReactIcon from "@/components/icons/colored/ReactIcon.astro";
@@ -10,8 +11,27 @@ import VercelIcon from "@/components/icons/colored/VercelIcon.astro";
 import ViteIcon from "@/components/icons/colored/ViteIcon.astro";
 import NextIcon from "@/components/icons/NextIcon.astro";
 import type { Project } from "@/types/Project";
+import DotNetIcon from "@/components/icons/DotNetIcon.astro";
+import PostgreSQLIcon from "@/components/icons/colored/PostgreSQLIcon.astro";
+import DockerIcon from "@/components/icons/DockerIcon.astro";
 
 export const projectsData: Project[] = [
+  {
+    title: "projects.supplierDueDiligence.title",
+    description: "projects.supplierDueDiligence.description",
+    image: supplierDueDiligenceImage,
+    demoUrl: "https://supplier-due-diligence.jexugaz.work/",
+    codeUrl: "https://github.com/JexUgaz/SupplierDueDiligence-frontend",
+    stack: [
+      { title: "React", Icon: ReactIcon },
+      { title: "TypeScript", Icon: TypeScriptIcon },
+      { title: "Tailwind CSS", Icon: TailwindCSSIcon },
+      { title: ".NET", Icon: DotNetIcon },
+      { title: "PostgreSQL", Icon: PostgreSQLIcon },
+      { title: "Docker", Icon: DockerIcon },
+      // { title: "Render", Icon: RenderIcon },
+    ],
+  },
   {
     title: "projects.grocery.title",
     description: "projects.grocery.description",

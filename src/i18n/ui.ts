@@ -118,6 +118,9 @@ export const ui = {
       A selection of <span class="text-accent">my public projects</span> built with modern 
       <span class="text-accent">technologies</span>, featuring open-source code and cloud integrations.
     `,
+    "projects.supplierDueDiligence.title": "Supplier Due Diligence",
+    "projects.supplierDueDiligence.description":
+      "A supplier risk assessment platform designed to help organizations make informed business decisions before engaging with vendors. The system centralizes supplier information, ownership structures, and compliance data while performing sanctions screening against OFAC, World Bank, and Offshore Leaks databases through automated web scraping. Features include secure JWT authentication, entity network visualization, supplier due diligence workflows, and risk analysis tools that support regulatory compliance and reduce financial, legal, and reputational exposure.",
     "projects.mika.title": "Mika - Beauty Salon",
     "projects.mika.description":
       "Official website for the women's empowerment campaign organized by Mika Beauty Salon. The project aims to inspire women through Heels Dance (also known as Strip Dance), promoting self-esteem, sensuality, and personal power.",
@@ -313,6 +316,10 @@ export const ui = {
       Una selección de <span class="text-accent">mis proyectos públicos</span> desarrollados con 
       <span class="text-accent">tecnologías modernas</span>, con código open-source e integraciones en la nube.
     `,
+    "projects.supplierDueDiligence.title": "Debida Diligencia de Proveedores",
+    "projects.supplierDueDiligence.description":
+      "Una plataforma de evaluación de riesgos de proveedores diseñada para ayudar a las organizaciones a tomar decisiones de negocio informadas antes de establecer relaciones comerciales. El sistema centraliza información de proveedores, estructuras de propiedad y datos de cumplimiento normativo, mientras realiza verificaciones automáticas contra listas de sanciones de OFAC, World Bank y Offshore Leaks mediante técnicas de web scraping. Incluye autenticación segura con JWT, visualización de redes de entidades, flujos de trabajo de debida diligencia y herramientas de análisis de riesgo que contribuyen al cumplimiento regulatorio y a la reducción de riesgos financieros, legales y reputacionales.",
+
     "projects.mika.title": "Mika - Beauty Salon",
     "projects.mika.description":
       "Sitio web oficial para la campaña de empoderamiento femenino organizada por Mika Beauty Salon. El proyecto busca inspirar a las mujeres mediante el Heels Dance (también conocido como Strip Dance), promoviendo la autoestima, la sensualidad y el poder personal.",
