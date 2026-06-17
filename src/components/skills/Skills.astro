@@ -1,5 +1,4 @@
 ---
-import { ui } from "@/i18n/ui";
 import FloatingCubesScene from "./components/FloatingCubesScene";
 import SkillsTitle from "./components/SkillsTitle.astro";
 import TechSkillsTab from "./components/TechSkillsTab";
@@ -17,10 +16,10 @@ const translations = getSkillsCategoryMap(lang);
 
 <section
   id={id}
-  class="relative px-5 xl:px-10 sm:h-[calc(100dvh_-_var(--navbar-height))] overflow-visible"
+  class="relative px-5 xl:px-10 sm:h-[calc(100dvh-var(--navbar-height))] overflow-visible"
 >
   <div
-    class="absolute w-[100dvw] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] h-full"
+    class="absolute w-dvw top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] h-full"
   >
     <FloatingCubesScene client:visible />
   </div>

@@ -26,8 +26,7 @@ export const ui = {
     "meta.description":
       "I'm Loammi Ugaz, a Telecommunications Engineer specialized in Full-Stack Software Development and Cloud Architecture. Explore my portfolio, skills, and projects.",
     "meta.og.title": "Loammi Ugaz - Software Developer",
-    "meta.og.description":
-      "Telecommunications Engineer focused on building scalable software and cloud solutions. View my work, background, and projects.",
+    "meta.og.description": "Telecommunications Engineer focused on building scalable software and cloud solutions. View my work, background, and projects.",
     "meta.og.site_name": "Loammi Ugaz Portfolio",
     "nav.home": "Home",
     "nav.skills": "Skills",
@@ -114,13 +113,23 @@ export const ui = {
     `,
     "experience.barbacci.date": "Jan 2023 - Mar 2023",
     "projects.title": "Projects",
-    "projects.description": `
-      A selection of <span class="text-accent">my public projects</span> built with modern 
-      <span class="text-accent">technologies</span>, featuring open-source code and cloud integrations.
-    `,
+    "projects.description":
+      'Public applications and demos built with <span class="text-accent">modern technologies</span> and <span class="text-accent">open-source code</span>.',
     "projects.supplierDueDiligence.title": "Supplier Due Diligence",
     "projects.supplierDueDiligence.description":
       "A supplier risk assessment platform designed to help organizations make informed business decisions before engaging with vendors. The system centralizes supplier information, ownership structures, and compliance data while performing sanctions screening against OFAC, World Bank, and Offshore Leaks databases through automated web scraping. Features include secure JWT authentication, entity network visualization, supplier due diligence workflows, and risk analysis tools that support regulatory compliance and reduce financial, legal, and reputational exposure.",
+    "projects.supplierDueDiligence.section.frontend.label": "Frontend",
+    "projects.supplierDueDiligence.section.frontend.markdownPath": "/src/components/projects/markdown/supplier-due-diligence/en/frontend.md",
+
+    "projects.supplierDueDiligence.section.backend.label": "Backend",
+    "projects.supplierDueDiligence.section.backend.markdownPath": "/src/components/projects/markdown/supplier-due-diligence/en/backend.md",
+
+    "projects.supplierDueDiligence.section.scraper.label": "Scraper",
+    "projects.supplierDueDiligence.section.scraper.markdownPath": "/src/components/projects/markdown/supplier-due-diligence/en/scraper.md",
+
+    "projects.supplierDueDiligence.section.arquitecture.label": "Arquitecture",
+    "projects.supplierDueDiligence.section.arquitecture.markdownPath": "/src/components/projects/markdown/supplier-due-diligence/en/arquitecture.md",
+
     "projects.mika.title": "Mika - Beauty Salon",
     "projects.mika.description":
       "Official website for the women's empowerment campaign organized by Mika Beauty Salon. The project aims to inspire women through Heels Dance (also known as Strip Dance), promoting self-esteem, sensuality, and personal power.",
@@ -133,8 +142,7 @@ export const ui = {
       "A modern e-commerce platform for grocery shopping built with Next.js, TypeScript, and Tailwind CSS. Features include a responsive design, dynamic product listings, a shopping cart with discount calculations, and a smooth checkout flow powered by Framer Motion animations.",
 
     "projects.placeholder.title": "More Projects Coming Soon",
-    "projects.placeholder.description":
-      "Stay tuned, we're still building amazing stuff!",
+    "projects.placeholder.description": "Stay tuned, we're still building amazing stuff!",
     "projects.button.demo": "Demo",
     "projects.button.code": "Code",
     "about.title": `
@@ -191,8 +199,7 @@ export const ui = {
 
     "contact.whatsapp.title": "WhatsApp",
     "contact.whatsapp.description": "Message me directly via WhatsApp",
-    "contact.whatsapp.url":
-      "https://wa.me/51970149453?text=Hi%20Jex%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20to%20you.",
+    "contact.whatsapp.url": "https://wa.me/51970149453?text=Hi%20Jex%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20to%20you.",
 
     "contact.email.title": "Email",
     "contact.email.description": "Send me an email to start a conversation",
@@ -211,8 +218,7 @@ export const ui = {
     "contact.form.success": "Message sent successfully!",
     "contact.form.error": "Something went wrong. Please try again.",
 
-    "footer.description":
-      "Telecommunications Engineer specialized in Software Development and Cloud Architecture",
+    "footer.description": "Telecommunications Engineer specialized in Software Development and Cloud Architecture",
     "footer.copyright": "Loammi Ugaz. All rights reserved.",
   },
   es: {
@@ -220,8 +226,7 @@ export const ui = {
     "meta.description":
       "Soy Loammi Ugaz, Ingeniero en Telecomunicaciones especializado en Desarrollo de Software Full-Stack y Arquitectura Cloud. Explora mi portafolio, habilidades y proyectos.",
     "meta.og.title": "Loammi Ugaz - Desarrollador de Software",
-    "meta.og.description":
-      "Ingeniero en Telecomunicaciones enfocado en crear soluciones escalables de software y nube. Descubre mi experiencia y proyectos.",
+    "meta.og.description": "Ingeniero en Telecomunicaciones enfocado en crear soluciones escalables de software y nube. Descubre mi experiencia y proyectos.",
     "meta.og.site_name": "Portafolio de Loammi Ugaz",
     "site.title": "Mi Portafolio",
     "nav.home": "Inicio",
@@ -231,11 +236,7 @@ export const ui = {
     "nav.about": "Sobre mí",
     "nav.contact": "Contacto",
     "home.intro": "Hola, soy Loammi",
-    "home.roles": [
-      "Ingeniero de TI",
-      "Desarrollador de Software",
-      "Desarrollador Mobile",
-    ],
+    "home.roles": ["Ingeniero de TI", "Desarrollador de Software", "Desarrollador Mobile"],
     "home.description": `
       <span class="text-accent font-semibold">Ingeniero en Telecomunicaciones</span>
       enfocado en el desarrollo de software, desde aplicaciones móviles y backend hasta
@@ -311,14 +312,24 @@ export const ui = {
       <span class="text-accent">SQL Server</span> y <span class="text-accent">PostgreSQL</span> para mejorar la eficiencia operativa.
     `,
     "experience.barbacci.date": "Ene 2023 - Mar 2023",
-    "projects.title": "Proyectos",
-    "projects.description": `
-      Una selección de <span class="text-accent">mis proyectos públicos</span> desarrollados con 
-      <span class="text-accent">tecnologías modernas</span>, con código open-source e integraciones en la nube.
-    `,
+    "projects.title": "Projects",
+    "projects.description":
+      'Aplicaciones públicas y demos creadas con <span class="text-accent">tecnologías modernas</span> y <span class="text-accent">código abierto</span>.',
     "projects.supplierDueDiligence.title": "Debida Diligencia de Proveedores",
     "projects.supplierDueDiligence.description":
       "Una plataforma de evaluación de riesgos de proveedores diseñada para ayudar a las organizaciones a tomar decisiones de negocio informadas antes de establecer relaciones comerciales. El sistema centraliza información de proveedores, estructuras de propiedad y datos de cumplimiento normativo, mientras realiza verificaciones automáticas contra listas de sanciones de OFAC, World Bank y Offshore Leaks mediante técnicas de web scraping. Incluye autenticación segura con JWT, visualización de redes de entidades, flujos de trabajo de debida diligencia y herramientas de análisis de riesgo que contribuyen al cumplimiento regulatorio y a la reducción de riesgos financieros, legales y reputacionales.",
+
+    "projects.supplierDueDiligence.section.frontend.label": "Frontend",
+    "projects.supplierDueDiligence.section.frontend.markdownPath": "/src/components/projects/markdown/supplier-due-diligence/es/frontend.md",
+
+    "projects.supplierDueDiligence.section.backend.label": "Backend",
+    "projects.supplierDueDiligence.section.backend.markdownPath": "/src/components/projects/markdown/supplier-due-diligence/es/backend.md",
+
+    "projects.supplierDueDiligence.section.scraper.label": "Scraper",
+    "projects.supplierDueDiligence.section.scraper.markdownPath": "/src/components/projects/markdown/supplier-due-diligence/es/scraper.md",
+
+    "projects.supplierDueDiligence.section.arquitecture.label": "Arquitectura",
+    "projects.supplierDueDiligence.section.arquitecture.markdownPath": "/src/components/projects/markdown/supplier-due-diligence/es/arquitecture.md",
 
     "projects.mika.title": "Mika - Beauty Salon",
     "projects.mika.description":
@@ -333,8 +344,7 @@ export const ui = {
       "Plataforma moderna de comercio electrónico para compras de supermercado, desarrollada con Next.js, TypeScript y Tailwind CSS. Incluye diseño responsivo, listado dinámico de productos, carrito de compras con cálculo de descuentos y un fluido proceso de pago potenciado con animaciones de Framer Motion.",
 
     "projects.placeholder.title": "Más proyectos próximamente",
-    "projects.placeholder.description":
-      "Estate atento, seguimos construyendo cosas increíbles.",
+    "projects.placeholder.description": "Estate atento, seguimos construyendo cosas increíbles.",
     "projects.button.demo": "Demo",
     "projects.button.code": "Código",
     "about.title": `
@@ -365,8 +375,7 @@ export const ui = {
     "about.timeline.transition.title": "Transición: El Software como Medio",
     "about.timeline.transition.desc": `Cambié el enfoque hacia el <span class="text-accent">desarrollo de software</span> como una forma de construir cosas útiles. Desde servicios backend hasta prototipos full-stack, comencé a dar vida a las ideas.`,
 
-    "about.timeline.growth.title":
-      "Crecimiento: Proyectos Reales, Personas Reales",
+    "about.timeline.growth.title": "Crecimiento: Proyectos Reales, Personas Reales",
     "about.timeline.growth.desc": `Trabajar en proyectos freelance y académicos me enseñó a construir <span class="text-accent">sistemas centrados en el usuario</span>, desde APIs e infraestructura cloud hasta experiencias móviles, siempre alineado con necesidades reales.`,
 
     "about.timeline.focus.title": "Enfoque Actual: Sistemas que Generan Valor",
@@ -393,12 +402,10 @@ export const ui = {
 
     "contact.whatsapp.title": "WhatsApp",
     "contact.whatsapp.description": "Envíame un mensaje directo por WhatsApp",
-    "contact.whatsapp.url":
-      "https://wa.me/51970149453?text=Hola%20Jex%2C%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo.",
+    "contact.whatsapp.url": "https://wa.me/51970149453?text=Hola%20Jex%2C%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo.",
 
     "contact.email.title": "Correo",
-    "contact.email.description":
-      "Envíame un correo para iniciar una conversación",
+    "contact.email.description": "Envíame un correo para iniciar una conversación",
     "contact.email.url":
       "mailto:loammi.jezreel@gmail.com?subject=Hola%20Jex%20-%20Portafolio&body=Hola%20Jex%2C%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo.",
 
@@ -414,8 +421,7 @@ export const ui = {
     "contact.form.success": "¡Mensaje enviado con éxito!",
     "contact.form.error": "Algo salió mal. Por favor, inténtalo de nuevo.",
 
-    "footer.description":
-      "Ingeniero en Telecomunicaciones especializado en Desarrollo de Software y Arquitectura Cloud",
+    "footer.description": "Ingeniero en Telecomunicaciones especializado en Desarrollo de Software y Arquitectura Cloud",
     "footer.copyright": "Loammi Ugaz. Todos los derechos reservados.",
   },
 } as const;

@@ -1,7 +1,7 @@
 import mikaBeautySalonImage from "@/assets/projects/mika-beauty-salon.webp";
 import portfolioImage from "@/assets/projects/portfolio.webp";
 import groceryStoreImage from "@/assets/projects/grocery-store.webp";
-import supplierDueDiligenceImage from "@/assets/projects/supplier-inventory-index.webp";
+import sDDImages from "@/assets/projects/supplier-inventory";
 import AstroIcon from "@/components/icons/colored/Astroicon.astro";
 import GitHubActionsIcon from "@/components/icons/colored/GitHubActionsIcon.astro";
 import ReactIcon from "@/components/icons/colored/ReactIcon.astro";
@@ -12,25 +12,80 @@ import ViteIcon from "@/components/icons/colored/ViteIcon.astro";
 import NextIcon from "@/components/icons/NextIcon.astro";
 import type { Project } from "@/types/Project";
 import DotNetIcon from "@/components/icons/DotNetIcon.astro";
-import PostgreSQLIcon from "@/components/icons/colored/PostgreSQLIcon.astro";
 import DockerIcon from "@/components/icons/DockerIcon.astro";
+import SupabaseIcon from "@/components/icons/colored/SupabaseIcon.astro";
+import WebScraping from "@/components/icons/colored/WebScraping.astro";
+import NodeIcon from "@/components/icons/colored/NodeIcon.astro";
 
 export const projectsData: Project[] = [
   {
     title: "projects.supplierDueDiligence.title",
     description: "projects.supplierDueDiligence.description",
-    image: supplierDueDiligenceImage,
+    image: sDDImages.login,
     demoUrl: "https://supplier-due-diligence.jexugaz.work/",
     codeUrl: "https://github.com/JexUgaz/SupplierDueDiligence-frontend",
     stack: [
+      { title: "Web Scraping", Icon: WebScraping },
+      { title: ".NET", Icon: DotNetIcon },
       { title: "React", Icon: ReactIcon },
       { title: "TypeScript", Icon: TypeScriptIcon },
-      { title: "Tailwind CSS", Icon: TailwindCSSIcon },
-      { title: ".NET", Icon: DotNetIcon },
-      { title: "PostgreSQL", Icon: PostgreSQLIcon },
       { title: "Docker", Icon: DockerIcon },
-      // { title: "Render", Icon: RenderIcon },
+      { title: "Vercel", Icon: VercelIcon },
+      { title: "Supabase", Icon: SupabaseIcon },
+      { title: "Tailwind CSS", Icon: TailwindCSSIcon },
+      { title: "Node.js", Icon: NodeIcon },
     ],
+    status: "demo",
+    details: {
+      images: [
+        {
+          optimize: sDDImages.index,
+          raw: sDDImages.indexRaw,
+        },
+        {
+          optimize: sDDImages.indexFilter,
+          raw: sDDImages.indexFilterRaw,
+        },
+        {
+          optimize: sDDImages.edition,
+          raw: sDDImages.editionRaw,
+        },
+        {
+          optimize: sDDImages.skeleton,
+          raw: sDDImages.skeletonRaw,
+        },
+        {
+          optimize: sDDImages.screeningResults,
+          raw: sDDImages.screeningResultsRaw,
+        },
+        {
+          optimize: sDDImages.screeningInit,
+          raw: sDDImages.screeningInitRaw,
+        },
+        {
+          optimize: sDDImages.login,
+          raw: sDDImages.loginRaw,
+        },
+      ],
+      sections: [
+        {
+          label: "projects.supplierDueDiligence.section.arquitecture.label",
+          markdownPath: "projects.supplierDueDiligence.section.arquitecture.markdownPath",
+        },
+        {
+          label: "projects.supplierDueDiligence.section.frontend.label",
+          markdownPath: "projects.supplierDueDiligence.section.frontend.markdownPath",
+        },
+        {
+          label: "projects.supplierDueDiligence.section.backend.label",
+          markdownPath: "projects.supplierDueDiligence.section.backend.markdownPath",
+        },
+        {
+          label: "projects.supplierDueDiligence.section.scraper.label",
+          markdownPath: "projects.supplierDueDiligence.section.scraper.markdownPath",
+        },
+      ],
+    },
   },
   {
     title: "projects.grocery.title",
@@ -45,6 +100,7 @@ export const projectsData: Project[] = [
       { title: "Tailwind CSS", Icon: TailwindCSSIcon },
       { title: "Vercel", Icon: VercelIcon },
     ],
+    status: "open-source",
   },
   {
     title: "projects.mika.title",
@@ -75,6 +131,7 @@ export const projectsData: Project[] = [
         Icon: GitHubActionsIcon,
       },
     ],
+    status: "production",
   },
   {
     title: "projects.portfolio.title",
@@ -90,5 +147,6 @@ export const projectsData: Project[] = [
       { title: "GitHub Actions", Icon: GitHubActionsIcon },
       { title: "Vite", Icon: ViteIcon },
     ],
+    status: "open-source",
   },
 ];

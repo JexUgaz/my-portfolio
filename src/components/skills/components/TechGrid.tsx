@@ -20,11 +20,11 @@ const TechGrid: React.FC<TechGridProps> = ({ techs }) => {
         {techs.map(
           (
             { name, Icon, iconSize = "size-15 xl:size-20", tooltip: { color } },
-            index
+            index,
           ) => (
             <div
               key={name}
-              className="group relative w-[45%] sm:w-[25%] lg:w-[17%] max-w-[120px] xl:max-w-[150px]"
+              className="group relative w-[45%] sm:w-[25%] lg:w-[17%] max-w-30 xl:max-w-37.5"
             >
               <div
                 className="p-2 sm:p-3 rounded-xl flex flex-col items-center justify-center
@@ -33,7 +33,7 @@ const TechGrid: React.FC<TechGridProps> = ({ techs }) => {
               >
                 <span data-tooltip-id={`tooltip-${index}`}>
                   <Icon
-                    className={`${iconSize} drop-shadow-[var(--shadow-white-sm)] group-hover:drop-shadow-[var(--shadow-primary)] group-hover:animate-lift-soft`}
+                    className={`${iconSize} drop-shadow-(--shadow-white-sm) group-hover:drop-shadow-(--shadow-primary) group-hover:animate-lift-soft`}
                   />
                 </span>
                 <p className="max-w-full mt-1 text-white text-sm truncate group-hover:text-primary group-hover:font-bold">
@@ -51,7 +51,7 @@ const TechGrid: React.FC<TechGridProps> = ({ techs }) => {
                 style={{ backgroundColor: color }}
               />
             </div>
-          )
+          ),
         )}
       </div>
     </div>
