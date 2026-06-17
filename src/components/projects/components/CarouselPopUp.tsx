@@ -21,19 +21,41 @@ export const CarouselPopUp = ({ images }: Props) => {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  const openInNewTab = (src: string) => window.open(src, "_blank");
+  const openInNewTab = ({ desktop, mobile }: { desktop: string, mobile: string }) => {
+    const isMobile = window.matchMedia("(max-width: 680px)").matches;
+
+    window.open(
+      isMobile ? mobile : desktop,
+      "_blank"
+    );
+  }
 
   return (
     <div className="relative">
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
-          {images.map(({ optimize: { src }, raw }) => {
-            const baseName = getBasename(src);
+          {images.map(({ desktop, mobile }) => {
+            const desktopSrc = desktop.optimize.src;
+            const baseName = getBasename(desktopSrc);
             return (
               <div className="embla__slide" key={baseName}>
-                <img src={src} alt={baseName} className="embla__slide__img" />
+                <picture>
+                  <source
+                    media="(max-width: 680px)"
+                    srcSet={mobile.optimize.src}
+                  />
 
-                <button className="embla__slide__fullscreen-btn" onClick={() => openInNewTab(raw)}>
+                  <img
+                    src={desktopSrc}
+                    alt={baseName}
+                    className="embla__slide__img"
+                  />
+                </picture>
+
+                <button
+                  className="embla__slide__fullscreen-btn"
+                  onClick={() => openInNewTab({ desktop: desktop.raw, mobile: mobile.raw })}
+                >
                   ⛶
                 </button>
               </div>

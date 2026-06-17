@@ -13,10 +13,10 @@ sequenceDiagram
     participant Frontend
     participant API as Backend API
 
-    User->>Frontend: Accede a la aplicación
-    Frontend->>API: Request HTTPS + JWT Cookie
-    API-->>Frontend: Response autorizada
-    Frontend-->>User: Muestra información
+    User->>Frontend: Accesses the application
+    Frontend->>API: HTTPS Request + JWT Cookie
+    API-->>Frontend: Authorized Response
+    Frontend-->>User: Displays information
 ```
 
 # Service Communication
@@ -31,7 +31,16 @@ Key features:
 - Authentication uses JWT stored in HttpOnly and Secure cookies.
 - Communication is configured to run exclusively over HTTPS.
 
-[Sequence: User -> Access application -> Frontend -> HTTPS Request + JWT Cookie -> Backend API -> Authorized Response -> Frontend -> Display information -> User]
+```mermaid
+sequenceDiagram
+
+    participant Frontend
+    participant API as Backend API
+
+    Frontend->>API: HTTPS Request
+    Note over Frontend,API: JWT stored in HttpOnly + Secure Cookie
+    API-->>Frontend: Authorized Response
+```
 
 ---
 

@@ -16,8 +16,14 @@ type ProjectSection = {
 };
 
 export type ProjectImages = {
-  optimize: ImageMetadata;
-  raw: string;
+ desktop: {
+    optimize: ImageMetadata;
+    raw: string;
+  };
+  mobile: {
+    optimize: ImageMetadata;
+    raw: string;
+  };
 };
 
 export type ProjectDetails = {

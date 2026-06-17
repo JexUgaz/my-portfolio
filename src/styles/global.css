@@ -113,8 +113,8 @@
     line-height: 1.7;
     font-size: 0.9rem;
 
-    & h1 {
-      font-size: 1.875rem;
+    & h2 {
+      font-size:  clamp(1.5rem, 3vw, 1.875rem);
       font-weight: 700;
       margin: 1.5rem 0 1rem;
       border-bottom: 1px solid var(--color-gray-300);
@@ -122,8 +122,8 @@
       color: var(--color-white);
     }
 
-    & h2 {
-      font-size: 1.25rem;
+    & h3 {
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
       font-weight: 600;
       margin: 1.5rem 0 0.75rem;
       border-bottom: 1px solid var(--color-gray-300);
@@ -220,7 +220,6 @@
     object-fit: contain;
     display: block;
   }
-
   .embla__button {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;

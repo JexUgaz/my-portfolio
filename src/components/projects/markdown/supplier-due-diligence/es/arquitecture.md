@@ -1,99 +1,84 @@
-# Arquitectura de la solución
+# Arquitectura de la Solución
 
 La plataforma está compuesta por tres servicios independientes:
 
-- **Frontend SPA:** capa de interacción con el usuario.
-- **Backend API:** núcleo de negocio y orquestación.
-- **Risk Entity Scraper:** servicio especializado en extracción de información externa.
+- Frontend SPA: Capa de interacción con el usuario.
+- Backend API: Núcleo de negocio y orquestación.
+- Risk Entity Scraper: Servicio especializado para la extracción de información desde fuentes externas.
 
 ```mermaid
-flowchart TD
+sequenceDiagram
 
-    User([Usuario])
+    actor Usuario
+    participant Frontend
+    participant API as Backend API
 
-    Frontend[Frontend SPA<br/>React + TypeScript]
-
-    Backend[Backend API<br/>ASP.NET Core]
-
-    Database[(SQL Server)]
-
-    Scraper[Risk Entity Scraper<br/>TypeScript + Puppeteer]
-
-    Browser[Chromium]
-
-    Sources[(Risk Sources)]
-
-    User --> Frontend
-    Frontend --> Backend
-    Backend --> Database
-    Backend --> Scraper
-    Scraper --> Browser
-    Browser --> Sources
+    Usuario->>Frontend: Accede a la aplicación
+    Frontend->>API: Solicitud HTTPS + Cookie JWT
+    API-->>Frontend: Respuesta autorizada
+    Frontend-->>Usuario: Muestra información
 ```
 
-# Comunicación entre servicios
+# Comunicación entre Servicios
 
-## Frontend → Backend
+## Frontend -> Backend
 
 La comunicación entre la aplicación web y la API se realiza mediante HTTPS.
 
 Características principales:
 
-- El acceso está restringido mediante **CORS** configurado por dominios permitidos.
-- La autenticación utiliza **JWT almacenado en cookies HttpOnly y Secure**.
-- La comunicación está preparada para ejecutarse únicamente sobre HTTPS.
+- El acceso está restringido mediante CORS configurado con dominios permitidos.
+- La autenticación utiliza JWT almacenado en cookies HttpOnly y Secure.
+- La comunicación está configurada para ejecutarse exclusivamente sobre HTTPS.
 
 ```mermaid
 sequenceDiagram
 
-    actor User
     participant Frontend
     participant API as Backend API
 
-    User->>Frontend: Accede a la aplicación
-    Frontend->>API: Request HTTPS + JWT Cookie
-    API-->>Frontend: Response autorizada
-    Frontend-->>User: Muestra información
+    Frontend->>API: Solicitud HTTPS con JWT
+    Note over Frontend,API: Autenticación mediante cookie HttpOnly y Secure
+    API-->>Frontend: Respuesta autenticada
 ```
-
 ---
 
-## Backend → Risk Entity Scraper
+## Backend -> Risk Entity Scraper
 
-## La comunicación interna entre Backend y Scraper está protegida mediante autenticación de servicio.
+La comunicación interna entre el Backend y el Scraper está protegida mediante autenticación entre servicios.
 
 ```mermaid
 flowchart LR
 
     API[Backend API]
 
-    Auth[Internal Token]
+    Auth[Token Interno]
 
-    Scraper[Scraper Service]
+    Scraper[Servicio Scraper]
 
     API --> Auth
     Auth --> Scraper
 ```
 
-Esto permite que:
+Esto garantiza que:
 
-- El scraper no sea expuesto públicamente.
-- Solo servicios autorizados puedan ejecutar búsquedas.
-- La lógica de extracción permanezca desacoplada del backend principal.
+- El scraper no está expuesto públicamente.
+- Solo los servicios autorizados pueden ejecutar búsquedas.
+- La lógica de extracción permanece desacoplada del backend principal.
 
-## Flujo de screening
+## Flujo de Screening
 
 El backend no realiza scraping directamente.
 
 La responsabilidad de extracción está aislada en un servicio independiente.
 
-El flujo es:
+El flujo es el siguiente:
 
-1. Usuario ejecuta una búsqueda de screening.
-2. Frontend envía la solicitud al backend.
-3. Backend valida la solicitud y consume el servicio scraper.
-4. El scraper ejecuta la búsqueda en fuentes externas.
-5. Los resultados retornan al backend y finalmente al usuario.
+1. El usuario ejecuta una búsqueda de screening.
+2. El Frontend envía la solicitud al Backend.
+3. El Backend valida la solicitud y consume el servicio Scraper.
+4. El Scraper ejecuta la búsqueda contra fuentes externas.
+5. Los resultados regresan al Backend y finalmente al usuario.
 
 ```mermaid
 sequenceDiagram
@@ -101,12 +86,12 @@ sequenceDiagram
     participant UI as Frontend
     participant API as Backend
     participant Scraper
-    participant Web as External Sources
+    participant Web as Fuentes Externas
 
-    UI->>API: Screening Request
+    UI->>API: Solicitud de Screening
     API->>Scraper: /internal/screening
     Scraper->>Web: Web Scraping
-    Web-->>Scraper: Entity Results
-    Scraper-->>API: Screening Response
-    API-->>UI: Risk Results
+    Web-->>Scraper: Resultados de Entidades
+    Scraper-->>API: Respuesta de Screening
+    API-->>UI: Resultados de Riesgo
 ```

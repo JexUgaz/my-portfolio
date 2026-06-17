@@ -39,32 +39,74 @@ export const projectsData: Project[] = [
     details: {
       images: [
         {
-          optimize: sDDImages.index,
-          raw: sDDImages.indexRaw,
+          mobile: {
+            optimize: sDDImages.indexMobile,
+            raw: sDDImages.indexMobileRaw,
+          },
+          desktop: {
+            optimize: sDDImages.index,
+            raw: sDDImages.indexRaw,
+          },
         },
         {
-          optimize: sDDImages.indexFilter,
-          raw: sDDImages.indexFilterRaw,
+          mobile: {
+            optimize: sDDImages.indexFilterMobile,
+            raw: sDDImages.indexFilterMobileRaw,
+          },
+          desktop: {
+            optimize: sDDImages.indexFilter,
+            raw: sDDImages.indexFilterRaw,
+          },
         },
         {
-          optimize: sDDImages.edition,
-          raw: sDDImages.editionRaw,
+          mobile: {
+            optimize: sDDImages.editionMobile,
+            raw: sDDImages.editionMobileRaw,
+          },
+          desktop: {
+            optimize: sDDImages.edition,
+            raw: sDDImages.editionRaw,
+          },
         },
         {
-          optimize: sDDImages.skeleton,
-          raw: sDDImages.skeletonRaw,
+          mobile: {
+            optimize: sDDImages.skeletonMobile,
+            raw: sDDImages.skeletonMobileRaw,
+          },
+          desktop: {
+            optimize: sDDImages.skeleton,
+            raw: sDDImages.skeletonRaw,
+          },
         },
         {
-          optimize: sDDImages.screeningResults,
-          raw: sDDImages.screeningResultsRaw,
+          mobile: {
+            optimize: sDDImages.screeningResultsMobile,
+            raw: sDDImages.screeningResultsMobileRaw,
+          },
+          desktop: {
+            optimize: sDDImages.screeningResults,
+            raw: sDDImages.screeningResultsRaw,
+          },
         },
         {
-          optimize: sDDImages.screeningInit,
-          raw: sDDImages.screeningInitRaw,
+          mobile: {
+            optimize: sDDImages.screeningInitMobile,
+            raw: sDDImages.screeningInitMobileRaw,
+          },
+          desktop: {
+            optimize: sDDImages.screeningInit,
+            raw: sDDImages.screeningInitRaw,
+          },
         },
         {
-          optimize: sDDImages.login,
-          raw: sDDImages.loginRaw,
+          mobile: {
+            optimize: sDDImages.loginMobile,
+            raw: sDDImages.loginMobileRaw,
+          },
+          desktop: {
+            optimize: sDDImages.login,
+            raw: sDDImages.loginRaw,
+          },
         },
       ],
       sections: [
@@ -100,7 +142,7 @@ export const projectsData: Project[] = [
       { title: "Tailwind CSS", Icon: TailwindCSSIcon },
       { title: "Vercel", Icon: VercelIcon },
     ],
-    status: "open-source",
+    status: "demo",
   },
   {
     title: "projects.mika.title",
@@ -131,7 +173,7 @@ export const projectsData: Project[] = [
         Icon: GitHubActionsIcon,
       },
     ],
-    status: "production",
+    status: "demo",
   },
   {
     title: "projects.portfolio.title",
