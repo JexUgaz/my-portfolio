@@ -11,11 +11,11 @@ type ProjectSection = {
 };
 
 type Props = {
-  images: ProjectImages[];
-  sections: ProjectSection[];
+  readonly images: ProjectImages[];
+  readonly sections: ProjectSection[];
 };
 
-const DetailPopUpContent = ({ sections, images }: Props) => {
+const DetailPopUpContent = ({ sections, images,  }: Props) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const sectionActive = sections[activeTab];

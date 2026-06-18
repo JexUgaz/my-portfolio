@@ -60,9 +60,9 @@ const SendMessageForm: React.FC<Props> = ({ translations }) => {
         <>
           <div className="flex justify-center items-center gap-2">
             <EmailOutLineIcon className="size-8" />
-            <h2 className="text-2xl text-center font-bold">
+            <h3 className="text-2xl text-center font-bold">
               {translations["contact.form.title"]}
-            </h2>
+            </h3>
           </div>
           <form
             id="contactForm"
