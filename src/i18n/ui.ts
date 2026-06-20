@@ -22,10 +22,10 @@ export const languages: Language[] = [
 export const ui = {
   en: {
     "site.title": "My Portfolio",
-    "meta.title": "Loammi Ugaz - Software Developer",
+    "meta.title": "Loammi Ugaz | Software Developer & Cloud Engineer",
     "meta.description":
       "I'm Loammi Ugaz, a Telecommunications Engineer specialized in Full-Stack Software Development and Cloud Architecture. Explore my portfolio, skills, and projects.",
-    "meta.og.title": "Loammi Ugaz - Software Developer",
+    "meta.og.title": "Loammi Ugaz | Software Developer & Cloud Engineer",
     "meta.og.description": "Telecommunications Engineer focused on building scalable software and cloud solutions. View my work, background, and projects.",
     "meta.og.site_name": "Loammi Ugaz Portfolio",
     "nav.home": "Home",

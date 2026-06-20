@@ -26,10 +26,15 @@ const t = useTranslations(lang);
     <meta property="og:title" content={t("meta.og.title")} />
     <meta property="og:description" content={t("meta.og.description")} />
     <meta property="og:url" content="https://portfolio.jexugaz.work/" />
+    <link rel="canonical" href={lang === "es" ? "https://portfolio.jexugaz.work/es/" : "https://portfolio.jexugaz.work/"} />
+    <link rel="alternate" hreflang="en" href="https://portfolio.jexugaz.work/" />
+    <link rel="alternate" hreflang="es" href="https://portfolio.jexugaz.work/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://portfolio.jexugaz.work/" />
     <meta
-      property="og:image"
-      content="https://portfolio.jexugaz.work/og-image.png"
+      name="keywords"
+      content="Loammi Ugaz, Software Developer, Full Stack Developer, React, Astro, Flutter, AWS, Cloud Architecture, Telecommunications Engineer"
     />
+    <meta property="og:image" content="https://portfolio.jexugaz.work/og-image.png" />
 
     <meta name="author" content="Loammi Ugaz" />
 
@@ -41,4 +46,18 @@ const t = useTranslations(lang);
   <AosInitScript />
   <NavbarObserverScript />
   <ScrollTopButtonObserverScript />
+
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Loammi Ugaz",
+      jobTitle: "Software Developer",
+      url: "https://portfolio.jexugaz.work",
+      image: "https://portfolio.jexugaz.work/og-image.png",
+      sameAs: ["https://github.com/JexUgaz", "https://www.linkedin.com/in/lugazmlink/"],
+    })}
+  />
 </html>

@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import path from "node:path";
+import sitemap from "@astrojs/sitemap";
 
 import react from "@astrojs/react";
 
@@ -28,5 +29,5 @@ export default defineConfig({
     target: "esnext",
     minify: "esbuild",
   },
-  integrations: [react()],
+  integrations: [react(), sitemap()],
 });
