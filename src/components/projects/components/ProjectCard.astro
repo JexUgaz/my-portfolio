@@ -6,6 +6,7 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import TicketStatus from "./TicketStatus.astro";
 import DetailPopUpContent from "./DetailPopUpContent.tsx";
 import CloseIcon from "@/components/icons/CloseIcon.astro";
+import PopUp from "./PopUp.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -16,7 +17,7 @@ interface Props {
 
 const { item } = Astro.props;
 const { description, image, stack, title, demoUrl, codeUrl, status, details } = item;
-const titleKey = title
+const popupKey = title
   .toLowerCase()
   .trim()
   .replace(/\s+/g, "-")
@@ -31,6 +32,8 @@ const markdowns = import.meta.glob("/src/components/projects/markdown/**/*.md", 
   eager: true,
 });
 
+const images = details?.images;
+
 const sections = details?.sections.map((s) => {
   const contentPath = t(s.markdownPath);
   return {
@@ -42,57 +45,8 @@ const sections = details?.sections.map((s) => {
 
 <div class="relative group grid grid-rows-[auto_1fr] max-w-100 rounded-3xl overflow-hidden bg-white/10 hover:animate-lift">
   <TicketStatus status={status} />
-  <ProjectImage hasDetails={hasDetails} titleKey={titleKey} alt={title} image={image} />
-  {
-    hasDetails && (
-      <div id={titleKey} popover>
-        <div
-          class="fixed inset-0 bg-black/80 flex items-center justify-center p-4"
-          onclick={`if(event.target === this) document.getElementById('${titleKey}').hidePopover()`}
-        >
-          <div
-            class="  flex flex-col bg-primary 
-      rounded-lg shadow-lg  w-full max-w-4xl 
-      max-h-[90dvh] 
-      overflow-y-auto 
-      items-center
-      md:p-4
-      p-2"
-          >
-            <div class="w-full flex justify-between">
-              <div class="ml-[5%] ps-4">
-                <a
-                  href={demoUrl}
-                  target="_blank"
-                  class="group inline-flex items-center gap-3 rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-1 text-sm font-medium text-white transition-all duration-300 hover:border-neutral-500 hover:bg-neutral-800 hover:shadow-lg"
-                >
-                  <span class="relative flex h-2.5 w-2.5">
-                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-                  </span>
-
-                  <span>Live Preview</span>
-
-                  <svg
-                    class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M7 7h10v10" />
-                  </svg>
-                </a>
-              </div>
-              <button popovertarget={titleKey} popovertargetaction="hide" class="self-end font-extrabold text-white mt-2">
-                <CloseIcon class="size-5" />
-              </button>
-            </div>
-            <DetailPopUpContent sections={sections!} images={details!.images} client:visible />
-          </div>
-        </div>
-      </div>
-    )
-  }
+  <ProjectImage hasDetails={hasDetails} popupKey={popupKey} alt={title} image={image} />
+  {hasDetails && <PopUp demoUrl={demoUrl} images={images!} sections={sections!} popupKey={popupKey} />}
 
   <div class="p-6 flex flex-col justify-start">
     <h3 class="text-xl font-semibold mb-2 text-white">{t(title)}</h3>

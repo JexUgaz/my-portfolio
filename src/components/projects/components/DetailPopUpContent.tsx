@@ -1,26 +1,20 @@
 import { useState } from "react";
 import "highlight.js/styles/github-dark.css";
 import { ReactMarkdownRenderer } from "@/react/ReactMarkdownRenderer";
-import type { ProjectSectionTranslationValue } from "@/i18n/types/project-types";
 import { CarouselPopUp } from "./CarouselPopUp";
-import type { ProjectImages } from "@/types/Project";
-
-type ProjectSection = {
-  label: ProjectSectionTranslationValue;
-  content: string;
-};
+import type { ProjectImages, ProjectSectionPopUp } from "@/types/Project";
 
 type Props = {
   readonly images: ProjectImages[];
-  readonly sections: ProjectSection[];
+  readonly sections: ProjectSectionPopUp[];
 };
 
-const DetailPopUpContent = ({ sections, images,  }: Props) => {
+const DetailPopUpContent = ({ sections, images }: Props) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const sectionActive = sections[activeTab];
   return (
-    <div className="w-[90%] max-w-3xl rounded-xl shadow-xl p-4 h-full">
+    <div className="w-full desktop:w-[90%] desktop:max-w-3xl rounded-xl shadow-xl desktop:p-4 h-full">
       <CarouselPopUp images={images} />
 
       <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mt-4 overflow-x-auto">

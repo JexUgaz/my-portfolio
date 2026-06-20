@@ -40,6 +40,16 @@ export const projectsData: Project[] = [
       images: [
         {
           mobile: {
+            optimize: sDDImages.loginMobile,
+            raw: sDDImages.loginMobileRaw,
+          },
+          desktop: {
+            optimize: sDDImages.login,
+            raw: sDDImages.loginRaw,
+          },
+        },
+        {
+          mobile: {
             optimize: sDDImages.indexMobile,
             raw: sDDImages.indexMobileRaw,
           },
@@ -56,6 +66,16 @@ export const projectsData: Project[] = [
           desktop: {
             optimize: sDDImages.indexFilter,
             raw: sDDImages.indexFilterRaw,
+          },
+        },
+        {
+          mobile: {
+            optimize: sDDImages.screeningInitMobile,
+            raw: sDDImages.screeningInitMobileRaw,
+          },
+          desktop: {
+            optimize: sDDImages.screeningInit,
+            raw: sDDImages.screeningInitRaw,
           },
         },
         {
@@ -86,26 +106,6 @@ export const projectsData: Project[] = [
           desktop: {
             optimize: sDDImages.screeningResults,
             raw: sDDImages.screeningResultsRaw,
-          },
-        },
-        {
-          mobile: {
-            optimize: sDDImages.screeningInitMobile,
-            raw: sDDImages.screeningInitMobileRaw,
-          },
-          desktop: {
-            optimize: sDDImages.screeningInit,
-            raw: sDDImages.screeningInitRaw,
-          },
-        },
-        {
-          mobile: {
-            optimize: sDDImages.loginMobile,
-            raw: sDDImages.loginMobileRaw,
-          },
-          desktop: {
-            optimize: sDDImages.login,
-            raw: sDDImages.loginRaw,
           },
         },
       ],

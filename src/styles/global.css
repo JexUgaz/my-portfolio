@@ -3,6 +3,7 @@
 
 @theme static {
   --breakpoint-xs: 30rem;
+  --breakpoint-desktop: 42.5rem;
 
   --gradient-radial: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
 
@@ -114,7 +115,7 @@
     font-size: 0.9rem;
 
     & h2 {
-      font-size:  clamp(1.5rem, 3vw, 1.875rem);
+      font-size: clamp(1.5rem, 3vw, 1.875rem);
       font-weight: 700;
       margin: 1.5rem 0 1rem;
       border-bottom: 1px solid var(--color-gray-300);
@@ -206,6 +207,7 @@
 
   .embla__container {
     display: flex;
+    align-items: center;
   }
 
   .embla__slide {
@@ -220,6 +222,7 @@
     object-fit: contain;
     display: block;
   }
+
   .embla__button {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -291,6 +294,33 @@
 
   .embla__slide__fullscreen-btn:active {
     transform: scale(0.9);
+  }
+
+  @media (max-width: 680px) {
+    .embla {
+      margin-top: 15px;
+    }
+
+    .embla__container {
+      gap: 0.75rem;
+    }
+
+    .embla__slide {
+      flex: 0 0 min(75%, 280px);
+      border-radius: 36px;
+      overflow: hidden;
+      aspect-ratio: 9 / 19.5;
+    }
+    .embla__slide__img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .embla__slide__fullscreen-btn {
+      width: 28px;
+      height: 28px;
+      font-size: 15px;
+    }
   }
 }
 

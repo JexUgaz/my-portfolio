@@ -3,32 +3,28 @@ import Autoplay from "embla-carousel-autoplay";
 import { useCallback } from "react";
 import { getBasename } from "@/utils/helpers";
 import type { ProjectImages } from "@/types/Project";
+import { useIsMobile } from "@/utils/hooks/useIsMobile";
 
 type Props = {
   readonly images: ProjectImages[];
 };
 
 export const CarouselPopUp = ({ images }: Props) => {
+  const isMobile = useIsMobile();
+
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      loop: true,
+      loop: !isMobile,
       align: "start",
-      dragFree: false,
+      dragFree: isMobile,
     },
-    [Autoplay({ delay: 5000, stopOnInteraction: false })],
+    isMobile ? [] : [Autoplay({ delay: 5000, stopOnInteraction: false })],
   );
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  const openInNewTab = ({ desktop, mobile }: { desktop: string, mobile: string }) => {
-    const isMobile = window.matchMedia("(max-width: 680px)").matches;
-
-    window.open(
-      isMobile ? mobile : desktop,
-      "_blank"
-    );
-  }
+  const openInNewTab = ({ desktop, mobile }: { desktop: string; mobile: string }) => window.open(isMobile ? mobile : desktop, "_blank");
 
   return (
     <div className="relative">
@@ -40,22 +36,12 @@ export const CarouselPopUp = ({ images }: Props) => {
             return (
               <div className="embla__slide" key={baseName}>
                 <picture>
-                  <source
-                    media="(max-width: 680px)"
-                    srcSet={mobile.optimize.src}
-                  />
+                  <source media="(max-width: 680px)" srcSet={mobile.optimize.src} />
 
-                  <img
-                    src={desktopSrc}
-                    alt={baseName}
-                    className="embla__slide__img"
-                  />
+                  <img src={desktopSrc} alt={baseName} className="embla__slide__img" />
                 </picture>
 
-                <button
-                  className="embla__slide__fullscreen-btn"
-                  onClick={() => openInNewTab({ desktop: desktop.raw, mobile: mobile.raw })}
-                >
+                <button className="embla__slide__fullscreen-btn" onClick={() => openInNewTab({ desktop: desktop.raw, mobile: mobile.raw })}>
                   ⛶
                 </button>
               </div>
@@ -63,12 +49,16 @@ export const CarouselPopUp = ({ images }: Props) => {
           })}
         </div>
       </div>
-      <button className="embla__button embla__button--prev" onClick={scrollPrev}>
-        ←
-      </button>
-      <button className="embla__button embla__button--next" onClick={scrollNext}>
-        →
-      </button>
+      {!isMobile && (
+        <>
+          <button className="embla__button embla__button--prev" onClick={scrollPrev}>
+            ←
+          </button>
+          <button className="embla__button embla__button--next" onClick={scrollNext}>
+            →
+          </button>
+        </>
+      )}
     </div>
   );
 };

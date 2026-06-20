@@ -1,0 +1,42 @@
+---
+import CloseIcon from "@/components/icons/CloseIcon.astro";
+import DetailPopUpContent from "./DetailPopUpContent";
+import type { ProjectImages, ProjectSectionPopUp } from "@/types/Project";
+import LivePreviewButton from "./LivePreviewButton.astro";
+
+interface Props {
+  readonly popupKey: string;
+  readonly demoUrl: string;
+  readonly images: ProjectImages[];
+  readonly sections: ProjectSectionPopUp[];
+}
+
+const { popupKey, demoUrl, images, sections } = Astro.props;
+---
+
+<div id={popupKey} popover>
+  <div
+    class="fixed inset-0 bg-black/80 flex items-center justify-center p-4"
+    onclick={`if(event.target === this) document.getElementById('${popupKey}').hidePopover()`}
+  >
+    <div
+      class="flex flex-col bg-primary
+      rounded-lg shadow-lg w-full max-w-4xl
+      max-h-[90dvh]
+      overflow-y-auto
+      items-center
+      md:p-4
+      p-2"
+    >
+      <div class="w-full flex justify-between items-center">
+        <div class="md:ml-[5%] md:ps-4">
+          <LivePreviewButton url={demoUrl} />
+        </div>
+        <button popovertarget={popupKey} popovertargetaction="hide" class="font-extrabold text-white">
+          <CloseIcon class="size-5" />
+        </button>
+      </div>
+      <DetailPopUpContent sections={sections!} images={images} client:visible />
+    </div>
+  </div>
+</div>

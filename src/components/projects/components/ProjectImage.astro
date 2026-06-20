@@ -4,11 +4,11 @@ import { Image } from "astro:assets";
 interface Props {
   image: ImageMetadata;
   alt: string;
-  titleKey: string;
+  popupKey: string;
   hasDetails: boolean;
 }
 
-const { alt, image, titleKey, hasDetails } = Astro.props;
+const { alt, image, popupKey, hasDetails } = Astro.props;
 ---
 
 <div class="relative rounded-t-xl shadow-md aspect-video overflow-hidden">
@@ -21,7 +21,7 @@ const { alt, image, titleKey, hasDetails } = Astro.props;
   {
     hasDetails && (
       <button
-        popovertarget={titleKey}
+        popovertarget={popupKey}
         class="absolute bottom-1 right-0 bg-primary/80 py-1 px-2 rounded-2xl text-sm flex gap-1 items-center justify-end
           transition-all duration-300 ease-in-out xl:translate-y-100 group-hover:translate-y-0"
       >

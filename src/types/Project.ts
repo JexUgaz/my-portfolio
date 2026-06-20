@@ -1,6 +1,6 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import type { TranslationKey } from "@/i18n/types";
-import type { ProjectSectionTranslationKey } from "@/i18n/types/project-types";
+import type { ProjectSectionTranslationKey, ProjectSectionTranslationValue } from "@/i18n/types/project-types";
 import type { ImageMetadata } from "astro";
 
 export type ProjectStatus = "demo" | "production" | "client" | "open-source" | "archived";
@@ -16,7 +16,7 @@ type ProjectSection = {
 };
 
 export type ProjectImages = {
- desktop: {
+  desktop: {
     optimize: ImageMetadata;
     raw: string;
   };
@@ -24,6 +24,11 @@ export type ProjectImages = {
     optimize: ImageMetadata;
     raw: string;
   };
+};
+
+export type ProjectSectionPopUp = {
+  label: ProjectSectionTranslationValue;
+  content: string;
 };
 
 export type ProjectDetails = {
