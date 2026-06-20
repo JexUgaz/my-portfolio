@@ -10,6 +10,7 @@ interface Props {
 
 const markdownComponents: Components = {
   code: CodeBlock,
+  a: ({ node, ...props }) => <a {...props} target="_blank" rel="noopener noreferrer" />,
   h1: ({ children }) => <h2>{children}</h2>,
   h2: ({ children }) => <h3>{children}</h3>,
   h3: ({ children }) => <h4>{children}</h4>,
@@ -19,11 +20,7 @@ const markdownComponents: Components = {
 
 export const ReactMarkdownRenderer = ({ content }: Props) => {
   return (
-    <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeHighlight]}
-      components={markdownComponents}
-    >
+    <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]} components={markdownComponents}>
       {content}
     </ReactMarkdown>
   );
